@@ -6,7 +6,7 @@ import Link from "../components/Link.astro";
   <!-- brug "fixed" for at have den på siden hele vejen ned -->
   <div id="navbar" class="flex flex-row justify-between max-w-7xl mx-auto pr-4 pl-4 pt-2 pb-2">
     <div class="">
-      <a class="uppercase font-bold text-red-700" href="#logo">Logo</a>
+      <a href="#logo"><img class="h-8" src="/favicon.svg" alt="logo for Kadaver" /></a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
       <ul class="flex flex-row gap-4">
@@ -22,7 +22,14 @@ import Link from "../components/Link.astro";
       </svg>
     </button>
   </div>
-  <nav id="mobilmenu" class="flex flex-col content-center pt-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+  <nav
+    id="mobilmenu"
+    class="flex flex-col content-center pt-4"
+    x-show="showmenu"
+    x-transition
+    x-on:click="showmenu = false"
+    x-on:click.outside="showmenu = false"
+  >
     <ul>
       <li class="text-center py-2 border-y-2"><a href="#">Link 1</a></li>
       <li class="text-center py-2 border-b-2"><a href="#">Link 2</a></li>

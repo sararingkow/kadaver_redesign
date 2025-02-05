@@ -2,5 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer components {
+  .display {
+    @apply font-gilroy-display font-semibold text-gray-950 uppercase;
+    @apply text-display-gilroy-mobile;
+  }
+
+  @screen md {
+    .display {
+      @apply text-display-gilroy-desktop;
+    }
+  }
+  h1 {
+    @apply font-gilroy-display font-semibold text-gray-950;
+    @apply text-h1-mobile;
+  }
+
+  @screen md {
+    h1 {
+      @apply text-h1-desktop;
+    }
+  }
+
+  h2 {
+    @apply font-gilroy-display font-semibold text-gray-950;
+    @apply text-h2-mobile;
+  }
+
+  @screen md {
+    h2 {
+      @apply text-h2-desktop;
+    }
+  }
+
+  h3 {
+    @apply font-gilroy-display font-bold text-gray-950;
+    @apply text-h3-mobile;
+  }
+
+  @screen md {
+    h3 {
+      @apply text-h3-desktop;
+    }
+  }
+
+  h4 {
+    @apply font-gilroy-display font-bold text-gray-950;
+    @apply text-h4-mobile;
+  }
+
+  @screen md {
+    h4 {
+      @apply text-h4-desktop;
+    }
+  }
+
+  p {
+    @apply font-gilroy-regular font-light text-gray-950;
+    @apply text-p-mobile;
+  }
+
+  @screen md {
+    p {
+      @apply text-p-desktop;
+    }
+  }
+
+  a,
+  li {
+    @apply font-gilroy-regular font-regular text-gray-950;
+    @apply text-a-mobile;
+  }
+
+  @screen md {
+    a,
+    li {
+      @apply text-a-desktop;
+    }
+  }
 }

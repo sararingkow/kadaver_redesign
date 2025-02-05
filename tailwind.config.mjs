@@ -45,12 +45,12 @@ export default {
     },
 
     fontFamily: {
-      lato: ["Lato", "sans-serif"],
-      display: ["Playfair", "serif"],
+      "gilroy-regular": ["Gilroy-regular", "sans-serif"],
+      "gilroy-display": ["Gilroy-display", "sans-serif"],
     },
     fontSize: {
-      "display-desktop": ["5.5rem", { lineHeight: "5.5rem" }],
-      "display-mobile": ["5rem", { lineHeight: "3.5rem" }],
+      "display-gilroy-desktop": ["6.5rem", { lineHeight: "5.5rem" }],
+      "display-gilroy-mobile": ["5rem", { lineHeight: "3.5rem" }],
       "h1-desktop": ["4.8rem", { lineHeight: "3.75rem" }],
       "h1-mobile": ["3.5rem", { lineHeight: "3.75rem" }],
       "h2-desktop": ["4rem", { lineHeight: "3.75rem" }],
@@ -95,7 +95,15 @@ export default {
       inner50: "0 4px 4px 0 rgb(0 0 0 / 0.50) inset",
     },
 
-    extend: {},
+    extend: {
+      spacing: {
+        gap: "25px",
+        "mobil-bottom": "85px",
+        "desktop-bottom": "120px",
+        "mobil-top": "85px",
+        "desktop-top": "120px",
+      },
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),
