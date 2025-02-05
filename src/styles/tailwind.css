@@ -70,7 +70,7 @@
 
   a,
   li {
-    @apply font-gilroy-regular text-gray-950;
+    @apply text-gray-950;
     @apply text-a-mobile;
   }
 
@@ -78,6 +78,11 @@
     a,
     li {
       @apply text-a-desktop;
+    }
+
+    .btn_container a {
+      @apply font-bold text-gray-50;
+      @apply text-[16px];
     }
   }
 }
