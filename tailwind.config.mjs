@@ -99,9 +99,9 @@ export default {
       spacing: {
         gap: "25px",
         "mobil-bottom": "85px",
-        "desktop-bottom": "120px",
+        "desktop-bottom": "100px",
         "mobil-top": "85px",
-        "desktop-top": "120px",
+        "desktop-top": "100px",
       },
     },
   },

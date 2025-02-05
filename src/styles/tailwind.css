@@ -4,7 +4,7 @@
 
 @layer components {
   .display {
-    @apply font-gilroy-display font-semibold text-gray-950 uppercase;
+    @apply font-gilroy-display text-gray-950 uppercase;
     @apply text-display-gilroy-mobile;
   }
 
@@ -14,7 +14,7 @@
     }
   }
   h1 {
-    @apply font-gilroy-display font-semibold text-gray-950;
+    @apply font-gilroy-display text-gray-950 uppercase;
     @apply text-h1-mobile;
   }
 
@@ -25,7 +25,7 @@
   }
 
   h2 {
-    @apply font-gilroy-display font-semibold text-gray-950;
+    @apply font-gilroy-display uppercase text-gray-950;
     @apply text-h2-mobile;
   }
 
@@ -36,7 +36,7 @@
   }
 
   h3 {
-    @apply font-gilroy-display font-bold text-gray-950;
+    @apply font-gilroy-display uppercase text-gray-950;
     @apply text-h3-mobile;
   }
 
@@ -47,7 +47,7 @@
   }
 
   h4 {
-    @apply font-gilroy-display font-bold text-gray-950;
+    @apply font-gilroy-display uppercase text-gray-950;
     @apply text-h4-mobile;
   }
 
@@ -58,7 +58,7 @@
   }
 
   p {
-    @apply font-gilroy-regular font-light text-gray-950;
+    @apply font-gilroy-regular text-gray-950;
     @apply text-p-mobile;
   }
 
@@ -70,7 +70,7 @@
 
   a,
   li {
-    @apply font-gilroy-regular font-regular text-gray-950;
+    @apply font-gilroy-regular text-gray-950;
     @apply text-a-mobile;
   }
 

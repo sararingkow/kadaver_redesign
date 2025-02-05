@@ -2,15 +2,18 @@
 import Link from "../components/Link.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="gap-4 z-[50] fixed bg-gray-100 md:w-[90%] p-4 w-full md:rounded-lg md:left-1/2 md:-translate-x-1/2 md:top-8">
+<div
+  x-data="{ showmenu: false }"
+  class="gap-4 z-[50] fixed bg-gray-100 md:w-[95%] p-4 w-full md:rounded-lg md:left-1/2 md:-translate-x-1/2 md:top-8 shadow-drop25 hover:scale-[1.01] transiton duration-300 ease-in-out"
+>
   <!-- brug "fixed" for at have den på siden hele vejen ned -->
-  <div id="navbar" class="flex flex-row justify-between max-w-7xl mx-auto pr-4 pl-4 pt-2 pb-2">
+  <div id="navbar" class="flex flex-row justify-between max-w-7xl mx-auto pr-4 pl-4">
     <nav id="desktopmenu" class="hidden lg:block w-full">
       <div class="max-w-5xl mx-auto">
         <ul class="flex flex-row justify-between items-center gap-4 w-full [&>li]:basis-1/5">
-          <li class="text-center"><a class="py-2 hover:opacity-50 transition duration-300 ease-in-out" href="/">Forside</a></li>
-          <li class="text-center"><a class="py-2 hover:opacity-50 transition duration-300 ease-in-out" href="/listview">Cases</a></li>
-          <li class="text-center"><a class="py-2 hover:opacity-50 transition duration-300 ease-in-out" href="/om_os">Om os</a></li>
+          <li class="text-center"><a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/">Forside</a></li>
+          <li class="text-center"><a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/listview">Cases</a></li>
+          <li class="text-center"><a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/om_os">Om os</a></li>
           <li class="text-center">
             <a class="text-neutral-50 flex items-center justify-center" href="/">
               <img
@@ -20,9 +23,15 @@ import Link from "../components/Link.astro";
               />
             </a>
           </li>
-          <li class="text-center"><a class="py-2 hover:opacity-50 transition duration-300 ease-in-out" href="/studieleje">Studieleje</a></li>
-          <li class="text-center"><a class="py-2 hover:opacity-50 transition duration-300 ease-in-out" href="/praktik">Praktik</a></li>
-          <li class="text-center"><a class="py-2 hover:opacity-50 transition duration-300 ease-in-out" href="/kontakt">Kontakt os</a></li>
+          <li class="text-center">
+            <a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/studieleje">Studieleje</a>
+          </li>
+          <li class="text-center">
+            <a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/praktik">Praktik</a>
+          </li>
+          <li class="text-center">
+            <a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/kontakt">Kontakt os</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -74,14 +83,24 @@ import Link from "../components/Link.astro";
       <!-- Logo (Visible Outside Burger Menu) -->
 
       <ul>
-        <li class="py-4 text-center"><a class="py-3 border-b hover:opacity-50 transition duration-300 ease-in-out" href="/">Forside</a></li>
-        <li class="py-4 text-center"><a class="py-3 border-b hover:opacity-50 transition duration-300 ease-in-out" href="/listview">Cases</a></li>
-        <li class="py-4 text-center"><a class="py-3 border-b hover:opacity-50 transition duration-300 ease-in-out" href="/om_os">Om os</a></li>
         <li class="py-4 text-center">
-          <a class="py-3 border-b hover:opacity-50 transition duration-300 ease-in-out" href="/studieleje">Studieleje</a>
+          <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/">Forside</a>
         </li>
-        <li class="py-4 text-center"><a class="py-3 border-b hover:opacity-50 transition duration-300 ease-in-out" href="/praktik">Praktik</a></li>
-        <li class="py-4 text-center"><a class="py-3 border-b hover:opacity-50 transition duration-300 ease-in-out" href="/kontakt">Kontakt os</a></li>
+        <li class="py-4 text-center">
+          <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/listview">Cases</a>
+        </li>
+        <li class="py-4 text-center">
+          <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/om_os">Om os</a>
+        </li>
+        <li class="py-4 text-center">
+          <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/studieleje">Studieleje</a>
+        </li>
+        <li class="py-4 text-center">
+          <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/praktik">Praktik</a>
+        </li>
+        <li class="py-4 text-center">
+          <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/kontakt">Kontakt os</a>
+        </li>
       </ul>
     </nav>
   </nav>
