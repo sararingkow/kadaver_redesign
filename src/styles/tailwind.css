@@ -68,6 +68,15 @@
     }
   }
 
+  .name {
+    @apply font-gilroy-bold text-gray-950 text-center;
+    @apply text-p-desktop;
+  }
+
+  .email {
+    @apply font-gilroy-regularitalic text-gray-400 underline;
+  }
+
   a,
   li {
     @apply text-gray-950;
