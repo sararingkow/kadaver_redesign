@@ -3,94 +3,82 @@
 @tailwind utilities;
 
 @layer components {
-  .display {
-    @apply font-gilroy-display text-gray-950 uppercase;
-    @apply text-display-gilroy-mobile;
-  }
+  /* === TYPOGRAPHY STYLES === */
 
+  /* Display Text */
+  .display {
+    @apply font-gilroy-display text-gray-950 uppercase text-display-gilroy-mobile;
+  }
   @screen md {
     .display {
       @apply text-display-gilroy-desktop;
     }
   }
-  h1 {
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply font-gilroy-display text-gray-950 uppercase;
+  }
+  h1 {
     @apply text-h1-mobile;
   }
-
+  h2 {
+    @apply text-h2-mobile;
+  }
+  h3 {
+    @apply text-h3-mobile;
+  }
+  h4 {
+    @apply text-h4-mobile;
+  }
   @screen md {
     h1 {
       @apply text-h1-desktop;
     }
-  }
-
-  h2 {
-    @apply font-gilroy-display uppercase text-gray-950;
-    @apply text-h2-mobile;
-  }
-
-  @screen md {
     h2 {
       @apply text-h2-desktop;
     }
-  }
-
-  h3 {
-    @apply font-gilroy-display uppercase text-gray-950;
-    @apply text-h3-mobile;
-  }
-
-  @screen md {
     h3 {
       @apply text-h3-desktop;
     }
-  }
-
-  h4 {
-    @apply font-gilroy-display uppercase text-gray-950;
-    @apply text-h4-mobile;
-  }
-
-  @screen md {
     h4 {
       @apply text-h4-desktop;
     }
   }
 
-  p {
-    @apply font-gilroy-regular text-gray-950;
-    @apply text-p-mobile;
+  /* Paragraph & Body Text */
+  p,
+  a,
+  li {
+    @apply font-gilroy-regular text-gray-950 text-p-mobile;
   }
-
   @screen md {
-    p {
+    p,
+    a,
+    li {
       @apply text-p-desktop;
     }
   }
 
+  /* Specific Elements */
   .name {
-    @apply font-gilroy-bold text-gray-950 text-center;
-    @apply text-p-desktop;
+    @apply font-gilroy-bold text-gray-950 text-center text-h3-mobile;
+  }
+  @screen md {
+    .name {
+      @apply text-p-desktop font-gilroy-bold;
+    }
   }
 
   .email {
     @apply font-gilroy-regularitalic text-gray-400 underline;
   }
+
+  /* Button Text */
   .btn_container a {
-    @apply font-bold text-gray-50;
-    @apply text-[16px];
-  }
-
-  a,
-  li {
-    @apply text-gray-950;
-    @apply text-p-mobile;
-  }
-
-  @screen md {
-    a,
-    li {
-      @apply text-p-desktop;
-    }
+    @apply font-gilroy-bold text-gray-50 text-[16px];
   }
 }

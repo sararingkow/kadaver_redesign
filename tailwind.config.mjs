@@ -114,7 +114,7 @@ export default {
 
     extend: {
       spacing: {
-        gap: "25px",
+        gap: "30px",
         "mobil-bottom": "85px",
         "desktop-bottom": "120px",
         "mobil-top": "85px",

@@ -9,15 +9,17 @@ import Carrousel from "../components/Carrousel.astro";
     <div class="absolute inset-0 w-full h-full z-0">
       <img src="/images/hero_gif.gif" alt="background gif" class="w-full h-screen object-cover" />
       <div class="absolute inset-0 bg-gray-950 opacity-75 z-[10]"></div>
-      <div class="absolute inset-0 md:pt-desktop-top pt-mobile-top max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 content-center">
-        <h1 class="display pb-8 text-gray-50 col-span-12">Kadaver</h1>
-        <h2 class="text-h3-desktop pb-12 text-gray-50 col-span-8 lg:col-span-6">Kreativ kommunikation, der skaber stærke relationer</h2>
-        <p class="z-[10] text-gray-50 col-span-10 pb-12">
+      <div class="absolute inset-0 md:pt-desktop-top pt-mobile-top max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center">
+        <h1 class="display pb-4 text-gray-50 col-span-12">Kadaver</h1>
+        <h2 class="text-h3-mobile md:text-h3-desktop md:pb-8 text-gray-50 col-span-12 lg:col-span-8 xl:col-span-6">
+          Kreativ kommunikation, der skaber stærke relationer
+        </h2>
+        <p class="text-gray-50 col-span-12 lg:col-span-10 xl:col-span-8 pb-12">
           Vi skaber indhold, der engagerer og inspirerer. Hos Kadaver forstår vi kraften i kreativ kommunikation og brænder for at hjælpe brands med
           at finde deres unikke stemme. Gennem strategisk storytelling og innovative løsninger, bygger vi forbindelser, der rækker ud over det
           sædvanlige og skaber varige relationer med dit publikum.
         </p>
-        <div class="btn_container flex flex-row gap-12 col-span-12">
+        <div class="btn_container flex flex-row gap-6 md:gap-12 col-span-12">
           <a href="/kontakt">
             <Button variant="secondary" size="medium">Kontakt os</Button>
           </a>
@@ -43,84 +45,59 @@ import Carrousel from "../components/Carrousel.astro";
     </div>
   </section>
 
-  <section id="info-section" class="mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-12 items-center justify-center">
-    <div class="info-container1 pb-16 col-span-10 col-start-2">
-      <h3 class="pb-4 md:pb-2">Hvem er vi?</h3>
-      <div class="flex flex-col md:flex-row md:items-center gap-12">
+  <section id="info-section" class="mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center justify-center">
+    <div class="info-container1 pb-8 col-span-12 lg:col-span-8 xl:col-span-6 lg:col-start-2 md:col-start-2">
+      <h3 class="pb-2 md:pb-4">Hvem er vi?</h3>
+      <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
         <p>
-          Kadaver er et kreativt brand- og contentbureau, der tænker anderledes, udfordrer status quo og skaber oplevelser, der engagerer og
-          inspirerer. Vi kombinerer strategi, design og storytelling for at bringe idéer til live.
+          Kadaver er et kreativt brand- og contentbureau, der bryder med normen og skaber oplevelser, der både engagerer og inspirerer. Vi forener
+          strategi, design og storytelling for at bringe idéer til live. Vi er passionerede omkring at forstå dine behov, udforske nye muligheder og
+          skabe kreative løsninger, der bygger varige forbindelser med dit publikum.
         </p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          class="size-28 hover:text-violet-600 transition duration-300 ease-in-out"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 0 1-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 0 1-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 0 1-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584ZM12 18a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
-            clip-rule="evenodd"></path>
-        </svg>
       </div>
     </div>
-    <div class="info-container2 pb-16 col-span-10 col-start-2">
-      <h3 class="pb-8 md:pb-4">Hvad laver vi?</h3>
-      <div class="flex flex-col md:flex-row md:items-center gap-12">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-28 hover:text-blue-700 transition duration-300 ease-in-out"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
-          ></path>
-        </svg>
+    <div class="info-container2 pb-8 col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-6 lg:col-start-2 md:col-start-2">
+      <h3 class="pb-2 md:pb-4">Hvad laver vi?</h3>
+      <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
+        <p>
+          Vi skaber kampagner, brandoplevelser og innovative løsninger, der bryder grænser. Uanset om det drejer sig om events, branding eller
+          digitale koncepter, udvikler vi unikke løsninger, der får folk til at stoppe op og engagere sig. Vores mål er at skabe ægte forbindelser,
+          der efterlader et varigt indtryk.
+        </p>
+      </div>
+    </div>
+    <div class="info-container3 col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-6 lg:col-start-2 md:col-start-2">
+      <h3 class="pb-2 md:pb-4">Vores tilgang</h3>
+      <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
+        <p>
+          Vi tror på, at de bedste resultater opstår gennem tæt samarbejde. Ved at dykke ned i udfordringerne tænker vi kreativt og finder løsninger,
+          der både overrasker og skaber værdi. Vores proces er drevet af nysgerrighed, eksperimenter og en passion for at skabe noget nyt, der gør en
+          forskel.
+        </p>
+      </div>
+    </div>
 
-        <p>
-          Vi skaber stærke kampagner, engagerende brandoplevelser og innovative løsninger, der rykker grænser. Uanset om det er events, branding eller
-          digitale koncepter, udvikler vi skræddersyede løsninger, der får folk til at stoppe op og interagere.
-        </p>
-      </div>
-    </div>
-    <div class="info-container3 col-span-10 col-start-2">
-      <h3 class="pb-4 md:pb-2">Vores tilgang</h3>
+    <!-- New paragraph section -->
+    <div class="info-container4 col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-6 lg:col-start-2 md:col-start-2">
+      <h3 class="md:pt-0 pt-8 pb-2 md:pb-4">Vores process</h3>
       <div class="flex flex-col md:flex-row md:items-center gap-12">
         <p>
-          Vi tror på, at de bedste resultater opstår i samarbejde. Vi dykker ned i udfordringer, tænker kreativt og finder unikke løsninger, der både
-          overrasker og skaber værdi. Vores proces er drevet af nysgerrighed, eksperimenter og en lyst til at skabe noget nyt.
+          Vi brænder for at sætte os ind i dine ambitioner, opdage nye muligheder og skabe løsninger, der både er praktiske og kreative. Vores proces
+          bygger på samarbejde, så vi altid er i tæt dialog med dig, fra idé til færdigt resultat. Sammen sikrer vi, at din vision bliver til
+          virkelighed.
         </p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-28 hover:text-violet-600 transition duration-300 ease-in-out"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
-          ></path>
-        </svg>
       </div>
     </div>
   </section>
 
   <section class="highlighted_cases mt-20 md:mt-32">
-    <div class="max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-12 items-center justify-center">
-      <div class="col-span-10 col-start-2">
-        <h3 class="pb-8 md:pb-4">Highlightede cases</h3>
-        <div class="flex flex-col md:flex-row md:items-center gap-12">
+    <div class="max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center justify-center">
+      <div class="col-span-12">
+        <h3 class="pb-2 md:pb-4">Highlightede cases</h3>
+        <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
           <p>
-            Vil du se, hvordan vores værdier kommer til live? Dyk ned i vores cases, og oplev, hvordan vi skaber engagerende kampagner, der efterlader
-            et varigt indtryk.
+            Er du nysgerrig på, hvordan vores værdier bliver til handling? Tag et kig på vores cases, <br class="hidden md:block" /> og se, hvordan vi
+            skaber kampagner, der engagerer og skaber langvarige indtryk.
           </p>
         </div>
         <Carrousel />
@@ -133,12 +110,13 @@ import Carrousel from "../components/Carrousel.astro";
     </div>
   </section>
 
-  <section class="contact pb-16 mt-20 md:mt-32 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-20 justify-center">
-    <div class="col-span-8 col-start-2">
-      <h3 class="pb-8 md:pb-4">Har du en idé? Lad os gøre den til virkelighed</h3>
+  <section class="contact pb-16 mt-20 md:mt-32 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
+    <div class="col-span-10 md:col-span-8 md:col-start-2">
+      <h3 class="pb-2 md:pb-4">Har du en idé? Lad os gøre <br class="hidden md:block" /> den til virkelighed</h3>
       <p class="pb-4">
-        Har du en idé, et projekt eller en udfordring, vi kan hjælpe med? Lad os tage en snak om, hvordan vi kan skabe engagerende og kreative
-        løsninger sammen. Kontakt os i dag— vi glæder os til at høre fra dig!
+        Har du en idé, et projekt eller en udfordring, vi kan hjælpe med? Lad os tage en snak om, <br class="hidden md:block" /> hvordan vi sammen kan
+        skabe kreative løsninger, der inspirerer og fanger opmærksomhed.<br class="hidden md:block" />Kontakt os i dag&mdash; vi glæder os til at høre
+        fra dig!
       </p>
       <div class="btn_container pt-6">
         <a href="/kontakt">
@@ -146,7 +124,7 @@ import Carrousel from "../components/Carrousel.astro";
         </a>
       </div>
     </div>
-    <div class="col-span-2 flex justify-center items-center">
+    <div class="hidden md:block col-span-2 content-center">
       <img src="/images/logo_gradient.gif" alt="Logo for Kadaver" class="w-40 h-40" />
     </div>
   </section>
@@ -166,6 +144,7 @@ import Carrousel from "../components/Carrousel.astro";
     .float {
       animation: float 3s ease-in-out infinite;
     }
+
     html {
       scroll-behavior: smooth;
     }
