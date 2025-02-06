@@ -71,13 +71,13 @@
   a,
   li {
     @apply text-gray-950;
-    @apply text-a-mobile;
+    @apply text-p-mobile;
   }
 
   @screen md {
     a,
     li {
-      @apply text-a-desktop;
+      @apply text-p-desktop;
     }
 
     .btn_container a {
