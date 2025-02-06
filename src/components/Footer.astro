@@ -2,6 +2,73 @@
 
 ---
 
-<div>
-  <p>Footer - tilføj footerindhold</p>
-</div>
+<!-- Footer til mobil format -->
+<footer class="bg-gray-950">
+  <section class="max-w-7xl mx-auto pt-12 pb-6 px-8">
+    <section class="grid md:grid-cols-3 gap-4">
+      <!-- Left Section -->
+      <div class="md:pb-0 pb-4">
+        <a href="/">
+          <img
+            class="h-24 w-auto pb-6 transform hover:-translate-y-1 transition duration-300 ease-in-out hover:opacity-70"
+            src="/favicon.svg"
+            alt="logo"
+          />
+        </a>
+        <p class="text-gray-50">Wilders Plads 5</p>
+        <p class="text-gray-50">1403 København K</p>
+        <p class="pb-6 text-gray-50">Danmark</p>
+        <p class="text-gray-50">CVR: 33047940</p>
+      </div>
+
+      <!-- Links Section (3 Columns) -->
+      <div class="grid md:grid-cols-3 grid-cols-1 h-[100px]">
+        <a href="/listview" class="order-1 h-fit text-gray-50 no-underline hover:text-opacity-50 hover:underline transition duration-300 ease-in-out"
+          >Cases</a
+        >
+        <a href="/om_os" class="order-5 h-fit text-gray-50 no-underline hover:text-opacity-50 hover:underline transition duration-300 ease-in-out"
+          >Om os</a
+        >
+        <a
+          href="/studieleje"
+          class="order-2 h-fit text-gray-50 no-underline hover:text-opacity-50 hover:underline transition duration-300 ease-in-out">Studieleje</a
+        >
+        <a href="/praktik" class="order-4 h-fit text-gray-50 no-underline hover:text-opacity-50 hover:underline transition duration-300 ease-in-out"
+          >Praktik</a
+        >
+        <a href="/kontakt" class="order-3 h-fit text-gray-50 no-underline hover:text-opacity-50 hover:underline transition duration-300 ease-in-out"
+          >Kontakt os</a
+        >
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="md:pt-0 pt-12 flex flex-col md:items-end items-start justify-center max-w-7xl gap-4">
+        <div class="flex gap-5 pb-6">
+          <a href="https://facebook.com">
+            <img
+              class="w-[26px] transform hover:-translate-y-1 transition duration-300 ease-in-out hover:opacity-70"
+              src="/images/facebook.svg"
+              alt="Facebook ikon"
+            />
+          </a>
+          <a href="https://instagram.com">
+            <img
+              class="w-12 transform hover:-translate-y-1 transition duration-300 ease-in-out hover:opacity-70"
+              src="/images/instagram.svg"
+              alt="Instagram ikon"
+            />
+          </a>
+          <a href="https://linkedin.com">
+            <img
+              class="w-12 transform hover:-translate-y-1 transition duration-300 ease-in-out hover:opacity-70"
+              src="/images/linkedin.svg"
+              alt="Linkedin ikon"
+            />
+          </a>
+        </div>
+        <!-- Copyright Section Below SoMe Icons -->
+        <p class="text-gray-50 md:mt-24">2025 © Kadaver ApS</p>
+      </div>
+    </section>
+  </section>
+</footer>
