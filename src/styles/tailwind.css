@@ -76,6 +76,10 @@
   .email {
     @apply font-gilroy-regularitalic text-gray-400 underline;
   }
+  .btn_container a {
+    @apply font-bold text-gray-50;
+    @apply text-[16px];
+  }
 
   a,
   li {
@@ -87,11 +91,6 @@
     a,
     li {
       @apply text-p-desktop;
-    }
-
-    .btn_container a {
-      @apply font-bold text-gray-50;
-      @apply text-[16px];
     }
   }
 }
