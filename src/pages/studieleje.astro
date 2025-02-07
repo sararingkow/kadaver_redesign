@@ -8,9 +8,97 @@ import MainLayout from "../layouts/MainLayout.astro";
   ogtitle="Kadaver - studieleje-side"
   ogdescription="Kadaver's studieleje-side"
 >
-  <section class="pt-desktop-top max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
-    <div class="col-span-12">
+  <section class="top-section mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6">
+    <div class="col-span-12 text-left">
       <h1 class="display md:mt-24 mt-16 mb-4">Studieleje</h1>
+      <hr class="border-blue-700 border-4 w-[190px] md:w-[335px] md:mb-16 mb-8" />
+    </div>
+    <div class="col-span-12">
+      <img src="/images/studio_placeholder.webp" class="w-full object-cover rounded-sm" alt="Studieleje - placeholder-billede" />
+    </div>
+  </section>
+
+  <section class="info_list mt-20 md:mt-24 pb-8 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6">
+    <div class="col-span-12">
+      <h2 class="md:mt-24 mt-16 md:mb-12 mb-4">Alt du skal vide om studiet</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="flex flex-col">
+          <img src="/images/mandatory.webp" class="w-full object-cover rounded-sm" alt="Obligatorisk info" />
+          <h3 class="mt-8 mb-4">Obligatorisk</h3>
+          <ul class="space-y-4">
+            <li><span class="bold">Beliggenhed:</span><br />Wilders Plads 5, 1403 KBH K</li>
+            <li><span class="bold">Pris pr. dag:</span><br />2950,- kr. ekskl. moms</li>
+            <li><span class="bold">Tidsrum:</span><br />8-17</li>
+            <li><span class="bold">Areal:</span><br />40 m2 + klippestudie på 12,5 m2</li>
+            <li><span class="bold">Højde:</span><br />3 m</li>
+            <li><span class="bold">Rumhorisont:</span><br />18 m2 <em>(Kan males efter aftale)</em></li>
+            <li><span class="bold">Adgang:</span><br />Direkte fra parkeringsplads i stueplan</li>
+            <li><span class="bold">Internet:</span><br />Ja</li>
+          </ul>
+        </div>
+        <div class="flex flex-col">
+          <img src="/images/technical.webp" class="w-full object-cover rounded-sm" alt="Teknisk info" />
+          <h3 class="mt-8 mb-4">Teknisk</h3>
+          <ul class="space-y-4">
+            <li><span class="bold">Green-screen:</span> Ja</li>
+            <li><span class="bold">Baggrunde:</span> Ja, mange forskellige farver</li>
+            <li><span class="bold">Lydisoleret:</span> Delvist</li>
+            <li><span class="bold">Akustik-behandlet:</span> Ja</li>
+            <li><span class="bold">Mulighed for mørklægning:</span> Ja</li>
+            <li><span class="bold">Lys:</span> Mulighed for opsætning i loft- og standerlamper</li>
+            <li><span class="bold">El:</span> 18 amp udtag</li>
+            <li><span class="bold">Musikanlæg:</span> Ja</li>
+            <li><span class="bold">Makeup-station:</span> Ja</li>
+            <li><span class="bold">Lounge:</span> Ja</li>
+            <li><span class="bold">Tekøkken:</span> Ja</li>
+          </ul>
+        </div>
+        <div class="flex flex-col">
+          <img src="/images/rent.webp" class="w-full object-cover rounded-sm" alt="Udstyrsleje" />
+          <h3 class="mt-8 mb-4">Udstyrsleje</h3>
+          <ul class="space-y-4">
+            <li>
+              <span class="bold">Kamera:</span> Sony a7s iii + Atomos Ninja V recorder inkl. diske: <span class="bold underline">800 kr. pr. dag</span
+              >
+            </li>
+            <li>
+              <span class="bold">Objektiv:</span> SONY (E) FE 28-135MM F/4 PZ G OSS Ø95: <span class="bold underline">500 kr. pr. dag</span>
+            </li>
+            <li><span class="bold">Gimbal:</span> ZHIYUN CRANE 3S: <span class="bold underline">500 kr. pr. dag</span></li>
+            <li>
+              <span class="bold">Lys:</span>
+              <ul class="space-y-2">
+                <li>5 x Area 48 LED: <span class="bold underline">250 kr. pr. dag</span></li>
+                <li>1 x Soft boks Nanlite Compac 200B: <span class="bold underline">250 kr. pr. dag</span></li>
+                <li>2 x Boling LED Slim line BL-2280P. 5500 Kelvin: <span class="bold underline">200 kr. pr. stk. pr. dag</span></li>
+                <li>Diverse lysstofrør og stativer: <span class="bold underline">Pris efter aftale</span></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="image_section mt-20 md:mt-24 md:pb-0 pb-16">
+    <div class="max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center items-center">
+      <div class="col-span-12 md:col-span-10 md:col-start-2">
+        <img src="/images/image_section.webp" alt="Billede-sektion" class="w-full object-cover rounded-sm" />
+      </div>
+    </div>
+  </section>
+
+  <section class="contact pb-16 mt-20 md:mt-32 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
+    <div class="md:col-span-7 col-span-12 md:col-start-2 flex flex-col justify-center md:items-start">
+      <h3 class="pb-2 md:pb-4">Kontakt</h3>
+      <p class="pb-2 md:pb-4">
+        Hvis du har spørgsmål om leje eller har brug for yderligere information omkring vores studie, er du velkommen til at kontakte Carl Johannes
+        Borris på: <br /><br />
+        <span class="bold">borris@kadaver.dk <br />+45 2636 5015</span>
+      </p>
+    </div>
+    <div class="col-span-8 md:col-span-3 flex md:justify-center">
+      <img src="/images/borris_contact.svg" alt="Billede af Johannes" class="w-[290px] h-[386.77px]" />
     </div>
   </section>
 </MainLayout>
