@@ -67,8 +67,14 @@
   .name {
     @apply font-gilroy-bold text-gray-950 text-center text-h3-mobile;
   }
+
+  .sub-element {
+    @apply font-gilroy-bold text-gray-950;
+  }
+
   @screen md {
-    .name {
+    .name,
+    .sub-element {
       @apply text-p-desktop font-gilroy-bold;
     }
   }
