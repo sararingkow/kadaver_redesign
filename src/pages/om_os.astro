@@ -4,74 +4,59 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Kadaver | Om os" description="Kadaver - om os" ogtitle="Kadaver - om os side" ogdescription="Kadaver's om os side">
-  <section class="top-section mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
-    <div class="col-span-12">
+  <section class="top-section mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6">
+    <div class="col-span-12 text-left">
       <h1 class="display md:mt-24 mt-16 mb-4">Om os</h1>
       <hr class="border-blue-700 border-4 w-[100px] md:w-[180px] mb-16" />
     </div>
     <div class="col-span-12 md:col-span-9 max-w-4xl">
-      <h3 class="pb-2 md:pb-4">Kadaver – et resultatdrevet brand- & contentbureau</h3>
+      <h2 class="text-h3-mobile md:text-h3-desktop pb-2 md:pb-4">Kadaver – et resultatdrevet brand- & contentbureau</h2>
       <p class="md:pb-4 pb-8">
-        Vi inspirerer, engagerer og aktiverer bestemte målgrupper på vegne af vores kunder. Kadavers brief-proces er undersøgende og dybdegående, så
-        vi kan finde og bruge de ukendte, ufortalte, og ofte ikke værdsatte elementer af et produkt, kampagne, eller brands historie, som input til
-        den kreative proces. Resultatet er en styrket strategisk positionering og opfyldelse af de interne mål. Vi underholder og inspirerer vores
-        målgrupper for at opbygge en stærk og bæredygtig relation over tid, der skaber loyalitet, awareness og salg. Identifikationen ligger i de
-        værdier mennesker kan se sig selv i, og det er det der gør kommunikation vedkommende og effektiv. Vi følger alle visioner og drømme, som vi
-        kan føle og forstå. <br /><br />
-        <span class="sub-element">Vi glæder os til at høre om dine udfordringer!</span>
+        Vi inspirerer, engagerer og skaber handling for vores kunders målgrupper. Hos Kadaver dykker vi dybt ned i hvert projekt for at finde de
+        skjulte historier, de oversete detaljer og de autentiske værdier, der gør et brand unikt. Det er vores kreative brændstof.
+        <br />
+        Med en strategisk tilgang forvandler vi indsigt til stærke kampagner, der ikke bare vækker opmærksomhed, men også skaber ægte forbindelser og målbare
+        resultater. Vi underholder, vi inspirerer&mdash; og vi bygger relationer, der holder. Når mennesker kan spejle sig i et brands værdier, bliver
+        kommunikationen ikke bare relevant, men også meningsfuld.
+        <br /><br />
+        <span class="sub-element"
+          >Hos os handler det ikke om at følge trends&mdash; det handler om at følge visioner, <br class="hidden md:block" />vi virkelig kan mærke og
+          forstå.</span
+        >
       </p>
     </div>
-    <div class="mb-20 md:mb-24 flex md:items-center items-start md:justify-center md:col-span-3 col-span-6 gap-gap">
+    <div class="col-span-12 md:col-span-3 flex md:justify-center justify-start items-center md:pb-0 pb-10">
       <img src="/images/logo_gradient.gif" alt="Logo for Kadaver" class="md:w-52 md:h-52 w-40 h-40" />
     </div>
   </section>
-  <section class="max-w-7xl mt-20 md:mt-24 pb-20 mx-auto md:px-0 px-8 grid grid-cols-12 items-center content-center">
+
+  <section class="max-w-7xl mt-20 md:mt-24 pb-20 mx-auto md:px-0 px-8 grid grid-cols-12 items-center justify-center">
     <div class="col-span-12">
-      <div class="flex flex-col md:flex-row gap-12 justify-center">
-        <img
-          src="/images/ydelser1.svg"
-          alt="Ydelser 1"
-          class="hover:-translate-y-2 transition duration-300 ease-in-out object-cover w-[fit-content] h-44"
-        />
-        <img
-          src="/images/ydelser2.svg"
-          alt="Ydelser 2"
-          class="hover:-translate-y-2 transition duration-300 ease-in-out object-cover w-[fit-content] h-44"
-        />
-        <img
-          src="/images/ydelser3.svg"
-          alt="Ydelser 3"
-          class="hover:-translate-y-2 transition duration-300 ease-in-out object-cover w-[fit-content] h-44"
-        />
-        <img
-          src="/images/ydelser4.svg"
-          alt="Ydelser 4"
-          class="hover:-translate-y-2 transition duration-300 ease-in-out object-cover w-[fit-content] h-44"
-        />
-        <img
-          src="/images/ydelser5.svg"
-          alt="Ydelser 5"
-          class="hover:-translate-y-2 transition duration-300 ease-in-out object-cover w-[fit-content] h-44"
-        />
+      <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-16">
+        <img src="/images/ydelser1.svg" alt="Ydelser 1" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
+        <img src="/images/ydelser2.svg" alt="Ydelser 2" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
+        <img src="/images/ydelser3.svg" alt="Ydelser 3" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
+        <img src="/images/ydelser4.svg" alt="Ydelser 4" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
+        <img src="/images/ydelser5.svg" alt="Ydelser 5" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
       </div>
     </div>
   </section>
+
   <section class="highlighted_cases mt-20 md:mt-24 flex justify-center items-center">
-    <div class="max-w-7xl mx-auto pb-16 md:px-0 px-8 grid grid-cols-12 items-center justify-center">
+    <div class="max-w-7xl mx-auto pb-16 md:px-0 px-8 grid grid-cols-12 gap-6 items-center justify-center">
       <div class="col-span-12">
         <h3 class="pb-2 md:pb-4">Vores arbejde i praksis</h3>
-        <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
-          <p>
-            Vi tror på, at kreative løsninger starter med stærke idéer. Udforsk vores cases, og se<br class="hidden md:block" /> hvordan vi har hjulpet
-            brands med at formidle deres historier på nye og inspirerende <br class="hidden md:block" /> måder.
-          </p>
-        </div>
+        <p>
+          Vi tror på, at kreative løsninger starter med stærke idéer. Udforsk vores cases, og se<br class="hidden md:block" />
+          hvordan vi har hjulpet brands med at formidle deres historier på nye og inspirerende <br class="hidden md:block" />
+          måder.
+        </p>
         <div class="btn_container md:pt-5 pt-6 md:pb-12 pb-8">
           <a href="/listview">
             <Button variant="primary" size="medium">Udforsk cases</Button>
           </a>
         </div>
-        <img src="/images/top_cases.webp" alt="Cases" class="w-full h-full object-cover rounded-sm" />
+        <img src="/images/top_cases.webp" alt="Cases" class="shadow-drop25 w-full h-auto object-cover rounded-sm" />
       </div>
     </div>
   </section>
