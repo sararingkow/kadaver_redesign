@@ -73,6 +73,10 @@
       @apply font-gilroy-bold text-gray-950;
     }
 
+    .email {
+      @apply text-gray-500 underline;
+    }
+
     /* Button Text */
     .btn_container a {
       @apply font-gilroy-bold text-gray-50 text-[16px];
