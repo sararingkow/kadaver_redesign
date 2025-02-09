@@ -33,4 +33,26 @@ import MainLayout from "../layouts/MainLayout.astro";
       <img src="/images/mentoring.svg" alt="Grafik for mentorordning" class="w-40 h-40" />
     </div>
   </section>
+
+  <section class="internship_info mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
+    <!-- Properly aligned h2 -->
+    <h2 class="pb-4 md:pb-8 col-span-10 text-left">Livet som praktikant</h2>
+
+    <!-- Flex container with correct grid placement -->
+    <div class="col-span-12 flex flex-col md:flex-row items-center md:items-stretch gap-6">
+      <!-- Image container -->
+      <div class="flex justify-center">
+        <img src="/images/mikkel.webp" alt="Grafik for mentorordning" class="w-[450px] h-[400px] object-cover rounded-sm" />
+      </div>
+
+      <!-- Text-box container -->
+      <div class="bg-gray-100 p-20 rounded-sm w-[fit-content] flex flex-col justify-center shadow-drop25">
+        <h3 class="md:pb-8 pb-4">Mikkel Thorbøll Jensen, junior kreativ</h3>
+        <blockquote class="pb-4 italic">
+          "Jeg fik muligheden for at være med på virkelig fede projekter, som jeg selv var med til at starte. Det er en af mange grunde til at man
+          føler sig meget set og værdsat som praktikant hos Kadaver."
+        </blockquote>
+      </div>
+    </div>
+  </section>
 </MainLayout>

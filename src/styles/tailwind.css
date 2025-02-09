@@ -52,13 +52,15 @@
   /* Paragraph & Body Text */
   p,
   a,
-  li {
+  li,
+  blockquote {
     @apply font-gilroy-regular text-gray-950 text-p-mobile;
   }
   @screen md {
     p,
     a,
-    li {
+    li,
+    blockquote {
       @apply text-p-desktop;
     }
   }
