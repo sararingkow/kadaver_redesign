@@ -325,13 +325,13 @@ import Button from "./Button.astro";
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 col-span-12">
   {
     cards.map((card) => (
-      <div class="block max-w-7xl rounded-sm overflow-hidden shadow-drop25 bg-gray-100 hover:-translate-y-1 transition-transform duration-300">
+      <div class="flex flex-col max-w-7xl rounded-sm overflow-hidden shadow-drop25 bg-gray-100 hover:-translate-y-1 transition-transform duration-300 h-full">
         <img src={card.image} alt={card.title} class="w-full h-[350px] object-cover" />
-        <div class="p-6 items-center">
+        <div class="p-6 flex-grow">
           <h4>{card.title}</h4>
           <p class="bold text-gray-700 mt-2">{card.subtitle}</p>
         </div>
-        <div class="btn_container p-4 flex justify-start">
+        <div class="btn_container p-4 flex justify-start mt-auto">
           <a href="/singleview">
             <Button variant="primary" size="small">
               Se mere
