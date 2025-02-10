@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Kadaver | Praktik" description="Kadaver - praktik" ogtitle="Kadaver - praktik-side" ogdescription="Kadaver's praktik-side">
@@ -12,9 +13,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 
   <section class="info_image mt-20 md:mt-24 pb-8 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6">
     <div class="flex flex-col md:flex-row col-span-12 items-center">
-      <img src="/images/internship1.svg" alt="Grafik for mentorordning" class="w-fit object-cover" />
-      <img src="/images/internship2.svg" alt="Grafik for mentorordning" class="w-fit object-cover" />
-      <img src="/images/internship3.svg" alt="Grafik for mentorordning" class="w-fit object-cover" />
+      <img src="/images/internship1.svg" alt="Grafik for mentorordning" class="w-fit object-cover shadow-drop25" />
+      <img src="/images/internship2.svg" alt="Grafik for mentorordning" class="w-fit object-cover shadow-drop25" />
+      <img src="/images/internship3.svg" alt="Grafik for mentorordning" class="w-fit object-cover shadow-drop25" />
     </div>
   </section>
 
@@ -22,11 +23,10 @@ import MainLayout from "../layouts/MainLayout.astro";
     <div class="col-span-6 md:col-span-8 md:col-start-2">
       <h2 class="pb-4 md:pb-8">Mentorordning</h2>
       <p class="pb-4">
-        Det er vigtigt for os, at du får mest mulig uddannelse og læring ud af dit praktikforløb. Derfor får du indledningsvis tildelt en mentor, som
-        arbejder specialiseret inden for det felt, du som praktikant ønsker at lære noget om.
-        <br /><br />
-        Denne mentor vil følge dig under hele dit forløb og hjælpe dig med både at falde til i de forskellige projekter, men også i det sociale liv pả
-        kontoret, som vi vægter højt hos Kadaver.
+        Hos os handler dit praktikforløb om mere end bare erfaring&mdash; det handler om læring og udvikling. Derfor får du fra start en mentor, der
+        er specialiseret inden for netop det område, du brænder for at dykke ned i. <br /><br />Din mentor følger dig gennem hele forløbet, hjælper
+        dig med at finde fodfæste i projekterne og sørger for, at du bliver en del af det sociale fællesskab på kontoret&mdash; for hos Kadaver vægter
+        vi både faglig og personlig udvikling højt.
       </p>
     </div>
     <div class="hidden md:block col-span-3 content-center">
@@ -42,17 +42,49 @@ import MainLayout from "../layouts/MainLayout.astro";
     <div class="col-span-12 flex flex-col md:flex-row items-center md:items-stretch gap-6">
       <!-- Image container -->
       <div class="flex justify-center">
-        <img src="/images/mikkel.webp" alt="Grafik for mentorordning" class="w-[450px] h-[400px] object-cover rounded-sm" />
+        <img src="/images/mikkel.webp" alt="Grafik for mentorordning" class="w-[450px] h-[400px] object-cover rounded-sm shadow-drop25" />
       </div>
 
       <!-- Text-box container -->
-      <div class="bg-gray-100 p-20 rounded-sm w-[fit-content] flex flex-col justify-center shadow-drop25">
+      <div class="bg-gray-100 px-12 py-12 rounded-sm w-[fit-content] flex flex-col justify-center shadow-drop25">
         <h3 class="md:pb-8 pb-4">Mikkel Thorbøll Jensen, junior kreativ</h3>
-        <blockquote class="pb-4 italic">
+        <blockquote class="max-w-3xl italic">
           "Jeg fik muligheden for at være med på virkelig fede projekter, som jeg selv var med til at starte. Det er en af mange grunde til at man
           føler sig meget set og værdsat som praktikant hos Kadaver."
         </blockquote>
       </div>
+    </div>
+  </section>
+  <section class="after_internship relative pb-8 mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
+    <!-- Image container with text overlay -->
+    <div class="relative flex justify-center col-span-12">
+      <img src="/images/scribble.svg" alt="Logo for Kadaver" class="w-[fit-content] h-[fit-content] object-cover" />
+
+      <!-- Text-box container positioned over the image -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <h2 class="pb-2 md:pb-4">Efter endt praktik</h2>
+        <p class="max-w-[80%] md:max-w-[70%]">
+          Når du er i praktik hos os, arbejder vi altid med et mål om, at du skal være klar til erhvervslivet efter dit praktikforløb&mdash; og altid
+          med en forhåbning om, at vores samarbejde er så godt, at du kan fortsætte hos os.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="contact pb-16 mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
+    <div class="col-span-10 md:col-span-8 md:col-start-2">
+      <h3 class="pb-2 md:pb-4">Kom forbi og mød os</h3>
+      <p class="pb-4">
+        Kom forbi vores kontor og mærk stemningen, før du søger praktik! Vi byder dig velkommen til en uformel snak om mulighederne&mdash; og du får
+        et indblik i, hvem vi er.
+      </p>
+      <div class="btn_container pt-6">
+        <a href="/kontakt">
+          <Button variant="primary" size="medium">Gå til kontakt-siden</Button>
+        </a>
+      </div>
+    </div>
+    <div class="hidden md:block col-span-2 content-center">
+      <img src="/images/logo_gradient.gif" alt="Logo for Kadaver" class="w-40 h-40" />
     </div>
   </section>
 </MainLayout>
