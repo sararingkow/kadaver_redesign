@@ -1,0 +1,45 @@
+---
+export async function getStaticPaths() {
+  const url = "https://etfzcwwaduzutwwheiym.supabase.co/rest/v1/listview_cards";
+  const options = {
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV0Znpjd3dhZHV6dXR3d2hlaXltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzkyOTA0OTgsImV4cCI6MjA1NDg2NjQ5OH0.eWWrVOojbo44O3j_JsvadaZLHF_ShsNuuKG8SWxRWVA",
+    },
+  };
+  const response = await fetch(url, options);
+  const cards = await response.json();
+  return cards.map((card) => {
+    return {
+      params: { slug: card.slug },
+      props: { card },
+    };
+  });
+}
+
+const { card } = Astro.props;
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Kadaver | Cases" description="Kadaver - cases" ogtitle="Kadaver - case-side" ogdescription="Kadaver's case-side">
+  <section class="mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
+    <div class="col-span-12 pb-16">
+      <h1 class="display md:mt-24 mt-16 mb-4">{card.title}</h1>
+      <h2 class="text-h3-desktop mt-2">{card.subtitle}</h2>
+    </div>
+
+    <div class="flex md:flex-row flex-col col-span-12 gap-8">
+      <div class="md:w-[700px] w-full">
+        <img src={card.image} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[400px] object-cover" />
+      </div>
+      <div class="md:pl-16 pl-0 flex flex-col">
+        <h3 class="text-h4-desktop">Type:</h3>
+        <p>{card.type}</p>
+        <h3 class="text-h4-desktop md:mt-8 mt-4">Målgruppe:</h3>
+        <p>{card.group}</p>
+        <h3 class="text-h4-desktop md:mt-8 mt-4">Medier:</h3>
+        <p>{card.media}</p>
+      </div>
+    </div>
+  </section>
+</MainLayout>
