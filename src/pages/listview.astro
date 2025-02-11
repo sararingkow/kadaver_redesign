@@ -17,3 +17,18 @@ import Cards from "../components/Cards.astro";
     </div>
   </section>
 </MainLayout>
+
+<script>
+  import { inView } from "motion";
+
+  /* inView Animations */
+  const elementmedanimation1 = document.querySelector("h1");
+  inView(elementmedanimation1, () => {
+    elementmedanimation1.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const elementmedanimation2 = document.querySelector("hr");
+  inView(elementmedanimation2, () => {
+    elementmedanimation2.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+</script>
