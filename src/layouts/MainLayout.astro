@@ -59,3 +59,9 @@ const { title } = Astro.props;
     scroll-behavior: smooth;
   }
 </style>
+
+<script>
+  import { animate } from "motion";
+  /*Entrance Animation*/
+  animate("body", { opacity: [0, 1] }, { duration: 1 });
+</script>

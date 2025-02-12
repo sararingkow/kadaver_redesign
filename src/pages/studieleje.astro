@@ -13,7 +13,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <h1 class="display md:mt-24 mt-16 mb-4">Studieleje</h1>
       <hr class="border-blue-700 border-4 w-[190px] md:w-[335px] md:mb-16 mb-8" />
     </div>
-    <div class="col-span-12">
+    <div class="image col-span-12">
       <img src="/images/studio_placeholder.webp" class="w-full object-cover rounded-sm" alt="Studieleje - placeholder-billede" />
     </div>
   </section>
@@ -21,7 +21,7 @@ import MainLayout from "../layouts/MainLayout.astro";
   <section class="info_list mt-20 md:mt-32 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12">
     <div class="col-span-12">
       <h2 class="md:mt-16 mt-8 md:mb-12 mb-4">Alt du skal vide om studiet</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="list grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="flex flex-col">
           <img src="/images/mandatory.webp" class="w-full object-cover rounded-sm" alt="Obligatorisk info" />
           <h3 class="mt-8 mb-4">Obligatorisk</h3>
@@ -89,16 +89,71 @@ import MainLayout from "../layouts/MainLayout.astro";
   </section>
 
   <section class="contact pb-16 mt-20 md:mt-32 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
-    <div class="md:col-span-7 col-span-12 md:col-start-2 flex flex-col justify-center md:items-start">
+    <div class="contact_text md:col-span-7 col-span-12 md:col-start-2 flex flex-col justify-center md:items-start">
       <h3 class="pb-2 md:pb-4">Kontakt</h3>
       <p class="pb-2 md:pb-4">
         Hvis du har spørgsmål om leje eller har brug for yderligere information omkring vores studie, er du velkommen til at kontakte Carl Johannes
         Borris på: <br /><br />
-        <span class="bold">borris@kadaver.dk <br />+45 2636 5015</span>
+        <span
+          ><a href="mailto:borris@kadaver.dk" class="email">borris@kadaver.dk</a><br /><a href="tel:+4526365015" class="phone">+45 2636 5015</a></span
+        >
       </p>
     </div>
-    <div class="col-span-8 md:col-span-3 flex md:justify-center">
-      <img src="/images/borris_contact.svg" alt="Billede af Johannes" class="w-[290px] h-[386.77px]" />
+    <div class="contact_image col-span-8 md:col-span-3 flex md:justify-center">
+      <img
+        src="/images/borris_contact.svg"
+        alt="Billede af Johannes"
+        class="hover:-translate-y-2 transition duration-300 ease-in-out w-[290px] h-[386.77px]"
+      />
     </div>
   </section>
 </MainLayout>
+
+<script>
+  import { inView } from "motion";
+
+  /* inView Animations */
+  const elementmedanimation1 = document.querySelector("h1");
+  inView(elementmedanimation1, () => {
+    elementmedanimation1.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const elementmedanimation2 = document.querySelector("hr");
+  inView(elementmedanimation2, () => {
+    elementmedanimation2.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const elementmedanimation3 = document.querySelector(".image");
+  inView(elementmedanimation3, () => {
+    elementmedanimation3.classList.add("animate__animated", "animate__fadeInDown");
+  });
+
+  const elementmedanimation4 = document.querySelector("h2");
+  inView(elementmedanimation4, () => {
+    elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const columns = document.querySelectorAll(".list > div");
+
+  columns.forEach((column, index) => {
+    inView(column, () => {
+      column.classList.add("animate__animated", "animate__fadeInLeft");
+      column.style.animationDelay = `${index * 0.2}s`; // Delay each column by 0.2s
+    });
+  });
+
+  const elementmedanimation5 = document.querySelector(".image_section");
+  inView(elementmedanimation5, () => {
+    elementmedanimation5.classList.add("animate__animated", "animate__zoomIn");
+  });
+
+  const elementmedanimation6 = document.querySelector(".contact_text");
+  inView(elementmedanimation6, () => {
+    elementmedanimation6.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const elementmedanimation7 = document.querySelector(".contact_image");
+  inView(elementmedanimation7, () => {
+    elementmedanimation7.classList.add("animate__animated", "animate__fadeInRight");
+  });
+</script>

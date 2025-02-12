@@ -12,15 +12,15 @@ import Button from "../components/Button.astro";
   </section>
 
   <section class="info_image mt-20 md:mt-24 pb-8 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6">
-    <div class="flex flex-col md:flex-row col-span-12 items-center">
+    <div class="column flex flex-col md:flex-row col-span-12 items-center">
       <img src="/images/internship1.svg" alt="Grafik for mentorordning" class="w-fit object-cover shadow-drop25" />
       <img src="/images/internship2.svg" alt="Grafik for mentorordning" class="w-fit object-cover shadow-drop25" />
       <img src="/images/internship3.svg" alt="Grafik for mentorordning" class="w-fit object-cover shadow-drop25" />
     </div>
   </section>
 
-  <section class="info_image mt-20 md:mt-24 pb-8 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-20">
-    <div class="col-span-6 md:col-span-8 md:col-start-2">
+  <section class="mentoring mt-20 md:mt-24 pb-8 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-20">
+    <div class="mentoring_text col-span-6 md:col-span-8 md:col-start-2">
       <h2 class="pb-4 md:pb-8">Mentorordning</h2>
       <p class="pb-4">
         Hos os handler dit praktikforløb om mere end bare erfaring&mdash; det handler om læring og udvikling. Derfor får du fra start en mentor, der
@@ -29,7 +29,7 @@ import Button from "../components/Button.astro";
         vi både faglig og personlig udvikling højt.
       </p>
     </div>
-    <div class="hidden md:block col-span-3 content-center">
+    <div class="mentoring_image hidden md:block col-span-3 content-center">
       <img src="/images/mentoring.svg" alt="Grafik for mentorordning" class="w-40 h-40" />
     </div>
   </section>
@@ -41,12 +41,12 @@ import Button from "../components/Button.astro";
     <!-- Flex container with correct grid placement -->
     <div class="col-span-12 flex flex-col md:flex-row items-center md:items-stretch gap-6">
       <!-- Image container -->
-      <div class="flex justify-center">
+      <div class="intern_image flex justify-center">
         <img src="/images/mikkel.webp" alt="Grafik for mentorordning" class="w-[450px] h-[400px] object-cover rounded-sm shadow-drop25" />
       </div>
 
       <!-- Text-box container -->
-      <div class="bg-gray-100 px-12 py-12 rounded-sm w-[fit-content] flex flex-col justify-center shadow-drop25">
+      <div class="intern_text bg-gray-100 px-12 py-12 rounded-sm w-[fit-content] flex flex-col justify-center shadow-drop25">
         <h3 class="md:pb-8 pb-4">Mikkel Thorbøll Jensen, junior kreativ</h3>
         <blockquote class="max-w-3xl italic">
           "Jeg fik muligheden for at være med på virkelig fede projekter, som jeg selv var med til at starte. Det er en af mange grunde til at man
@@ -71,7 +71,7 @@ import Button from "../components/Button.astro";
     </div>
   </section>
   <section class="contact pb-16 mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
-    <div class="col-span-10 md:col-span-8 md:col-start-2">
+    <div class="contact-text col-span-10 md:col-span-8 md:col-start-2">
       <h3 class="pb-2 md:pb-4">Kom forbi og mød os</h3>
       <p class="pb-4">
         Kom forbi vores kontor og mærk stemningen, før du søger praktik! Vi byder dig velkommen til en uformel snak om mulighederne&mdash; og du får
@@ -83,8 +83,72 @@ import Button from "../components/Button.astro";
         </a>
       </div>
     </div>
-    <div class="hidden md:block col-span-2 content-center">
+    <div class="logo hidden md:block col-span-2 content-center">
       <img src="/images/logo_gradient.gif" alt="Logo for Kadaver" class="w-40 h-40" />
     </div>
   </section>
 </MainLayout>
+
+<script>
+  import { inView } from "motion";
+
+  /* inView Animations */
+  const elementmedanimation1 = document.querySelector("h1");
+  inView(elementmedanimation1, () => {
+    elementmedanimation1.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const elementmedanimation2 = document.querySelector("hr");
+  inView(elementmedanimation2, () => {
+    elementmedanimation2.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const images = document.querySelectorAll(".info_image img");
+
+  images.forEach((image, index) => {
+    inView(image, () => {
+      image.classList.add("animate__animated", "animate__fadeInUp");
+      image.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
+    });
+  });
+
+  const elementmedanimation4 = document.querySelector(".mentoring_text");
+  inView(elementmedanimation4, () => {
+    elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const elementmedanimation5 = document.querySelector(".mentoring_image");
+  inView(elementmedanimation5, () => {
+    elementmedanimation5.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const elementmedanimation6 = document.querySelector(".after_internship");
+  inView(elementmedanimation6, () => {
+    elementmedanimation6.classList.add("animate__animated", "animate__zoomIn");
+  });
+
+  const elementmedanimation7 = document.querySelector(".contact-text");
+  inView(elementmedanimation7, () => {
+    elementmedanimation7.classList.add("animate__animated", "animate__slideInLeft");
+  });
+
+  const elementmedanimation8 = document.querySelector(".logo");
+  inView(elementmedanimation8, () => {
+    elementmedanimation8.classList.add("animate__animated", "animate__slideInRight");
+  });
+
+  const elementmedanimation9 = document.querySelector(".intern_image");
+  inView(elementmedanimation9, () => {
+    elementmedanimation9.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const elementmedanimation10 = document.querySelector(".intern_text");
+  inView(elementmedanimation10, () => {
+    elementmedanimation10.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const elementmedanimation11 = document.querySelector(".internship_info h2");
+  inView(elementmedanimation11, () => {
+    elementmedanimation11.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+</script>

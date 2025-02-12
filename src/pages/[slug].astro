@@ -9,30 +9,44 @@ export async function getStaticPaths() {
   };
   const response = await fetch(url, options);
   const cards = await response.json();
+
   return cards.map((card) => {
     return {
       params: { slug: card.slug },
-      props: { card },
+      props: { card, allCards: cards },
     };
   });
 }
 
-const { card } = Astro.props;
+const { card, allCards } = Astro.props;
+
+// Find the index of the current card
+const currentIndex = allCards.findIndex((c) => c.slug === card.slug);
+const prevCard = currentIndex > 0 ? allCards[currentIndex - 1] : null;
+const nextCard = currentIndex < allCards.length - 1 ? allCards[currentIndex + 1] : null;
+
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Kadaver | Cases" description="Kadaver - cases" ogtitle="Kadaver - case-side" ogdescription="Kadaver's case-side">
+<MainLayout
+  title={`Kadaver | ${card.title}`}
+  description={`Kadaver - ${card.title}`}
+  ogtitle={`Kadaver - ${card.subtitle}`}
+  ogdescription={`Kadaver's arbejde for ${card.subtitle}`}
+>
   <section class="mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
     <div class="col-span-12 pb-16">
-      <h1 class="display md:mt-24 mt-16 mb-4">{card.title}</h1>
-      <h2 class="text-h3-desktop mt-2">{card.subtitle}</h2>
+      <h1 class="display md:mt-32 mt-16 mb-4">{card.title}</h1>
+      <h2 class="text-h3-desktop mt-4 mb-2">{card.subtitle}</h2>
     </div>
 
     <div class="flex md:flex-row flex-col col-span-12 gap-8">
       <div class="md:w-[700px] w-full">
-        <img src={card.image} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[400px] object-cover" />
+        <img src={card.image} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[550px] object-cover" />
       </div>
-      <div class="md:pl-16 pl-0 flex flex-col">
+      <div class="md:pl-8 pl-0 flex flex-col">
+        <h2 class="text-h3-desktop">Detaljer</h2>
+        <hr class="border-blue-700 border-4 mb-8 mt-2 w-[185px]" />
         <h3 class="text-h4-desktop">Type:</h3>
         <p>{card.type}</p>
         <h3 class="text-h4-desktop md:mt-8 mt-4">Målgruppe:</h3>
@@ -40,6 +54,26 @@ import MainLayout from "../layouts/MainLayout.astro";
         <h3 class="text-h4-desktop md:mt-8 mt-4">Medier:</h3>
         <p>{card.media}</p>
       </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div
+      class="flex justify-center items-center md:mt-12 mt-2 col-span-12 gap-gap fixed bg-transparent backdrop-blur-sm p-2 rounded-sm w-[fit-content]"
+    >
+      {
+        prevCard && (
+          <a href={`/${prevCard.slug}`} class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center">
+            ← {prevCard.title}
+          </a>
+        )
+      }
+      {
+        nextCard && (
+          <a href={`/${nextCard.slug}`} class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center ml-auto">
+            {nextCard.title} →
+          </a>
+        )
+      }
     </div>
   </section>
 </MainLayout>
