@@ -1,0 +1,82 @@
+---
+const fetchCards = async () => {
+  const response = await fetch("https://etfzcwwaduzutwwheiym.supabase.co/rest/v1/listview_cards", {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV0Znpjd3dhZHV6dXR3d2hlaXltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzkyOTA0OTgsImV4cCI6MjA1NDg2NjQ5OH0.eWWrVOojbo44O3j_JsvadaZLHF_ShsNuuKG8SWxRWVA",
+    },
+  });
+  return response.ok ? await response.json() : [];
+};
+
+const cards = await fetchCards();
+---
+
+<div class="min-h-[350px] relative">
+  <div class="container mx-auto w-full overflow-hidden relative">
+    <div class="w-full h-full absolute">
+      <div class="w-1/4 h-full absolute z-30 left-0" style="background: linear-gradient(to right, #f6f6f6, #f6f6f600);"></div>
+      <div class="w-1/4 h-full absolute z-30 right-0" style="background: linear-gradient(to left, #f6f6f6, #f6f6f600);"></div>
+    </div>
+
+    <div id="logo-slider" class="logo-slider overflow-hidden">
+      <div class="marquee">
+        <div class="carousel-items flex items-center justify-center" style="width: fit-content; animation: marquee 400s infinite linear;">
+          {
+            cards.map((card) => (
+              <div
+                class="carousel-focus flex flex-col relative bg-gray-100 mx-5 my-10 rounded-sm shadow-drop25"
+                style="width: 400px;"
+                aria-label={`View project: ${card.title}`}
+              >
+                <img
+                  class="w-full h-[350px] object-cover rounded-tl-sm rounded-tr-sm border-gray-200 flex-shrink-0"
+                  src={card.image}
+                  alt={`Screenshot of the frontpage for ${card.title}`}
+                />
+                <div class="p-6">
+                  <h4 class="mb-2 ">{card.title}</h4>
+                  <p class="pb-8 bold text-gray-700">{card.subtitle}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Default animation behavior (for users with no preference) */
+  @media (prefers-reduced-motion: no-preference) {
+    .logo-slider {
+      max-width: fit-content;
+      min-width: 320px;
+      width: 100%;
+      display: flex;
+      padding-block: 5px;
+      overflow: hidden; /* Hide overflow for smoother scrolling */
+    }
+
+    .marquee {
+      animation: marquee 400s linear infinite; /* Slower animation */
+    }
+  }
+
+  .carousel-items {
+    opacity: 0.5;
+    filter: grayscale(100%);
+  }
+
+  /* Keyframes for normal-speed marquee */
+  @keyframes marquee {
+    0% {
+      transform: translateX(1%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>

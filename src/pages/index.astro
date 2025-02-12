@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Carrousel from "../components/Carrousel.astro";
+import Carousel from "../components/Carousel.astro";
 ---
 
 <MainLayout title="Kadaver | Hjem" description="Kadaver's forside" ogtitle="Kadaver - forside" ogdescription="Kadaver's forside/startside">
@@ -133,7 +133,7 @@ import Carrousel from "../components/Carrousel.astro";
           clip-rule="evenodd"></path>
       </svg>
 
-      <h3 class="pt-0 md:pt-8 pb-2 md:pb-4">Vores process</h3>
+      <h3 class="md:pt-0 pt-8 pb-2 md:pb-4">Vores process</h3>
       <div class="flex flex-col md:flex-row md:items-center gap-12">
         <p>
           Vi brænder for at sætte os ind i dine ambitioner, opdage nye muligheder og skabe løsninger, der både er praktiske og kreative. Vores proces
@@ -144,162 +144,165 @@ import Carrousel from "../components/Carrousel.astro";
     </div>
   </section>
 
-  <section class="highlighted_cases mt-20 md:mt-32">
+  <section class="our_cases mt-20 md:mt-32">
     <div class="max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center justify-center">
       <div class="col-span-12">
-        <h3 class="highlighted_cases_title pb-2 md:pb-4">Highlightede cases</h3>
+        <h3 class="highlighted_cases_title pb-2 md:pb-4">Vores cases</h3>
         <div class="highlighted_cases_text flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
           <p>
             Er du nysgerrig på, hvordan vores værdier bliver til handling? Tag et kig på vores cases, <br class="hidden md:block" /> og se, hvordan vi
             skaber kampagner, der engagerer og skaber langvarige indtryk.
           </p>
         </div>
-        <Carrousel />
-        <div class="btn_container pt-12">
+        <div class="btn_container pt-8">
           <a href="/listview">
-            <Button variant="primary" size="medium">Vis flere..</Button>
+            <Button variant="primary" size="medium">Gå til cases</Button>
           </a>
+        </div>
+        <!-- Carrousel -->
+        <div id="carousel-container" class="col-span-10 relative w-full overflow-hidden">
+          <Carousel />
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="contact pb-16 mt-20 md:mt-32 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
-    <div class="contact_text col-span-10 md:col-span-8 md:col-start-2">
-      <h3 class="pb-2 md:pb-4">Har du en idé? Lad os gøre <br class="hidden md:block" /> den til virkelighed</h3>
-      <p class="pb-4">
-        Har du en idé, et projekt eller en udfordring, vi kan hjælpe med? Lad os tage en snak om, <br class="hidden md:block" /> hvordan vi sammen kan
-        skabe kreative løsninger, der inspirerer og fanger opmærksomhed.<br class="hidden md:block" />Kontakt os i dag&mdash; vi glæder os til at høre
-        fra dig!
-      </p>
-      <div class="btn_container pt-6">
-        <a href="/kontakt">
-          <Button variant="primary" size="medium">Gå til kontakt-siden</Button>
-        </a>
+    <section class="contact pb-16 mt-20 md:mt-32 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
+      <div class="contact_text col-span-10 md:col-span-8 md:col-start-2">
+        <h3 class="pb-2 md:pb-4">Har du en idé? Lad os gøre <br class="hidden md:block" /> den til virkelighed</h3>
+        <p class="pb-4">
+          Har du en idé, et projekt eller en udfordring, vi kan hjælpe med? Lad os tage en snak om, <br class="hidden md:block" /> hvordan vi sammen kan
+          skabe kreative løsninger, der inspirerer og fanger opmærksomhed.<br class="hidden md:block" />Kontakt os i dag&mdash; vi glæder os til at
+          høre fra dig!
+        </p>
+        <div class="btn_container pt-6">
+          <a href="/kontakt">
+            <Button variant="primary" size="medium">Gå til kontakt-siden</Button>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="logo hidden md:block col-span-2 content-center">
-      <img src="/images/logo_gradient.gif" alt="Logo for Kadaver" class="w-40 h-40" />
-    </div>
-  </section>
+      <div class="logo hidden md:block col-span-2 content-center">
+        <img src="/images/logo_gradient.gif" alt="Logo for Kadaver" class="w-40 h-40" />
+      </div>
+    </section>
 
-  <style>
-    @keyframes float {
-      0% {
-        transform: translatey(0);
+    <style>
+      @keyframes float {
+        0% {
+          transform: translatey(0);
+        }
+        50% {
+          transform: translatey(-10px);
+        }
+        100% {
+          transform: translatey(0);
+        }
       }
-      50% {
-        transform: translatey(-10px);
+      .float {
+        animation: float 3s ease-in-out infinite;
       }
-      100% {
-        transform: translatey(0);
-      }
-    }
-    .float {
-      animation: float 3s ease-in-out infinite;
-    }
 
-    /* Define keyframes globally (not inside media queries) */
-    @keyframes typewriter {
-      0% {
-        width: 0;
+      /* Define keyframes globally (not inside media queries) */
+      @keyframes typewriter {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 37.5%;
+        }
       }
-      100% {
-        width: 37.5%;
-      }
-    }
 
-    @keyframes typewriter-mobile {
-      0% {
-        width: 0;
+      @keyframes typewriter-mobile {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 66.5%;
+        }
       }
-      100% {
-        width: 66.5%;
-      }
-    }
 
-    @keyframes blink-caret {
-      from,
-      to {
-        border-color: transparent;
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: #9934ff;
+        }
       }
-      50% {
-        border-color: #9934ff;
-      }
-    }
 
-    /* Default typewriter effect (for desktop) */
-    .typewriter {
-      overflow: hidden;
-      white-space: nowrap; /* Ensures text stays in one line */
-      border-right: 8px solid;
-      display: inline-block;
-      animation:
-        typewriter 0.9s steps(30) 0.8s 1 normal both,
-        blink-caret 0.9s step-end infinite;
-    }
-
-    /* Modify animation for smaller screens */
-    @media screen and (max-width: 768px) {
+      /* Default typewriter effect (for desktop) */
       .typewriter {
+        overflow: hidden;
+        white-space: nowrap; /* Ensures text stays in one line */
+        border-right: 8px solid;
+        display: inline-block;
         animation:
-          typewriter-mobile 0.9s steps(30) 0.8s 1 normal both,
+          typewriter 0.9s steps(30) 0.8s 1 normal both,
           blink-caret 0.9s step-end infinite;
       }
-    }
-  </style>
 
-  <script>
-    import { inView } from "motion";
+      /* Modify animation for smaller screens */
+      @media screen and (max-width: 768px) {
+        .typewriter {
+          animation:
+            typewriter-mobile 0.9s steps(30) 0.8s 1 normal both,
+            blink-caret 0.9s step-end infinite;
+        }
+      }
+    </style>
 
-    const elementmedanimation2 = document.querySelector("h2");
-    inView(elementmedanimation2, () => {
-      elementmedanimation2.classList.add("animate__animated", "animate__slideInRight");
-    });
+    <script>
+      import { inView } from "motion";
 
-    const elementmedanimation3 = document.querySelector("#top-section p");
-    inView(elementmedanimation3, () => {
-      elementmedanimation3.classList.add("animate__animated", "animate__slideInLeft");
-    });
-
-    const elementmedanimation4 = document.querySelector(".btn_container");
-    inView(elementmedanimation4, () => {
-      elementmedanimation4.classList.add("animate__animated", "animate__zoomIn");
-    });
-
-    /* InView Animations for Each Image with Delay */
-    const sections = document.querySelectorAll("#info-section > div");
-
-    sections.forEach((sections, index) => {
-      inView(sections, () => {
-        sections.classList.add("animate__animated", "animate__fadeInUp");
-        sections.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
+      const elementmedanimation2 = document.querySelector("h2");
+      inView(elementmedanimation2, () => {
+        elementmedanimation2.classList.add("animate__animated", "animate__slideInRight");
       });
-    });
 
-    const elementmedanimation5 = document.querySelector(".contact_text");
-    inView(elementmedanimation5, () => {
-      elementmedanimation5.classList.add("animate__animated", "animate__slideInLeft");
-    });
+      const elementmedanimation3 = document.querySelector("#top-section p");
+      inView(elementmedanimation3, () => {
+        elementmedanimation3.classList.add("animate__animated", "animate__slideInLeft");
+      });
 
-    const elementmedanimation6 = document.querySelector(".logo");
-    inView(elementmedanimation6, () => {
-      elementmedanimation6.classList.add("animate__animated", "animate__slideInRight");
-    });
+      const elementmedanimation4 = document.querySelector(".btn_container");
+      inView(elementmedanimation4, () => {
+        elementmedanimation4.classList.add("animate__animated", "animate__zoomIn");
+      });
 
-    const elementmedanimation7 = document.querySelector(".highlighted_cases .btn_container");
-    inView(elementmedanimation7, () => {
-      elementmedanimation7.classList.add("animate__animated", "animate__fadeInUp");
-    });
+      /* InView Animations for Each Image with Delay */
+      const sections = document.querySelectorAll("#info-section > div");
 
-    const elementmedanimation8 = document.querySelector(".highlighted_cases_title");
-    inView(elementmedanimation8, () => {
-      elementmedanimation8.classList.add("animate__animated", "animate__fadeInLeft");
-    });
+      sections.forEach((sections, index) => {
+        inView(sections, () => {
+          sections.classList.add("animate__animated", "animate__fadeInUp");
+          sections.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
+        });
+      });
 
-    const elementmedanimation9 = document.querySelector(".highlighted_cases_text");
-    inView(elementmedanimation9, () => {
-      elementmedanimation9.classList.add("animate__animated", "animate__fadeInRight");
-    });
-  </script>
+      const elementmedanimation5 = document.querySelector(".contact_text");
+      inView(elementmedanimation5, () => {
+        elementmedanimation5.classList.add("animate__animated", "animate__slideInLeft");
+      });
+
+      const elementmedanimation6 = document.querySelector(".logo");
+      inView(elementmedanimation6, () => {
+        elementmedanimation6.classList.add("animate__animated", "animate__slideInRight");
+      });
+
+      const elementmedanimation7 = document.querySelector(".highlighted_cases .btn_container");
+      inView(elementmedanimation7, () => {
+        elementmedanimation7.classList.add("animate__animated", "animate__fadeInUp");
+      });
+
+      const elementmedanimation8 = document.querySelector(".highlighted_cases_title");
+      inView(elementmedanimation8, () => {
+        elementmedanimation8.classList.add("animate__animated", "animate__fadeInLeft");
+      });
+
+      const elementmedanimation9 = document.querySelector(".highlighted_cases_text");
+      inView(elementmedanimation9, () => {
+        elementmedanimation9.classList.add("animate__animated", "animate__fadeInRight");
+      });
+    </script>
+  </section>
 </MainLayout>
