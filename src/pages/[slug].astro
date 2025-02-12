@@ -35,16 +35,16 @@ import MainLayout from "../layouts/MainLayout.astro";
   ogdescription={`Kadaver's arbejde for ${card.subtitle}`}
 >
   <section class="mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
-    <div class="col-span-12 pb-16">
-      <h1 class="display md:mt-32 mt-16 mb-4">{card.title}</h1>
+    <div class="col-span-12 md:pb-16 pb-8">
+      <h1 class="display md:mt-32 mt-24 mb-4">{card.title}</h1>
       <h2 class="text-h3-desktop mt-4 mb-2">{card.subtitle}</h2>
     </div>
 
     <div class="flex md:flex-row flex-col col-span-12 gap-8">
       <div class="md:w-[700px] w-full">
-        <img src={card.image} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[550px] object-cover" />
+        <img src={card.image} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[600px] object-cover" />
       </div>
-      <div class="md:pl-8 pl-0 flex flex-col">
+      <div class="md:pl-8 pl-0 md:mt-0 mt-8 flex flex-col">
         <h2 class="text-h3-desktop">Detaljer</h2>
         <hr class="border-blue-700 border-4 mb-8 mt-2 w-[185px]" />
         <h3 class="text-h4-desktop">Type:</h3>
@@ -69,11 +69,22 @@ import MainLayout from "../layouts/MainLayout.astro";
       }
       {
         nextCard && (
-          <a href={`/${nextCard.slug}`} class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center ml-auto">
+          <a
+            href={`/${nextCard.slug}`}
+            aria-label="Næste case"
+            class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center ml-auto"
+          >
             {nextCard.title} →
           </a>
         )
       }
+    </div>
+
+    <!-- 'To listivew'-button -->
+    <div
+      class="flex justify-center items-center right-[5.25rem] md:mt-12 mt-2 col-span-12 gap-gap fixed bg-transparent backdrop-blur-sm p-2 rounded-sm w-[fit-content]"
+    >
+      <a href="/listview" class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center"> ← Tilbage</a>
     </div>
   </section>
 </MainLayout>

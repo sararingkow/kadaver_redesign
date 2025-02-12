@@ -1,9 +1,16 @@
 ---
-
+const cards = await fetch("https://etfzcwwaduzutwwheiym.supabase.co/rest/v1/listview_cards", {
+  method: "GET",
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV0Znpjd3dhZHV6dXR3d2hlaXltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzkyOTA0OTgsImV4cCI6MjA1NDg2NjQ5OH0.eWWrVOojbo44O3j_JsvadaZLHF_ShsNuuKG8SWxRWVA",
+  },
+});
+const card = await cards.json();
 ---
 
 <div class="relative flex items-center justify-center w-full h-full py-4 px-4"></div>
-<div class="w-full relative flex items-center justify-center">
+<div class="highlighted_cases_carrousel w-full relative flex items-center justify-center">
   <button aria-label="slide backward" class="absolute left-0 ml-10 cursor-pointer z-[50]" id="prev">
     <svg
       class="text-gray-50 hover:opacity-50 hover:-translate-x-1 transiton duration-300 ease-in-out"
@@ -199,5 +206,11 @@
 
     next.addEventListener("click", goNext);
     prev.addEventListener("click", goPrev);
+  });
+
+  import { inView } from "motion";
+  const elementmedanimation7 = document.querySelector(".highlighted_cases_carrousel");
+  inView(elementmedanimation7, () => {
+    elementmedanimation7.classList.add("animate__animated", "animate__zoomIn");
   });
 </script>

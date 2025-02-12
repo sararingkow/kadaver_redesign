@@ -9,9 +9,11 @@ import Carrousel from "../components/Carrousel.astro";
     <div class="absolute inset-0 w-full h-full z-0">
       <img src="/images/hero_gif.gif" alt="background gif" class="w-full h-screen object-cover" />
       <div class="absolute inset-0 bg-gray-950 opacity-75 z-[10]"></div>
-      <div class="absolute inset-0 md:pt-desktop-top pt-mobile-top max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center">
-        <h1 class="display pb-4 text-gray-50 col-span-12">Kadaver</h1>
-        <h2 class="text-h3-mobile md:text-h3-desktop md:pb-8 text-gray-50 col-span-12 lg:col-span-8 xl:col-span-6">
+      <div class="absolute inset-0 md:pt-desktop-top pt-mobile-top max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center h-full">
+        <div class="typewriter col-span-12 md:col-span-12 z-30">
+          <h1 class="display text-gray-50">Kadaver</h1>
+        </div>
+        <h2 class="text-h3-mobile md:text-h3-desktop text-gray-50 col-span-12 lg:col-span-8 xl:col-span-6">
           Kreativ kommunikation, der skaber stærke relationer
         </h2>
         <p class="text-gray-50 col-span-12 lg:col-span-10 xl:col-span-8 pb-12">
@@ -47,7 +49,12 @@ import Carrousel from "../components/Carrousel.astro";
 
   <section id="info-section" class="mt-20 md:mt-32 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
     <div class="info-container1 pb-8 col-span-12 lg:col-span-8 xl:col-span-6 lg:col-start-2 md:col-start-2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-16 mb-9">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="size-16 md:mb-9 mb-4 hover:text-violet-600 transition duration-300 ease-in-out"
+      >
         <path
           fill-rule="evenodd"
           d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 0 1-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 0 1-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 0 1-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584ZM12 18a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
@@ -64,7 +71,12 @@ import Carrousel from "../components/Carrousel.astro";
       </div>
     </div>
     <div class="info-container2 pb-8 col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-6 lg:col-start-2 md:col-start-2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-16 mb-9">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="size-16 md:mb-9 mb-4 hover:text-blue-700 transition duration-300 ease-in-out"
+      >
         <path
           fill-rule="evenodd"
           d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z"
@@ -80,8 +92,13 @@ import Carrousel from "../components/Carrousel.astro";
         </p>
       </div>
     </div>
-    <div class="info-container3 col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-6 lg:col-start-2 md:col-start-2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-16 mb-9">
+    <div class="info-container3 md:pb-0 pb-8 col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-6 lg:col-start-2 md:col-start-2">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="size-16 md:mb-9 mb-4 hover:text-violet-600 transition duration-300 ease-in-out"
+      >
         <path
           fill-rule="evenodd"
           d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z"
@@ -100,7 +117,12 @@ import Carrousel from "../components/Carrousel.astro";
 
     <!-- New paragraph section -->
     <div class="info-container4 col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-6 lg:col-start-2 md:col-start-2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-16 mb-9">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="size-16 md:mb-9 mb-4 hover:text-blue-700 transition duration-300 ease-in-out"
+      >
         <path
           fill-rule="evenodd"
           d="M5.478 5.559A1.5 1.5 0 0 1 6.912 4.5H9A.75.75 0 0 0 9 3H6.912a3 3 0 0 0-2.868 2.118l-2.411 7.838a3 3 0 0 0-.133.882V18a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3v-4.162c0-.299-.045-.596-.133-.882l-2.412-7.838A3 3 0 0 0 17.088 3H15a.75.75 0 0 0 0 1.5h2.088a1.5 1.5 0 0 1 1.434 1.059l2.213 7.191H17.89a3 3 0 0 0-2.684 1.658l-.256.513a1.5 1.5 0 0 1-1.342.829h-3.218a1.5 1.5 0 0 1-1.342-.83l-.256-.512a3 3 0 0 0-2.684-1.658H3.265l2.213-7.191Z"
@@ -111,7 +133,7 @@ import Carrousel from "../components/Carrousel.astro";
           clip-rule="evenodd"></path>
       </svg>
 
-      <h3 class="md:pt-0 pt-8 pb-2 md:pb-4">Vores process</h3>
+      <h3 class="pt-0 md:pt-8 pb-2 md:pb-4">Vores process</h3>
       <div class="flex flex-col md:flex-row md:items-center gap-12">
         <p>
           Vi brænder for at sætte os ind i dine ambitioner, opdage nye muligheder og skabe løsninger, der både er praktiske og kreative. Vores proces
@@ -125,8 +147,8 @@ import Carrousel from "../components/Carrousel.astro";
   <section class="highlighted_cases mt-20 md:mt-32">
     <div class="max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center justify-center">
       <div class="col-span-12">
-        <h3 class="pb-2 md:pb-4">Highlightede cases</h3>
-        <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
+        <h3 class="highlighted_cases_title pb-2 md:pb-4">Highlightede cases</h3>
+        <div class="highlighted_cases_text flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
           <p>
             Er du nysgerrig på, hvordan vores værdier bliver til handling? Tag et kig på vores cases, <br class="hidden md:block" /> og se, hvordan vi
             skaber kampagner, der engagerer og skaber langvarige indtryk.
@@ -176,15 +198,59 @@ import Carrousel from "../components/Carrousel.astro";
     .float {
       animation: float 3s ease-in-out infinite;
     }
+
+    /* Define keyframes globally (not inside media queries) */
+    @keyframes typewriter {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 37.5%;
+      }
+    }
+
+    @keyframes typewriter-mobile {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 66.5%;
+      }
+    }
+
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: #9934ff;
+      }
+    }
+
+    /* Default typewriter effect (for desktop) */
+    .typewriter {
+      overflow: hidden;
+      white-space: nowrap; /* Ensures text stays in one line */
+      border-right: 8px solid;
+      display: inline-block;
+      animation:
+        typewriter 0.9s steps(30) 0.8s 1 normal both,
+        blink-caret 0.9s step-end infinite;
+    }
+
+    /* Modify animation for smaller screens */
+    @media screen and (max-width: 768px) {
+      .typewriter {
+        animation:
+          typewriter-mobile 0.9s steps(30) 0.8s 1 normal both,
+          blink-caret 0.9s step-end infinite;
+      }
+    }
   </style>
 
   <script>
     import { inView } from "motion";
-    /* inView Animations */
-    const elementmedanimation1 = document.querySelector("h1");
-    inView(elementmedanimation1, () => {
-      elementmedanimation1.classList.add("animate__animated", "animate__slideInLeft");
-    });
 
     const elementmedanimation2 = document.querySelector("h2");
     inView(elementmedanimation2, () => {
@@ -221,9 +287,19 @@ import Carrousel from "../components/Carrousel.astro";
       elementmedanimation6.classList.add("animate__animated", "animate__slideInRight");
     });
 
-    const elementmedanimation7 = document.querySelector(".highlighted_cases");
+    const elementmedanimation7 = document.querySelector(".highlighted_cases .btn_container");
     inView(elementmedanimation7, () => {
-      elementmedanimation7.classList.add("animate__animated", "animate__zoomIn");
+      elementmedanimation7.classList.add("animate__animated", "animate__fadeInUp");
+    });
+
+    const elementmedanimation8 = document.querySelector(".highlighted_cases_title");
+    inView(elementmedanimation8, () => {
+      elementmedanimation8.classList.add("animate__animated", "animate__fadeInLeft");
+    });
+
+    const elementmedanimation9 = document.querySelector(".highlighted_cases_text");
+    inView(elementmedanimation9, () => {
+      elementmedanimation9.classList.add("animate__animated", "animate__fadeInRight");
     });
   </script>
 </MainLayout>
