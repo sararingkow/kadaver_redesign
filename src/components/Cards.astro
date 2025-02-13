@@ -22,24 +22,26 @@ cards.map((card) => {
 import Button from "./Button.astro";
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 col-span-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 col-span-12">
   {
-    cards.map((card) => (
-      <a href={`/${card.slug}`} class="hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-        <div class="cards flex flex-col max-w-7xl rounded-sm overflow-hidden shadow-drop25 bg-gray-100 h-full">
-          <img src={card.image} alt={card.title} class="w-full h-[350px] object-cover" />
-          <div class="p-6 flex-grow">
-            <h4>{card.title}</h4>
-            <p class="bold text-gray-700 mt-2">{card.subtitle}</p>
+    cards
+      .filter((c) => c.slug !== cards.slug)
+      .map((card) => (
+        <a href={`/${card.slug}`} class="hover:-translate-y-1 transition-transform duration-300 ease-in-out">
+          <div class="cards flex flex-col max-w-7xl rounded-sm overflow-hidden shadow-drop25 bg-gray-100 h-full">
+            <img src={card.image} alt={card.title} class="w-full h-[350px] object-cover" />
+            <div class="p-6 flex-grow">
+              <h4>{card.title}</h4>
+              <p class="bold text-gray-700 mt-2">{card.subtitle}</p>
+            </div>
+            <div class="btn_container p-4 flex justify-start mt-auto">
+              <Button variant="primary" size="small">
+                Se mere
+              </Button>
+            </div>
           </div>
-          <div class="btn_container p-4 flex justify-start mt-auto">
-            <Button variant="primary" size="small">
-              Se mere
-            </Button>
-          </div>
-        </div>
-      </a>
-    ))
+        </a>
+      ))
   }
 </div>
 

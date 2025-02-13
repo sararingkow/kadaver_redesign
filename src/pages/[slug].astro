@@ -26,6 +26,8 @@ const prevCard = currentIndex > 0 ? allCards[currentIndex - 1] : null;
 const nextCard = currentIndex < allCards.length - 1 ? allCards[currentIndex + 1] : null;
 
 import MainLayout from "../layouts/MainLayout.astro";
+import Carousel from "../components/Carousel.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout
@@ -36,7 +38,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 >
   <section class="mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
     <div class="col-span-12 md:pb-16 pb-8">
-      <h1 class="display md:mt-32 mt-24 mb-4">{card.title}</h1>
+      <h1 class="display md:mt-24 mt-24 mb-4">{card.title}</h1>
       <h2 class="text-h3-desktop mt-4 mb-2">{card.subtitle}</h2>
     </div>
 
@@ -58,7 +60,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
     <!-- Navigation Arrows -->
     <div
-      class="flex justify-center items-center md:mt-12 mt-2 col-span-12 gap-gap fixed bg-transparent backdrop-blur-sm p-2 rounded-sm w-[fit-content]"
+      class="z-[50] flex justify-center items-center md:mt-12 mt-2 col-span-12 gap-gap fixed bg-transparent backdrop-blur-sm p-2 rounded-sm w-[fit-content]"
     >
       {
         prevCard && (
@@ -82,9 +84,27 @@ import MainLayout from "../layouts/MainLayout.astro";
 
     <!-- 'To listivew'-button -->
     <div
-      class="flex justify-center items-center right-[5.25rem] md:mt-12 mt-2 col-span-12 gap-gap fixed bg-transparent backdrop-blur-sm p-2 rounded-sm w-[fit-content]"
+      class="z-[50] flex justify-center items-center right-[5.25rem] md:mt-12 mt-2 col-span-12 gap-gap fixed bg-transparent backdrop-blur-sm p-2 rounded-sm w-[fit-content]"
     >
       <a href="/listview" class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center"> ← Tilbage</a>
+    </div>
+  </section>
+  <section class="mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
+    <div class="col-span-12">
+      <h3>Andre cases</h3>
+      <p class="pt-4">
+        Er du nysgerrig på flere? Udforsk andre cases, hvor vi har hjulpet brands med at skabe unikke og kreative løsninger,<br
+          class="hidden md:block"
+        />
+        der fanger opmærksomheden og gør en forskel. Se hvordan vi kombinerer strategisk tænkning med kreativ udførelse<br class="hidden md:block" />
+        for at opnå målbare resultater.
+      </p>
+      <div class="btn_container pt-8">
+        <a href="/listview">
+          <Button variant="primary" size="medium">Gå til cases</Button>
+        </a>
+      </div>
+      <Carousel cards={allCards} currentSlug={card.slug} />
     </div>
   </section>
 </MainLayout>

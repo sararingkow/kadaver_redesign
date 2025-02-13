@@ -70,6 +70,16 @@
     @apply font-gilroy-bold text-gray-950;
   }
 
+  .email,
+  .phone {
+    @apply text-gray-500 underline;
+  }
+
+  .email:hover,
+  .phone:hover {
+    @apply opacity-50 transition duration-300 ease-in-out;
+  }
+
   @screen md {
     .bold {
       @apply font-gilroy-bold text-gray-950;

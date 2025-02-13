@@ -11,9 +11,12 @@ const fetchCards = async () => {
 };
 
 const cards = await fetchCards();
+
+const currentSlug = Astro.props.currentSlug; // Assuming you pass the single view case slug as a prop
+const filteredCards = cards.filter((card) => card.slug !== currentSlug);
 ---
 
-<div class="min-h-[350px] relative">
+<div class="min-h-[400px] relative">
   <div class="container mx-auto w-full overflow-hidden relative">
     <div class="w-full h-full absolute">
       <div class="w-1/4 h-full absolute z-30 left-0" style="background: linear-gradient(to right, #f6f6f6, #f6f6f600);"></div>
@@ -22,9 +25,30 @@ const cards = await fetchCards();
 
     <div id="logo-slider" class="logo-slider overflow-hidden">
       <div class="marquee">
-        <div class="carousel-items flex items-center justify-center" style="width: fit-content; animation: marquee 400s infinite linear;">
+        <div class="carousel-items flex items-center justify-center">
           {
-            cards.map((card) => (
+            filteredCards.map((card) => (
+              <a
+                href={`/${card.slug}`}
+                class="carousel-focus flex flex-col relative bg-gray-100 mx-5 my-10 rounded-sm shadow-drop25 hover:-translate-y-1 transition-transform duration-300 ease-in-out"
+                style="width: 400px;"
+                aria-label={`View project: ${card.title}`}
+              >
+                <img
+                  class="w-full h-[350px] object-cover rounded-tl-sm rounded-tr-sm border-gray-200 flex-shrink-0"
+                  src={card.image}
+                  alt={`Screenshot of the frontpage for ${card.title}`}
+                />
+                <div class="p-6">
+                  <h4 class="mb-2 ">{card.title}</h4>
+                  <p class="pb-8 bold text-gray-700">{card.subtitle}</p>
+                </div>
+              </a>
+            ))
+          }
+          <!-- Duplicate for smooth looping -->
+          {
+            filteredCards.map((card) => (
               <div
                 class="carousel-focus flex flex-col relative bg-gray-100 mx-5 my-10 rounded-sm shadow-drop25"
                 style="width: 400px;"
@@ -49,34 +73,27 @@ const cards = await fetchCards();
 </div>
 
 <style>
-  /* Default animation behavior (for users with no preference) */
-  @media (prefers-reduced-motion: no-preference) {
-    .logo-slider {
-      max-width: fit-content;
-      min-width: 320px;
-      width: 100%;
-      display: flex;
-      padding-block: 5px;
-      overflow: hidden; /* Hide overflow for smoother scrolling */
-    }
-
-    .marquee {
-      animation: marquee 400s linear infinite; /* Slower animation */
-    }
+  .logo-slider {
+    max-width: fit-content;
+    min-width: 400px;
+    width: 100%;
+    display: flex;
+    padding-block: 5px;
+    overflow: hidden;
   }
 
-  .carousel-items {
-    opacity: 0.5;
-    filter: grayscale(100%);
+  .marquee {
+    display: flex;
+    width: fit-content;
+    animation: marquee 400s linear infinite;
   }
 
-  /* Keyframes for normal-speed marquee */
   @keyframes marquee {
     0% {
-      transform: translateX(1%);
+      transform: translateX(0%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
   }
 </style>

@@ -114,11 +114,11 @@ export default {
 
     extend: {
       spacing: {
-        gap: "30px",
-        "mobil-bottom": "85px",
-        "desktop-bottom": "120px",
-        "mobil-top": "85px",
-        "desktop-top": "120px",
+        gap: "30px", // Keeps the 30px gap
+        "mobil-bottom": "80px", // Slightly reduced bottom spacing for mobile
+        "desktop-bottom": "100px", // Reduced bottom spacing for desktop
+        "mobil-top": "80px", // Reduced top spacing for mobile
+        "desktop-top": "100px", // Reduced top spacing for desktop
       },
     },
   },
