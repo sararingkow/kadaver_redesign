@@ -28,6 +28,7 @@ const nextCard = currentIndex < allCards.length - 1 ? allCards[currentIndex + 1]
 import MainLayout from "../layouts/MainLayout.astro";
 import Carousel from "../components/Carousel.astro";
 import Button from "../components/Button.astro";
+import "../styles/tobii.min.css";
 ---
 
 <MainLayout
@@ -44,7 +45,7 @@ import Button from "../components/Button.astro";
 
     <div class="flex md:flex-row flex-col col-span-12 gap-8">
       <div class="md:w-[700px] w-full">
-        <img src={card.image} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[600px] object-cover" />
+        <img src={card.image_header} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[600px] object-cover" />
       </div>
       <div class="md:pl-8 pl-0 md:mt-0 mt-8 flex flex-col">
         <h2 class="text-h3-desktop">Detaljer</h2>
@@ -60,7 +61,7 @@ import Button from "../components/Button.astro";
 
     <!-- Navigation Arrows -->
     <div
-      class="z-[50] flex justify-center items-center md:mt-12 mt-2 col-span-12 gap-gap fixed bg-transparent backdrop-blur-sm p-2 rounded-sm w-[fit-content]"
+      class="z-[50] flex justify-center items-center md:mt-10 mt-2 col-span-12 gap-gap fixed bg-transparent backdrop-blur-sm p-2 rounded-sm w-[fit-content]"
     >
       {
         prevCard && (
@@ -89,7 +90,32 @@ import Button from "../components/Button.astro";
       <a href="/listview" class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center"> ← Tilbage</a>
     </div>
   </section>
+
   <section class="mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
+    <div class="col-span-12">
+      <h3 class="pb-4">Reklamemateriale</h3>
+      <div class="flex flex-wrap gap-4">
+        <a href={card.image4} class="lightbox w-[fit-content] md:w-[60%] h-[484px] object-cover rounded-sm">
+          <img src={card.image4} alt={card.title} class="w-full h-full object-cover rounded-sm" />
+        </a>
+        <div class="flex flex-wrap gap-4 flex-grow md:w-[38%]">
+          <a href={card.image2} class="lightbox w-[fit-content] md:w-[240px] h-auto object-cover rounded-sm">
+            <img src={card.image2} alt={card.title} class="w-full h-full object-cover rounded-sm" />
+          </a>
+          <a href={card.image3} class="lightbox w-[fit-content] md:w-[240px] h-auto object-cover rounded-sm">
+            <img src={card.image3} alt={card.title} class="w-full h-full object-cover rounded-sm" />
+          </a>
+          <a href={card.image5} class="lightbox w-[fit-content] md:w-[240px] h-auto object-cover rounded-sm">
+            <img src={card.image5} alt={card.title} class="w-full h-full object-cover rounded-sm" />
+          </a>
+          <a href={card.image6} class="lightbox w-[fit-content] md:w-[240px] h-auto object-cover rounded-sm">
+            <img src={card.image6} alt={card.title} class="w-full h-full object-cover rounded-sm" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mt-20 md:mt-24 pb-16 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
     <div class="col-span-12">
       <h3>Andre cases</h3>
       <p class="pt-4">
@@ -108,3 +134,8 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 </MainLayout>
+
+<script is:inline src="/tobii.min.js"></script>
+<script defer>
+  const tobii = new Tobii();
+</script>
