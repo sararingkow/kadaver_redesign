@@ -25,6 +25,10 @@ const currentIndex = allCards.findIndex((c) => c.slug === card.slug);
 const prevCard = currentIndex > 0 ? allCards[currentIndex - 1] : null;
 const nextCard = currentIndex < allCards.length - 1 ? allCards[currentIndex + 1] : null;
 
+const isVideo =
+  typeof card.image_header === "string" &&
+  (card.image_header.endsWith(".mp4") || card.image_header.endsWith(".webm") || card.image_header.endsWith(".ogg"));
+
 import MainLayout from "../layouts/MainLayout.astro";
 import Carousel from "../components/Carousel.astro";
 import Button from "../components/Button.astro";
@@ -42,10 +46,15 @@ import "../styles/tobii.min.css";
       <h1 class="display md:mt-24 mt-24 mb-4">{card.title}</h1>
       <h2 class="text-h3-desktop mt-4 mb-2">{card.subtitle}</h2>
     </div>
-
     <div class="flex md:flex-row flex-col col-span-12 gap-8">
       <div class="md:w-[700px] w-full">
-        <img src={card.image_header} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[600px] object-cover" />
+        {
+          isVideo ? (
+            <video src={card.image_header} class="rounded-sm shadow-drop25 w-full h-[600px] object-cover" controls />
+          ) : (
+            <img src={card.image_header} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[600px] object-cover" />
+          )
+        }
       </div>
       <div class="md:pl-8 pl-0 md:mt-0 mt-8 flex flex-col">
         <h2 class="text-h3-desktop">Detaljer</h2>
