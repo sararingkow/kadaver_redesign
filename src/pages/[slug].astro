@@ -60,34 +60,27 @@ import "../styles/tobii.min.css";
     </div>
 
     <!-- Navigation Arrows -->
-    <div
-      class="z-[50] flex justify-center items-center md:mt-10 mt-2 col-span-12 gap-gap fixed bg-transparent backdrop-blur-sm p-2 rounded-sm w-[fit-content]"
-    >
-      {
-        prevCard && (
-          <a href={`/${prevCard.slug}`} class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center">
-            ← {prevCard.title}
-          </a>
-        )
-      }
-      {
-        nextCard && (
-          <a
-            href={`/${nextCard.slug}`}
-            aria-label="Næste case"
-            class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center ml-auto"
-          >
-            {nextCard.title} →
-          </a>
-        )
-      }
-    </div>
-
-    <!-- 'To listivew'-button -->
-    <div
-      class="z-[50] flex justify-center items-center right-[5.25rem] md:mt-12 mt-2 col-span-12 gap-gap fixed bg-transparent backdrop-blur-sm p-2 rounded-sm w-[fit-content]"
-    >
-      <a href="/listview" class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center"> ← Tilbage</a>
+    <div class="arrows z-50 fixed top-[6.5rem] right-[5.25rem] flex flex-col items-end gap-4 col-span-12">
+      <div class="flex justify-between items-center md:mt-7 mt-0 gap-8 bg-transparent backdrop-blur-sm p-2 rounded-sm w-fit">
+        {
+          prevCard && (
+            <a href={`/${prevCard.slug}`} class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center">
+              ← {prevCard.title}
+            </a>
+          )
+        }
+        {
+          nextCard && (
+            <a
+              href={`/${nextCard.slug}`}
+              aria-label="Næste case"
+              class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center ml-auto"
+            >
+              {nextCard.title} →
+            </a>
+          )
+        }
+      </div>
     </div>
   </section>
 
