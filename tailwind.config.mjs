@@ -66,7 +66,7 @@ export default {
       "gilroy-regularitalic": ["Gilroy-regularitalic", "sans-serif"],
     },
     fontSize: {
-      "display-gilroy-desktop": ["5.8rem", { lineHeight: "5.5rem" }],
+      "display-gilroy-desktop": ["6.5rem", { lineHeight: "5.5rem" }],
       "display-gilroy-mobile": ["3.75rem", { lineHeight: "3.5rem" }],
       "h1-desktop": ["4.8rem", { lineHeight: "3.75rem" }],
       "h1-mobile": ["3.5rem", { lineHeight: "3.75rem" }],
