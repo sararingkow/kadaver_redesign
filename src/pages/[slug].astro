@@ -57,7 +57,9 @@ import "../styles/tobii.min.css";
           isVideo ? (
             <video src={card.image_header} class="rounded-sm shadow-drop25 w-full h-[600px] object-cover" controls />
           ) : (
-            <img src={card.image_header} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[600px] object-cover" />
+            <a href={card.image_header} class="lightbox w-[fit-content] md:w-[700px] h-auto object-cover rounded-sm">
+              <img src={card.image_header} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[600px] object-cover" />
+            </a>
           )
         }
       </div>
