@@ -11,15 +11,15 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="info_image mt-20 md:mt-24 pb-8 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6">
-    <div class="column grid grid-cols-1 lg:grid-cols-3 flex-row col-span-12 items-center">
-      <img src="/images/internship1.svg" alt="Grafik for mentorordning" class="w-fit object-cover shadow-drop25" />
-      <img src="/images/internship2.svg" alt="Grafik for mentorordning" class="w-fit object-cover shadow-drop25" />
-      <img src="/images/internship3.svg" alt="Grafik for mentorordning" class="w-fit object-cover shadow-drop25" />
+  <section class="info_image mt-20 md:mt-24 pb-8 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
+    <div class="column grid grid-cols-1 lg:grid-cols-3 flex-row col-span-12 gap-4">
+      <img src="/images/internship1.svg" alt="Grafik for mentorordning" class="object-cover" />
+      <img src="/images/internship2.svg" alt="Grafik for mentorordning" class="object-cover" />
+      <img src="/images/internship3.svg" alt="Grafik for mentorordning" class="object-cover" />
     </div>
   </section>
 
-  <section class="mentoring mt-20 md:mt-24 pb-8 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-20">
+  <section class="mentoring mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-20">
     <div class="mentoring_text col-span-6 md:col-span-8 md:col-start-2">
       <h2 class="pb-4 md:pb-8">Mentorordning</h2>
       <p class="pb-4">
@@ -30,29 +30,31 @@ import Button from "../components/Button.astro";
       </p>
     </div>
     <div class="mentoring_image hidden md:block col-span-3 content-center">
-      <img src="/images/mentoring.svg" alt="Grafik for mentorordning" class="w-40 h-40" />
+      <img src="/images/mentoring.svg" alt="Grafik for mentorordning" class="w-36 h-36" />
+    </div>
+  </section>
+  <section class="mt-20 md:mt-24 max-w-5xl mx-auto px-6 md:px-0 grid grid-cols-12">
+    <h2 class="col-span-12 md:col-span-10 text-left mb-8">Livet som praktikant</h2>
+
+    <div class="flex gap-10 items-start col-span-12">
+      <div class="flex flex-col md:flex-row items-center md:gap-12 gap-8">
+        <!-- Avatar Image -->
+        <img class="rounded-full w-[200px] h-[200px] object-cover" src="/images/mikkel.webp" alt="Avatar for Mikkel" />
+
+        <!-- Text Box -->
+        <div class="flex flex-col w-full justify-center p-8 bg-gray-100 rounded-lg shadow-md">
+          <!-- Quote -->
+          <span class="hidden md:block font-semibold text-h4-mobile">Mikkel Thorbøll <span class="text-gray-500">(junior kreativ)</span></span>
+          <p class="quote py-2 text-gray-700">
+            Jeg fik muligheden for at være med på virkelig fede projekter, som jeg selv var med til at starte. Det er en af mange grunde til at man
+            føler sig meget set og værdsat som praktikant hos Kadaver.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="internship_info mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
-    <h2 class="pb-4 md:pb-8 md:col-span-10 col-span-12 text-left">Livet som praktikant</h2>
-
-    <div class="col-span-12 flex flex-col md:flex-row items-center md:items-stretch gap-6">
-      <div class="intern_image flex justify-center">
-        <img src="/images/mikkel.webp" alt="Grafik for mentorordning" class="w-[450px] h-[400px] object-cover rounded-sm shadow-drop25" />
-      </div>
-
-      <div class="intern_text bg-gray-100 px-12 py-12 rounded-sm w-[fit-content] flex flex-col justify-center shadow-drop25">
-        <h3 class="md:pb-8 pb-4">Mikkel Thorbøll Jensen, junior kreativ</h3>
-        <blockquote class="max-w-3xl italic">
-          "Jeg fik muligheden for at være med på virkelig fede projekter, som jeg selv var med til at starte. Det er en af mange grunde til at man
-          føler sig meget set og værdsat som praktikant hos Kadaver."
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <section class="after_internship relative pb-8 mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
+  <section class="after_internship relative mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
     <div class="relative flex justify-center col-span-12">
       <img src="/images/scribble.svg" alt="Logo for Kadaver" class="w-[fit-content] h-[fit-content] object-cover" />
 

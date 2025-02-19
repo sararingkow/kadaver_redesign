@@ -44,7 +44,7 @@ import Button from "../components/Button.astro";
 
   <section class="work_section mt-20 md:mt-24 flex justify-center items-center">
     <div class="max-w-7xl mx-auto pb-16 md:px-0 px-8 grid grid-cols-12 gap-6 items-center justify-center">
-      <div class="col-span-12">
+      <div class="work_text col-span-12">
         <h3 class="pb-2 md:pb-4">Vores arbejde i praksis</h3>
         <p>
           Vi tror på, at kreative løsninger starter med stærke idéer. Udforsk vores cases, og se<br class="hidden md:block" />
@@ -56,7 +56,7 @@ import Button from "../components/Button.astro";
             <Button variant="primary" size="medium">Udforsk cases</Button>
           </a>
         </div>
-        <img src="/images/top_cases.webp" alt="Cases" class="shadow-drop25 w-full h-auto object-cover rounded-sm" />
+        <img src="/images/top_cases.webp" alt="Cases" class="work_image w-full h-auto object-cover rounded-sm" />
       </div>
     </div>
   </section>
@@ -91,8 +91,18 @@ import Button from "../components/Button.astro";
     elementmedanimation5.classList.add("animate__animated", "animate__flipInX");
   });
 
-  const elementmedanimation6 = document.querySelector(".work_section");
+  const elementmedanimation6 = document.querySelector(".work_text");
   inView(elementmedanimation6, () => {
     elementmedanimation6.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  const elementmedanimation7 = document.querySelector(".work_image");
+  inView(elementmedanimation7, () => {
+    elementmedanimation7.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const elementmedanimation8 = document.querySelector(".btn_container");
+  inView(elementmedanimation8, () => {
+    elementmedanimation8.classList.add("animate__animated", "animate__fadeInLeft");
   });
 </script>

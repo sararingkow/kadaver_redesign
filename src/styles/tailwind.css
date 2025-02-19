@@ -70,6 +70,15 @@
     @apply font-gilroy-bold text-gray-950;
   }
 
+  .quote {
+    @apply text-gray-950 text-quote-mobile;
+  }
+  @screen md {
+    .quote {
+      @apply text-quote-desktop;
+    }
+  }
+
   .email,
   .phone {
     @apply text-gray-500 underline;

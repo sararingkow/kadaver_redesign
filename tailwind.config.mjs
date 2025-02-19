@@ -67,7 +67,7 @@ export default {
     },
     fontSize: {
       "display-gilroy-desktop": ["6.5rem", { lineHeight: "5.5rem" }],
-      "display-gilroy-mobile": ["3.75rem", { lineHeight: "3.5rem" }],
+      "display-gilroy-mobile": ["3.9rem", { lineHeight: "3.5rem" }],
       "h1-desktop": ["4.8rem", { lineHeight: "3.75rem" }],
       "h1-mobile": ["3.5rem", { lineHeight: "3.75rem" }],
       "h2-desktop": ["4rem", { lineHeight: "3.75rem" }],
@@ -80,6 +80,8 @@ export default {
       "p-mobile": ["1rem", { lineHeight: "1.5rem" }],
       "a-desktop": ["1.125rem", { lineHeight: "1.875rem" }],
       "a-mobile": ["1rem", { lineHeight: "1.5rem" }],
+      "quote-desktop": ["1.2rem", { lineHeight: "2.25rem" }],
+      "quote-mobile": ["1rem", { lineHeight: "1.875rem" }],
     },
     fontWeight: {
       light: "300",

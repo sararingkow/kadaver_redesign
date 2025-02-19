@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout
@@ -8,17 +9,46 @@ import MainLayout from "../layouts/MainLayout.astro";
   ogtitle="Kadaver - studieleje-side"
   ogdescription="Kadaver's studieleje-side"
 >
-  <section class="top-section mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6">
-    <div class="col-span-12 text-left">
-      <h1 class="display md:mt-24 mt-16 mb-4">Studieleje</h1>
-      <hr class="border-blue-700 border-4 w-[190px] md:w-[335px] md:mb-16 mb-8" />
+  <section class="top-section relative md:pt-desktop-top md:pb-desktop-bottom pt-mobile-top pb-mobile-bottom w-full h-screen">
+    <!-- Video Background -->
+    <div class="absolute inset-0 w-full h-full z-0">
+      <video src="/images/studio_video.mp4" class="w-full h-full object-cover" autoplay loop muted></video>
+      <div class="absolute inset-0 bg-gray-950 opacity-70 z-[10]"></div>
     </div>
-    <div class="image col-span-12">
-      <video src="/images/studio_video.mp4" class="w-full object-cover rounded-sm" autoplay loop muted></video>
+
+    <!-- Text Overlay -->
+    <div class="absolute inset-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 content-center h-full">
+      <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
+        <h1 class="display mb-4 text-gray-50">Studieleje</h1>
+        <hr class="border-blue-700 border-4 w-[195px] md:w-[335px] md:mb-8 mb-10" />
+        <p class="hero_text text-gray-50">
+          Har du brug for et kreativt rum til dit næste projekt? Vores studie er udstyret med alt du behøver, fra green screen til makeupstation.
+          Perfekt til både fotoshoots og videoproduktioner. Book din næste session hos os og få den professionelle ramme, du søger.
+        </p>
+      </div>
+      <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
+        <a href="#contact">
+          <Button variant="primary" size="medium">Gå til kontakt</Button>
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
+      <a href="#info-list">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="float w-8 h-8 sm:w-10 sm:h-10 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+        </svg>
+      </a>
     </div>
   </section>
 
-  <section class="info_list mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12">
+  <section id="info-list" class="info_list mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12">
     <div class="col-span-12">
       <h2 class="md:mb-12 mb-4">Alt du skal vide om studiet</h2>
       <div class="list grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -88,7 +118,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </section>
 
-  <section class="contact pb-16 mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
+  <section id="contact" class="contact pb-16 mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
     <div class="contact_text md:col-span-7 col-span-12 md:col-start-2 flex flex-col justify-center md:items-start">
       <h3 class="pb-2 md:pb-4">Kontakt</h3>
       <p class="pb-2 md:pb-4">
@@ -156,4 +186,31 @@ import MainLayout from "../layouts/MainLayout.astro";
   inView(elementmedanimation7, () => {
     elementmedanimation7.classList.add("animate__animated", "animate__fadeInRight");
   });
+
+  const elementmedanimation8 = document.querySelector(".hero_text");
+  inView(elementmedanimation8, () => {
+    elementmedanimation8.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const elementmedanimation9 = document.querySelector(".btn_container");
+  inView(elementmedanimation9, () => {
+    elementmedanimation9.classList.add("animate__animated", "animate__zoomIn");
+  });
 </script>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>
