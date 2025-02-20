@@ -46,19 +46,19 @@ import "../styles/tobii.min.css";
   ogtitle={`Kadaver - ${card.subtitle}`}
   ogdescription={`Kadaver's arbejde for ${card.subtitle}`}
 >
-  <section class="max-w-7xl md:mt-desktop-top mt-mobile-top mb-desktop-bottom mb-mobile-bottom mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
+  <section class="max-w-7xl md:mt-desktop-top md:mb-desktop-bottom mb-mobil-bottom mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
     <div class="col-span-12 md:pb-16 pb-8">
       <h1 class="md:text-h2-desktop text-h2-mobile md:mt-28 mt-16 md:mb-4 mb-2">{card.title}</h1>
-      <h2 class="md:text-h3-desktop text-h4-mobile text-gray-500 md:mt-6 mt-0 md:mb-2 mb-0">{card.subtitle}</h2>
+      <h2 class="md:text-h3-desktop text-h4-mobile text-gray-500 md:mt-4 mt-0 md:mb-2 mb-0">{card.subtitle}</h2>
     </div>
     <div class="flex md:flex-row flex-col col-span-12 gap-8">
       <div class="md:w-[700px] w-full">
         {
           isVideo ? (
-            <video src={card.image_header} class="rounded-sm shadow-drop25 w-full h-[600px] object-cover" controls />
+            <video src={card.image_header} class="rounded-sm shadow-drop25 w-full md:w-[700px] h-[450px] object-cover" controls />
           ) : (
-            <a href={card.image_header} class="lightbox w-[fit-content] md:w-[700px] h-auto object-cover rounded-sm">
-              <img src={card.image_header} alt={card.title} class="rounded-sm shadow-drop25 w-full h-[600px] object-cover" />
+            <a href={card.image_header} class="lightbox w-full md:w-[700px] h-[450px] object-cover rounded-sm">
+              <img src={card.image_header} alt={card.title} class="rounded-sm shadow-drop25 w-full md:w-[700px] h-[450px] object-cover" />
             </a>
           )
         }
@@ -67,7 +67,7 @@ import "../styles/tobii.min.css";
         <h2 class="md:text-h3-desktop text-h3-mobile">Detaljer</h2>
         <hr class="border-blue-700 border-4 mb-8 mt-2 md:w-[185px] w-[150px]" />
         <h3 class="md:text-h4-desktop text-h4-mobile">Type:</h3>
-        <p class="max-w-[400px]">{card.type}</p>
+        <p class="md:max-w-[700px]">{card.type}</p>
         <h3 class="md:text-h4-desktop text-h4-mobile md:mt-8 mt-4">Målgruppe:</h3>
         <p>{card.group}</p>
         <h3 class="md:text-h4-desktop text-h4-mobile md:mt-8 mt-4">Medier:</h3>
@@ -76,7 +76,7 @@ import "../styles/tobii.min.css";
     </div>
 
     <!-- Navigation Arrows -->
-    <div class="arrows z-50 fixed top-[5.5rem] md:top-[6.5rem] right-[18px] md:right-[5.25rem] flex flex-col items-end gap-4 col-span-12">
+    <div class="arrows z-30 fixed top-[5.5rem] md:top-[6.5rem] right-[18px] md:right-[5.25rem] flex flex-col items-end gap-4 col-span-12">
       <div class="flex justify-between items-center md:mt-7 mt-0 gap-8 bg-transparent backdrop-blur-sm p-2 rounded-sm w-fit">
         {
           prevCard && (
@@ -121,7 +121,9 @@ import "../styles/tobii.min.css";
       </section>
     )
   }
-  <section class="mb-desktop-bottom mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
+  <section
+    class="md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
+  >
     <div class="col-span-12">
       <h3>Andre cases</h3>
       <p class="pt-4">
@@ -133,7 +135,7 @@ import "../styles/tobii.min.css";
       </p>
       <div class="btn_container pt-8">
         <a href="/listview">
-          <Button variant="primary" size="medium">Gå til cases</Button>
+          <Button variant="primary" size="small">Gå til cases</Button>
         </a>
       </div>
       <Carousel cards={allCards} currentSlug={card.slug} />

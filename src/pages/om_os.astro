@@ -4,7 +4,7 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Kadaver | Om os" description="Kadaver - om os" ogtitle="Kadaver - om os side" ogdescription="Kadaver's om os side">
-  <section class="top-section relative md:mb-desktop-bottom mb-mobile-bottom w-full h-screen">
+  <section class="top-section relative md:mb-desktop-bottom mb-mobil-bottom w-full h-screen">
     <!-- Video Background -->
     <div class="absolute inset-0 w-full h-full z-0">
       <img src="/images/au_page.webp" class="w-full h-full object-cover" />
@@ -23,7 +23,7 @@ import Button from "../components/Button.astro";
       </div>
       <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
         <a href="#contact">
-          <Button variant="primary" size="medium">Gå til kontakt</Button>
+          <Button variant="primary" size="small">Gå til kontakt</Button>
         </a>
       </div>
     </div>
@@ -44,7 +44,7 @@ import Button from "../components/Button.astro";
   </section>
   <section
     id="info-section"
-    class="info_section mt-mobile-top md:mt-desktop-top mb-mobile-bottom md:mb-desktop-bottom pb-8 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
+    class="info_section mt-mobil-top md:mt-desktop-top mb-mobil-bottom md:mb-desktop-bottom pb-8 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
   >
     <div class="text_left col-span-12 md:col-span-9 max-w-4xl">
       <h2 class="text-h3-mobile md:text-h3-desktop pb-2 md:pb-4">Kadaver – et resultatdrevet brand- & contentbureau</h2>
@@ -62,12 +62,12 @@ import Button from "../components/Button.astro";
         >
       </p>
     </div>
-    <div class="logo col-span-12 md:col-span-3 flex md:justify-center justify-start items-center md:pb-0 pb-10">
+    <div class="logo hidden md:block col-span-12 md:col-span-3 md:justify-center justify-start items-center md:pb-0 pb-10">
       <img src="/images/logo_gradient.webp" alt="Logo for Kadaver" class="md:w-52 md:h-52 w-40 h-40" />
     </div>
   </section>
 
-  <section class="service_section md:mt-desktop-top mt-mobile-top max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
+  <section class="service_section md:mt-desktop-top max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
     <div class="col-span-12">
       <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-16">
         <img src="/images/ydelser1.svg" alt="Ydelser 1" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
@@ -80,7 +80,9 @@ import Button from "../components/Button.astro";
   </section>
 
   <section class="work_section flex justify-center items-center">
-    <div class="max-w-7xl md:mt-desktop-top mt-mobile-top mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 items-center justify-center">
+    <div
+      class="max-w-7xl md:mt-desktop-top mt-mobil-top mb-mobil-bottom md:mb-desktop-bottom mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 items-center justify-center"
+    >
       <div class="work_text col-span-12">
         <h3 class="pb-2 md:pb-4">Vores arbejde i praksis</h3>
         <p>
@@ -90,7 +92,7 @@ import Button from "../components/Button.astro";
         </p>
         <div class="btn_container md:pt-5 pt-6 md:pb-12 pb-8">
           <a href="/listview">
-            <Button variant="primary" size="medium">Udforsk cases</Button>
+            <Button variant="primary" size="small">Udforsk cases</Button>
           </a>
         </div>
         <img src="/images/top_cases.webp" alt="Cases" class="work_image w-full h-auto object-cover rounded-sm" />

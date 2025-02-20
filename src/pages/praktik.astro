@@ -5,16 +5,16 @@ import Button from "../components/Button.astro";
 
 <MainLayout title="Kadaver | Praktik" description="Kadaver - praktik" ogtitle="Kadaver - praktik-side" ogdescription="Kadaver's praktik-side">
   <section
-    class="top-section max-w-7xl mx-auto md:mt-desktop-top mt-mobile-top md:mb-desktop-bottom mb-mobile-bottom md:px-0 px-8 z-20 grid grid-cols-12"
+    class="top-section max-w-7xl mx-auto md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom md:px-0 px-8 z-20 grid grid-cols-12"
   >
     <div class="col-span-10">
       <h1 class="display md:mt-24 mt-16 mb-4">Praktik hos Kadaver</h1>
-      <hr class="border-blue-700 border-4 w-[265px] md:w-[450px] md:mb-0 mb-8" />
+      <hr class="border-blue-700 border-4 w-[275px] md:w-[450px] md:mb-0 mb-8" />
     </div>
   </section>
 
   <section
-    class="info_image md:mt-desktop-top md:mb-desktop-bottom mt-mobile-top mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12"
+    class="info_image md:md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12"
   >
     <div class="column grid grid-cols-1 lg:grid-cols-3 flex-row col-span-12 gap-4">
       <img src="/images/internship1.svg" alt="Grafik for mentorordning" class="object-cover" />
@@ -24,7 +24,7 @@ import Button from "../components/Button.astro";
   </section>
 
   <section
-    class="mentoring md:mt-desktop-top md:mb-desktop-bottom mt-mobile-top mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-20"
+    class="mentoring md:md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-20"
   >
     <div class="mentoring_text col-span-6 md:col-span-8 md:col-start-2">
       <h2 class="pb-4 md:pb-8">Mentorordning</h2>
@@ -39,18 +39,18 @@ import Button from "../components/Button.astro";
       <img src="/images/mentoring.svg" alt="Grafik for mentorordning" class="w-36 h-36" />
     </div>
   </section>
-  <section class="md: mt-desktop-top md:mb-desktop-bottom mt-mobile-top mb-mobile-bottom max-w-5xl mx-auto px-6 md:px-0 grid grid-cols-12">
+  <section class="md:mt-desktop-top md:mb-desktop-bottom mb-mobil-bottom max-w-5xl mx-auto px-6 md:px-0 grid grid-cols-12">
     <h2 class="col-span-12 md:col-span-10 text-left mb-8">Livet som praktikant</h2>
 
     <div class="flex gap-10 items-start col-span-12">
-      <div class="flex flex-col md:flex-row items-center md:gap-12 gap-8">
+      <div class="flex flex-col md:flex-row md:items-center items-start md:gap-12 gap-8">
         <!-- Avatar Image -->
         <img class="rounded-full w-[200px] h-[200px] object-cover" src="/images/mikkel.webp" alt="Avatar for Mikkel" />
 
         <!-- Text Box -->
         <div class="flex flex-col w-full justify-center p-8 bg-gray-100 rounded-lg shadow-md">
           <!-- Quote -->
-          <span class="hidden md:block font-semibold text-h4-mobile">Mikkel Thorbøll <span class="text-gray-500">(junior kreativ)</span></span>
+          <span class="font-semibold text-h4-mobile">Mikkel Thorbøll <span class="text-gray-500">(junior kreativ)</span></span>
           <p class="quote py-2 text-gray-700">
             Jeg fik muligheden for at være med på virkelig fede projekter, som jeg selv var med til at starte. Det er en af mange grunde til at man
             føler sig meget set og værdsat som praktikant hos Kadaver.
@@ -61,7 +61,7 @@ import Button from "../components/Button.astro";
   </section>
 
   <section
-    class="after_internship md: mt-desktop-top md:mb-desktop-bottom mt-mobile-top mb-mobile-bottom relative max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center"
+    class="after_internship md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom relative max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center"
   >
     <div class="relative flex justify-center col-span-12">
       <img src="/images/scribble.svg" alt="Logo for Kadaver" class="w-[fit-content] h-[fit-content] object-cover" />
@@ -77,7 +77,7 @@ import Button from "../components/Button.astro";
   </section>
 
   <section
-    class="contact md:mt-desktop-top md:mb-desktop-bottom mt-mobile-top mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center"
+    class="contact md:md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center"
   >
     <div class="contact-text col-span-12 md:col-span-8 md:col-start-2">
       <h3 class="pb-2 md:pb-4">Kom forbi og mød os</h3>
@@ -87,7 +87,7 @@ import Button from "../components/Button.astro";
       </p>
       <div class="btn_container pt-6">
         <a href="/kontakt">
-          <Button variant="primary" size="medium">Gå til kontakt-siden</Button>
+          <Button variant="primary" size="small">Gå til kontakt-siden</Button>
         </a>
       </div>
     </div>

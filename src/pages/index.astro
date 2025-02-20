@@ -17,33 +17,33 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Kadaver | Hjem" description="Kadaver's forside" ogtitle="Kadaver - forside" ogdescription="Kadaver's forside/startside">
-  <section id="top-section" class="relative md:mb-desktop-bottom mb-mobile-bottom w-full h-screen">
+  <section id="top-section" class="relative md:mb-desktop-bottom mb-mobil-bottom w-full h-screen">
     <div class="absolute inset-0 w-full h-full z-0">
       <img src="/images/hero_gif.webp" alt="background gif" class="w-full h-screen object-cover" />
       <div class="absolute inset-0 bg-gray-950 opacity-70 z-[10]"></div>
-      <div class="absolute inset-0 md:mt-desktop-top mt-mobile-top max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center h-full">
+      <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center h-full">
         <div class="typewriter col-span-12 md:col-span-12 z-30">
           <h1 class="display text-gray-50">Kadaver</h1>
         </div>
         <h2 class="text-h3-mobile md:text-h3-desktop text-gray-50 col-span-12 lg:col-span-8 xl:col-span-6">
           Kreativ kommunikation, der skaber stærke relationer
         </h2>
-        <p class="text-gray-50 col-span-12 lg:col-span-10 xl:col-span-8 pb-12">
+        <p class="text-gray-50 col-span-12 lg:col-span-10 xl:col-span-8 md:pb-12 pb-8">
           Vi skaber indhold, der engagerer og inspirerer. Hos Kadaver forstår vi kraften i kreativ kommunikation og brænder for at hjælpe brands med
           at finde deres unikke stemme. Gennem strategisk storytelling og innovative løsninger, bygger vi forbindelser, der rækker ud over det
           sædvanlige og skaber varige relationer med dit publikum.
         </p>
         <div class="btn_container flex flex-row gap-6 md:gap-12 col-span-12">
           <a href="/kontakt">
-            <Button variant="secondary" size="medium">Kontakt os</Button>
+            <Button variant="secondary" size="small">Kontakt os</Button>
           </a>
           <a href="/listview">
-            <Button variant="secondary" href="/listview" size="medium">Vores cases</Button>
+            <Button variant="secondary" href="/listview" size="small">Vores cases</Button>
           </a>
         </div>
       </div>
       <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
-        <a href="#info-section">
+        <a href="#about">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -59,7 +59,7 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section id="info-section" class="px-6 md:px-12 grid gap-12 md:mt-desktop-top md:mb-desktop-bottom mt-mobile-top mb-mobile-bottom">
+  <section id="about" class="px-6 md:px-12 grid gap-12 md:md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom">
     <div class="grid md:grid-cols-2 gap-12">
       <div class="bg-gray-100 rounded-lg p-8">
         <h3 class="mb-4">Hvem er vi?</h3>
@@ -95,7 +95,7 @@ import Button from "../components/Button.astro";
   </section>
 
   <section class="our_cases">
-    <div class="md:mb-desktop-bottom mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center justify-center">
+    <div class="md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center justify-center">
       <div class="col-span-12">
         <h3 class="highlighted_cases_title pb-2 md:pb-4">Vores cases</h3>
         <div class="highlighted_cases_text flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
@@ -106,7 +106,7 @@ import Button from "../components/Button.astro";
         </div>
         <div class="btn_container pt-8">
           <a href="/listview">
-            <Button variant="primary" size="medium">Gå til cases</Button>
+            <Button variant="primary" size="small">Gå til cases</Button>
           </a>
         </div>
         <!-- Carrousel -->
@@ -169,17 +169,17 @@ import Button from "../components/Button.astro";
       </div>
     </div>
 
-    <section class="contact md:mb-desktop-bottom mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
+    <section class="contact md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
       <div class="contact_text col-span-12 md:col-span-8 md:col-start-2">
         <h3 class="pb-2 md:pb-4">Har du en idé? Lad os gøre <br class="hidden md:block" /> den til virkelighed</h3>
         <p class="pb-4">
           Har du en idé, et projekt eller en udfordring, vi kan hjælpe med? Lad os tage en snak om, <br class="hidden md:block" /> hvordan vi sammen kan
-          skabe kreative løsninger, der inspirerer og fanger opmærksomhed.<br class="hidden md:block" />Kontakt os i dag&mdash; vi glæder os til at
+          skabe kreative løsninger, der inspirerer og fanger opmærksomhed. <br class="hidden md:block" />Kontakt os i dag&mdash; vi glæder os til at
           høre fra dig!
         </p>
         <div class="btn_container pt-6">
           <a href="/kontakt">
-            <Button variant="primary" size="medium">Gå til kontakt-siden</Button>
+            <Button variant="primary" size="small">Gå til kontakt-siden</Button>
           </a>
         </div>
       </div>
@@ -219,7 +219,7 @@ import Button from "../components/Button.astro";
           width: 0;
         }
         100% {
-          width: 66.5%;
+          width: 69%;
         }
       }
 
@@ -303,7 +303,7 @@ import Button from "../components/Button.astro";
       });
 
       /* InView Animations for Each Image with Delay */
-      const sections = document.querySelectorAll("#info-section > div");
+      const sections = document.querySelectorAll("#about > div");
 
       sections.forEach((sections, index) => {
         inView(sections, () => {
