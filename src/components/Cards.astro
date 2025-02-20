@@ -44,17 +44,3 @@ import Button from "./Button.astro";
       ))
   }
 </div>
-
-<script>
-  import { inView } from "motion";
-
-  /* InView Animations for Each Card with Delay */
-  const cards = document.querySelectorAll(".cards");
-
-  cards.forEach((card, index) => {
-    inView(card, () => {
-      card.classList.add("animate__animated", "animate__slideInRight");
-      card.style.animationDelay = `${index * 0.1}s`; // Delay each card by 0.2s
-    });
-  });
-</script>

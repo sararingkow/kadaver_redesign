@@ -17,11 +17,11 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Kadaver | Hjem" description="Kadaver's forside" ogtitle="Kadaver - forside" ogdescription="Kadaver's forside/startside">
-  <section id="top-section" class="relative md:pt-desktop-top md:pb-desktop-bottom pt-mobile-top pb-mobile-bottom w-full h-screen">
+  <section id="top-section" class="relative md:mb-desktop-bottom mb-mobile-bottom w-full h-screen">
     <div class="absolute inset-0 w-full h-full z-0">
       <img src="/images/hero_gif.webp" alt="background gif" class="w-full h-screen object-cover" />
       <div class="absolute inset-0 bg-gray-950 opacity-70 z-[10]"></div>
-      <div class="absolute inset-0 md:pt-desktop-top pt-mobile-top max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center h-full">
+      <div class="absolute inset-0 md:mt-desktop-top mt-mobile-top max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center h-full">
         <div class="typewriter col-span-12 md:col-span-12 z-30">
           <h1 class="display text-gray-50">Kadaver</h1>
         </div>
@@ -59,17 +59,17 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section id="info-section" class="mt-20 md:mt-24 px-6 md:px-12 grid gap-12">
+  <section id="info-section" class="px-6 md:px-12 grid gap-12 md:mt-desktop-top md:mb-desktop-bottom mt-mobile-top mb-mobile-bottom">
     <div class="grid md:grid-cols-2 gap-12">
       <div class="bg-gray-100 rounded-lg p-8">
-        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Hvem er vi?</h3>
+        <h3 class="mb-4">Hvem er vi?</h3>
         <p class="text-gray-700 leading-relaxed">
           Kadaver er et kreativt brand- og contentbureau, der bryder med normen og skaber oplevelser, der både engagerer og inspirerer. Vi forener
           strategi, design og storytelling for at bringe idéer til live.
         </p>
       </div>
       <div class="bg-gray-100 rounded-lg p-8">
-        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Hvad laver vi?</h3>
+        <h3 class="mb-4">Hvad laver vi?</h3>
         <p class="text-gray-700 leading-relaxed">
           Vi skaber kampagner, brandoplevelser og innovative løsninger, der bryder grænser. Uanset om det drejer sig om events, branding eller
           digitale koncepter, udvikler vi unikke løsninger, der engagerer.
@@ -78,14 +78,14 @@ import Button from "../components/Button.astro";
     </div>
     <div class="grid md:grid-cols-2 gap-12">
       <div class="bg-gray-100 rounded-lg p-8">
-        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Vores tilgang</h3>
+        <h3 class="mb-4">Vores tilgang</h3>
         <p class="text-gray-700 leading-relaxed">
           Vi tror på, at de bedste resultater opstår gennem tæt samarbejde. Vi tænker kreativt og finder løsninger, der både overrasker og skaber
           værdi.
         </p>
       </div>
       <div class="bg-gray-100 rounded-lg p-8">
-        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Vores proces</h3>
+        <h3 class="mb-4">Vores proces</h3>
         <p class="text-gray-700 leading-relaxed">
           Vores proces bygger på samarbejde, så vi altid er i tæt dialog med dig, fra idé til færdigt resultat. Sammen sikrer vi, at din vision bliver
           til virkelighed.
@@ -94,8 +94,8 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="our_cases mt-20 md:mt-24">
-    <div class="max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center justify-center">
+  <section class="our_cases">
+    <div class="md:mb-desktop-bottom mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center justify-center">
       <div class="col-span-12">
         <h3 class="highlighted_cases_title pb-2 md:pb-4">Vores cases</h3>
         <div class="highlighted_cases_text flex flex-col md:flex-row md:items-center gap-6 md:gap-12">
@@ -169,7 +169,7 @@ import Button from "../components/Button.astro";
       </div>
     </div>
 
-    <section class="contact pb-16 mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
+    <section class="contact md:mb-desktop-bottom mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
       <div class="contact_text col-span-12 md:col-span-8 md:col-start-2">
         <h3 class="pb-2 md:pb-4">Har du en idé? Lad os gøre <br class="hidden md:block" /> den til virkelighed</h3>
         <p class="pb-4">

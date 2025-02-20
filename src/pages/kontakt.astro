@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Kadaver | Kontakt os" description="Kadaver - kontakt" ogtitle="Kadaver - kontaktside" ogdescription="Kadaver's kontaktside">
-  <section class="team_list mt-20 md:mt-24 pb-16 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
+  <section class="team_list md:mt-desktop-top mt-mobile-top max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
     <div class="col-span-12">
       <h1 class="display md:mt-24 mt-16 mb-4">Kontakt os</h1>
       <hr class="border-blue-700 border-4 w-[260px] md:w-[450px] mb-16" />
@@ -13,7 +13,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/chomee.webp" alt="Person 1" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Cho-Mee Annemette Kristensen</p>
-        <p>Partner/CEO</p>
+        <p class="position">Partner/CEO</p>
         <p class="email text-center mt-2">chomee@kadaver.dk</p>
         <a class="phone text-center" href="tel:+4540838185">+45 4083 8185</a>
       </div>
@@ -21,7 +21,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/borris.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Carl Johannes Borris</p>
-        <p>Partner/creative director</p>
+        <p class="position">Partner/creative director</p>
         <p class="email text-center mt-2">borris@kadaver.dk</p>
         <a class="phone text-center" href="tel:+4526365015">+45 2636 5015</a>
       </div>
@@ -29,7 +29,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/jakob.webp" alt="Person 1" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Jacob Klintrup</p>
-        <p>Creative strategic director</p>
+        <p class="position">Creative strategic director</p>
         <a href="mailto:klintrup@kadaver.dk" class="email text-center mt-2">klintrup@kadaver.dk</a>
         <a href="tel:+4551900082" class="phone text-center">+45 5190 0082</a>
       </div>
@@ -37,7 +37,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/toke.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Toke Krebs</p>
-        <p>Senior designer & concept developer</p>
+        <p class="position">Senior designer & concept developer</p>
         <a href="mailto:toke@kadaver.dk" class="email text-center mt-2">toke@kadaver.dk</a>
         <a href="tel:+4526856350" class="phone text-center">+45 2685 6350</a>
       </div>
@@ -45,7 +45,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/daniel.webp" alt="Person 1" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Daniel Stokke Meldrum Larsen</p>
-        <p>Senior creative</p>
+        <p class="position">Senior creative</p>
         <a href="mailto:daniel@kadaver.dk" class="email text-center mt-2">daniel@kadaver.dk</a>
         <a href="tel:+4551563371" class="phone text-center">+45 5156 3371</a>
       </div>
@@ -53,7 +53,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/kristoffer.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Kristoffer Telling Foged</p>
-        <p>Creative/copywriter</p>
+        <p class="position">Creative/copywriter</p>
         <a href="mailto:kristoffer@kadaver.dk" class="email text-center mt-2">kristoffer@kadaver.dk</a>
         <a href="tel:+4528554779" class="phone text-center">+45 2855 4779</a>
       </div>
@@ -61,7 +61,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/thomas.webp" alt="Person 1" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Thomas Arvid Jensen</p>
-        <p>Creative/AV creative</p>
+        <p class="position">Creative/AV creative</p>
         <a href="mailto:thomas@kadaver.dk" class="email text-center mt-2">thomas@kadaver.dk</a>
         <a href="tel:+4551541238" class="phone text-center">+45 5154 1238</a>
       </div>
@@ -69,7 +69,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/cecilie.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Cecilie Heisterberg Otzen</p>
-        <p>Production/project manager</p>
+        <p class="position">Production/project manager</p>
         <a href="mailto:cecilie@kadaver.dk" class="email text-center mt-2">cecilie@kadaver.dk</a>
         <a href="tel:+4526213333" class="phone text-center">+ 45 2621 3333</a>
       </div>
@@ -77,7 +77,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/nicolai.webp" alt="Person 1" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Nicolai Hundebøll</p>
-        <p>Produktionskoordinator</p>
+        <p class="position">Produktionskoordinator</p>
         <a href="mailto:nico@kadaver.dk" class="email text-center mt-2">nico@kadaver.dk</a>
         <a href="tel:+4551114182" class="phone text-center">+45 6111 4182</a>
       </div>
@@ -85,7 +85,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/jeppe.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Jeppe Wittus</p>
-        <p>Production/project manager</p>
+        <p class="position">Production/project manager</p>
         <a href="mailto:jeppe@kadaver.dk" class="email text-center mt-2">jeppe@kadaver.dk</a>
         <a href="tel:+4522323480" class="phone text-center">+45 2232 3480</a>
       </div>
@@ -93,7 +93,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/dharshika.webp" alt="Person 1" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Dharshika Christopher</p>
-        <p>Community manager</p>
+        <p class="position">Community manager</p>
         <a href="mailto:dharshika@kadaver.dk" class="email text-center mt-2">dharshika@kadaver.dk</a>
         <a href="tel:+4542972481" class="phone text-center">+45 4297 2481</a>
       </div>
@@ -101,7 +101,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/rose.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Rose Appel</p>
-        <p>Junior creative</p>
+        <p class="position">Junior creative</p>
         <a href="mailto:rose@kadaver.dk" class="email text-center mt-2">rose@kadaver.dk</a>
         <a href="tel:+4520349649" class="phone text-center">+45 2034 9649</a>
       </div>
@@ -109,7 +109,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/niels.webp" alt="Person 1" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Niels Forsberg</p>
-        <p>Manager (Girl's Legion)</p>
+        <p class="position">Manager (Girl's Legion)</p>
         <a href="mailto:niels@kadaver.dk" class="email text-center mt-2">niels@kadaver.dk</a>
         <a href="tel:+4526135970" class="phone text-center">+45 2613 5970</a>
       </div>
@@ -117,35 +117,35 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/marie.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Marie Groes-Petersen</p>
-        <p>Praktikant</p>
+        <p class="position">Praktikant</p>
         <a href="mailto:marie@kadaver.dk" class="email text-center mt-2">marie@kadaver.dk</a>
       </div>
 
       <div class="card flex flex-col items-start">
         <img src="/images/frederikke.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Frederikke Zander Kahne</p>
-        <p>Praktikant</p>
+        <p class="position">Praktikant</p>
         <a href="mailto:frederikke@kadaver.dk" class="email text-center mt-2">frederikke@kadaver.dk</a>
       </div>
 
       <div class="card flex flex-col items-start">
         <img src="/images/hannah.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Hannah Hansen</p>
-        <p>Praktikant</p>
+        <p class="position">Praktikant</p>
         <a href="mailto:hannah@kadaver.dk" class="email text-center mt-2">hannah@kadaver.dk</a>
       </div>
 
       <div class="card flex flex-col items-start">
         <img src="/images/emma.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Emma Lenau</p>
-        <p>Praktikant</p>
+        <p class="position">Praktikant</p>
         <a href="mailto:emma@kadaver.dk" class="email text-center mt-2">emma@kadaver.dk</a>
       </div>
 
       <div class="card flex flex-col items-start">
         <img src="/images/caroline.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Caroline Juul</p>
-        <p>Senior antropolog</p>
+        <p class="position">Senior antropolog</p>
         <a href="mailto:caroline@kadaver.dk" class="email text-center mt-2">caroline@kadaver.dk</a>
         <a href="tel:+4528967557" class="phone text-center">+45 2896 7557</a>
       </div>
@@ -153,7 +153,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/fahad.webp" alt="Person 2" alt="Person 1" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Fahad Saeed</p>
-        <p>Business & strategy lead</p>
+        <p class="position">Business & strategy lead</p>
         <a href="mailto:fahad@kadaver.dk" class="email text-center mt-2">fahad@kadaver.dk</a>
         <a href="tel:+4560468701" class="phone text-center">+45 6046 8701</a>
       </div>
@@ -161,22 +161,24 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="card flex flex-col items-start">
         <img src="/images/sara.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Sara Ringkow Petersen</p>
-        <p>Praktikant</p>
+        <p class="position">Praktikant</p>
         <a href="mailto:ringkow@kadaver.dk" class="email text-center mt-2">ringkow@kadaver.dk</a>
       </div>
 
       <div class="card flex flex-col items-start">
         <img src="/images/kristian.webp" alt="Person 2" class="rounded-sm w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Kristian Albert Petersen</p>
-        <p>Praktikant</p>
+        <p class="position">Praktikant</p>
         <a href="mailto:kristian@kadaver.dk" class="email text-center mt-2">kristian@kadaver.dk</a>
       </div>
     </div>
   </section>
 
   <div class="grid grid-cols-12 gap-4">
-    <section class="col-span-12 mt-20 md:mt-24">
-      <div class="pb-16 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section class="col-span-12">
+      <div
+        class="md:mt-desktop-top md:mb-desktop-bottom mt-mobile-top mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-1 md:grid-cols-2 gap-8"
+      >
         <div class="maps flex flex-col">
           <h4 class="mb-4">Kom og find os!</h4>
           <p class="max-w-6xl">
@@ -185,7 +187,7 @@ import MainLayout from "../layouts/MainLayout.astro";
           </p>
 
           <span class="mt-8">
-            <p><span class="bold">Kadaver ApS </span><br /> Wilders Plads 5 <br /> 1403 København K</p>
+            <p class="position"><span class="bold">Kadaver ApS </span><br /> Wilders Plads 5 <br /> 1403 København K</p>
           </span>
         </div>
         <div class="google relative w-full h-96">
@@ -236,3 +238,14 @@ import MainLayout from "../layouts/MainLayout.astro";
     elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
   });
 </script>
+
+<style>
+  .position {
+    font-size: 1em;
+  }
+
+  .email,
+  .phone {
+    font-size: 1em;
+  }
+</style>

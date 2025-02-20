@@ -9,7 +9,7 @@ import Button from "../components/Button.astro";
   ogtitle="Kadaver - studieleje-side"
   ogdescription="Kadaver's studieleje-side"
 >
-  <section class="top-section relative md:pt-desktop-top md:pb-desktop-bottom pt-mobile-top pb-mobile-bottom w-full h-screen">
+  <section class="top-section relative md:mb-desktop-bottom mb-mobile-bottom w-full h-screen">
     <!-- Video Background -->
     <div class="absolute inset-0 w-full h-full z-0">
       <video src="/images/studio_video.mp4" class="w-full h-full object-cover" autoplay loop muted></video>
@@ -48,7 +48,10 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section id="info-list" class="info_list mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12">
+  <section
+    id="info-list"
+    class="info_list mt-desktop-top md:pb-desktop-bottom pt-mobile-top pb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12"
+  >
     <div class="col-span-12">
       <h2 class="md:mb-12 mb-4">Alt du skal vide om studiet</h2>
       <div class="list grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -110,15 +113,18 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="image_section md:pb-0 pb-16">
-    <div class="mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
+  <section class="image_section md:pb-0 md:mb-desktop-bottom mb-mobile-bottom">
+    <div class="max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
       <div class="col-span-12 md:col-span-10 md:col-start-2">
         <img src="/images/image_section.webp" alt="Billede-sektion" class="w-full object-cover rounded-sm" />
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact pb-16 mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
+  <section
+    id="contact"
+    class="contact md:mb-desktop-bottom mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
+  >
     <div class="contact_text md:col-span-7 col-span-12 md:col-start-2 flex flex-col justify-center md:items-start">
       <h3 class="pb-2 md:pb-4">Kontakt</h3>
       <p class="pb-2 md:pb-4">

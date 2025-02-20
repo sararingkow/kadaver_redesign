@@ -4,11 +4,48 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Kadaver | Om os" description="Kadaver - om os" ogtitle="Kadaver - om os side" ogdescription="Kadaver's om os side">
-  <section class="top-section mt-20 md:mt-24 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
-    <div class="col-span-12 text-left">
-      <h1 class="display md:mt-24 mt-16 mb-4">Om os</h1>
-      <hr class="border-blue-700 border-4 w-[100px] md:w-[180px] mb-16" />
+  <section class="top-section relative md:mb-desktop-bottom mb-mobile-bottom w-full h-screen">
+    <!-- Video Background -->
+    <div class="absolute inset-0 w-full h-full z-0">
+      <img src="/images/au_page.webp" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gray-950 opacity-70 z-[10]"></div>
     </div>
+
+    <!-- Text Overlay -->
+    <div class="absolute inset-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 content-center h-full">
+      <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
+        <h1 class="display mb-4 text-gray-50">Om os</h1>
+        <hr class="border-blue-700 border-4 w-[100px] md:w-[180px] md:mb-8 mb-10" />
+        <p class="hero_text text-gray-50">
+          Vil du vide mere om, hvem vi er, og hvordan vi arbejder? Udforsk vores tilgang til kreativt og strategisk arbejde, og se, hvordan vi
+          udvikler idéer, der skaber stærke forbindelser mellem brands og mennesker.
+        </p>
+      </div>
+      <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
+        <a href="#contact">
+          <Button variant="primary" size="medium">Gå til kontakt</Button>
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
+      <a href="#info-section">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="float w-8 h-8 sm:w-10 sm:h-10 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+  <section
+    id="info-section"
+    class="info_section mt-mobile-top md:mt-desktop-top mb-mobile-bottom md:mb-desktop-bottom pb-8 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
+  >
     <div class="text_left col-span-12 md:col-span-9 max-w-4xl">
       <h2 class="text-h3-mobile md:text-h3-desktop pb-2 md:pb-4">Kadaver – et resultatdrevet brand- & contentbureau</h2>
       <p class="md:pb-4 pb-8">
@@ -30,7 +67,7 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="service_section mt-20 md:mt-24 pb-16 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
+  <section class="service_section md:mt-desktop-top mt-mobile-top max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
     <div class="col-span-12">
       <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-16">
         <img src="/images/ydelser1.svg" alt="Ydelser 1" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
@@ -42,8 +79,8 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="work_section mt-20 md:mt-24 flex justify-center items-center">
-    <div class="max-w-7xl mx-auto pb-16 md:px-0 px-8 grid grid-cols-12 gap-6 items-center justify-center">
+  <section class="work_section flex justify-center items-center">
+    <div class="max-w-7xl md:mt-desktop-top mt-mobile-top mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 items-center justify-center">
       <div class="work_text col-span-12">
         <h3 class="pb-2 md:pb-4">Vores arbejde i praksis</h3>
         <p>
@@ -106,3 +143,20 @@ import Button from "../components/Button.astro";
     elementmedanimation8.classList.add("animate__animated", "animate__fadeInLeft");
   });
 </script>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>
