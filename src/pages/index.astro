@@ -20,7 +20,7 @@ import Button from "../components/Button.astro";
   <section id="top-section" class="relative md:mb-desktop-bottom mb-mobil-bottom w-full h-screen">
     <div class="absolute inset-0 w-full h-full z-0">
       <img src="/images/hero_gif.webp" alt="background gif" class="w-full h-screen object-cover" />
-      <div class="absolute inset-0 bg-gray-950 opacity-70 z-[10]"></div>
+      <div class="absolute inset-0 bg-gray-950 opacity-80 z-[10]"></div>
       <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center h-full">
         <div class="typewriter col-span-12 md:col-span-12 z-30">
           <h1 class="display text-gray-50">Kadaver</h1>
@@ -29,9 +29,9 @@ import Button from "../components/Button.astro";
           Kreativ kommunikation, der skaber stærke relationer
         </h2>
         <p class="text-gray-50 col-span-12 lg:col-span-10 xl:col-span-8 md:pb-12 pb-8">
-          Vi skaber indhold, der engagerer og inspirerer. Hos Kadaver forstår vi kraften i kreativ kommunikation og brænder for at hjælpe brands med
-          at finde deres unikke stemme. Gennem strategisk storytelling og innovative løsninger, bygger vi forbindelser, der rækker ud over det
-          sædvanlige og skaber varige relationer med dit publikum.
+          Hos Kadaver skaber vi indhold, der fanger og motiverer. Vi tror på, at kreativ kommunikation er nøglen til at hjælpe brands med at finde
+          deres egen stemme. Med strategisk storytelling og innovative løsninger bygger vi stærke forbindelser, der går ud over det almindelige og
+          skaber langvarige relationer med dit publikum.
         </p>
         <div class="btn_container flex flex-row gap-6 md:gap-12 col-span-12">
           <a href="/kontakt">
@@ -229,7 +229,7 @@ import Button from "../components/Button.astro";
           border-color: transparent;
         }
         50% {
-          border-color: #9934ff;
+          border-color: #0143fd;
         }
       }
 
@@ -245,7 +245,7 @@ import Button from "../components/Button.astro";
       }
 
       /* Modify animation for smaller screens */
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1020px) {
         .typewriter {
           animation:
             typewriter-mobile 0.9s steps(30) 0.8s 1 normal both,
@@ -281,6 +281,12 @@ import Button from "../components/Button.astro";
         100% {
           transform: translateX(-50%);
         }
+      }
+
+      #top-section p,
+      #top-section h1,
+      #top-section h2 {
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
       }
     </style>
 

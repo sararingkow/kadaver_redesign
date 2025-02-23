@@ -71,8 +71,8 @@ export default {
       "h1-desktop": ["4.8rem", { lineHeight: "3.75rem" }],
       "h1-mobile": ["3.5rem", { lineHeight: "3.75rem" }],
       "h2-desktop": ["4rem", { lineHeight: "3.75rem" }],
-      "h2-mobile": ["2rem", { lineHeight: "2.5rem" }],
-      "h3-desktop": ["2.5rem", { lineHeight: "2.5rem" }],
+      "h2-mobile": ["2.5rem", { lineHeight: "2.5rem" }],
+      "h3-desktop": ["2.3rem", { lineHeight: "2.5rem" }],
       "h3-mobile": ["2rem", { lineHeight: "2.25rem" }],
       "h4-desktop": ["1.8rem", { lineHeight: "2.25rem" }],
       "h4-mobile": ["1.4rem", { lineHeight: "1.875rem" }],
@@ -117,10 +117,10 @@ export default {
     extend: {
       spacing: {
         gap: "40px", // Keeps the 30px gap
-        "mobil-bottom": "80px", // Slightly reduced bottom spacing for mobile
-        "desktop-bottom": "100px", // Reduced bottom spacing for desktop
-        "mobil-top": "80px", // Reduced top spacing for mobile
-        "desktop-top": "100px", // Reduced top spacing for desktop
+        "mobil-bottom": "100px", // Slightly reduced bottom spacing for mobile
+        "desktop-bottom": "120px", // Reduced bottom spacing for desktop
+        "mobil-top": "100px", // Reduced top spacing for mobile
+        "desktop-top": "120px", // Reduced top spacing for desktop
       },
     },
   },

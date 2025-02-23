@@ -4,16 +4,47 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Kadaver | Praktik" description="Kadaver - praktik" ogtitle="Kadaver - praktik-side" ogdescription="Kadaver's praktik-side">
-  <section
-    class="top-section max-w-7xl mx-auto md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom md:px-0 px-8 z-20 grid grid-cols-12"
-  >
-    <div class="col-span-10">
-      <h1 class="display md:mt-24 mt-16 mb-4">Praktik hos Kadaver</h1>
-      <hr class="border-blue-700 border-4 w-[275px] md:w-[450px] md:mb-0 mb-8" />
+  <section class="top-section relative md:mb-desktop-bottom mb-mobil-bottom w-full h-screen">
+    <!-- Video Background -->
+    <div class="absolute inset-0 w-full h-full z-0">
+      <img src="/images/internship.webp" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gray-950 opacity-80 z-[10]"></div>
+    </div>
+
+    <!-- Text Overlay -->
+    <div class="absolute inset-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 content-center h-full">
+      <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
+        <h1 class="display mb-4 text-gray-50">Praktik hos Kadaver</h1>
+        <hr class="shadow-drop25 border-blue-700 border-4 w-[275px] md:w-[450px] md:mb-8 mb-10" />
+        <p class="hero_text text-gray-50">
+          Er du klar til at bringe dine kreative idéer til live? Hos Kadaver søger vi praktikanter, der vil udfordre status quo og skabe ægte
+          forbindelser. Bliv en del af vores dynamiske team, hvor strategi og kreativitet forenes for at skabe resultater, der betyder noget.
+        </p>
+      </div>
+      <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
+        <a href="#contact">
+          <Button variant="primary" size="small">Gå til kontakt</Button>
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
+      <a href="#info-section">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="float w-8 h-8 sm:w-10 sm:h-10 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+        </svg>
+      </a>
     </div>
   </section>
 
   <section
+    id="info-section"
     class="info_image md:md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12"
   >
     <div class="column grid grid-cols-1 lg:grid-cols-3 flex-row col-span-12 gap-4">
@@ -39,16 +70,18 @@ import Button from "../components/Button.astro";
       <img src="/images/mentoring.svg" alt="Grafik for mentorordning" class="w-36 h-36" />
     </div>
   </section>
-  <section class="md:mt-desktop-top md:mb-desktop-bottom mb-mobil-bottom max-w-5xl mx-auto px-6 md:px-0 grid grid-cols-12">
+  <section
+    class="life_as_an_intern md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom max-w-5xl mx-auto px-6 md:px-0 grid grid-cols-12"
+  >
     <h2 class="col-span-12 md:col-span-10 text-left mb-8">Livet som praktikant</h2>
 
     <div class="flex gap-10 items-start col-span-12">
       <div class="flex flex-col md:flex-row md:items-center items-start md:gap-12 gap-8">
         <!-- Avatar Image -->
-        <img class="rounded-full w-[200px] h-[200px] object-cover" src="/images/mikkel.webp" alt="Avatar for Mikkel" />
+        <img class="intern_image rounded-full w-[200px] h-[200px] object-cover" src="/images/mikkel.webp" alt="Avatar for Mikkel" />
 
         <!-- Text Box -->
-        <div class="flex flex-col w-full justify-center p-8 bg-gray-100 rounded-lg shadow-md">
+        <div class="intern_text flex flex-col w-full justify-center p-8 bg-gray-100 rounded-lg shadow-md">
           <!-- Quote -->
           <span class="font-semibold text-h4-mobile">Mikkel Thorbøll <span class="text-gray-500">(junior kreativ)</span></span>
           <p class="quote py-2 text-gray-700">
@@ -60,9 +93,7 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section
-    class="after_internship md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom relative max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center"
-  >
+  <section class="after_internship relative max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
     <div class="relative flex justify-center col-span-12">
       <img src="/images/scribble.svg" alt="Logo for Kadaver" class="w-[fit-content] h-[fit-content] object-cover" />
 
@@ -77,6 +108,7 @@ import Button from "../components/Button.astro";
   </section>
 
   <section
+    id="contact"
     class="contact md:md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center"
   >
     <div class="contact-text col-span-12 md:col-span-8 md:col-start-2">
@@ -159,4 +191,41 @@ import Button from "../components/Button.astro";
   inView(elementmedanimation11, () => {
     elementmedanimation11.classList.add("animate__animated", "animate__fadeInLeft");
   });
+
+  const elementmedanimation12 = document.querySelector(".top-section p");
+  inView(elementmedanimation12, () => {
+    elementmedanimation12.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const elementmedanimation13 = document.querySelector(".btn_container");
+  inView(elementmedanimation13, () => {
+    elementmedanimation13.classList.add("animate__animated", "animate__zoomIn");
+  });
+
+  const elementmedanimation14 = document.querySelector(".life_as_an_intern h2");
+  inView(elementmedanimation14, () => {
+    elementmedanimation14.classList.add("animate__animated", "animate__fadeInLeft");
+  });
 </script>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .top-section p,
+  .top-section h1 {
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+</style>

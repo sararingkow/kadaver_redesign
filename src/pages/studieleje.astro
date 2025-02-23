@@ -13,14 +13,14 @@ import Button from "../components/Button.astro";
     <!-- Video Background -->
     <div class="absolute inset-0 w-full h-full z-0">
       <video src="/images/studio_video.mp4" class="w-full h-full object-cover" autoplay loop muted></video>
-      <div class="absolute inset-0 bg-gray-950 opacity-70 z-[10]"></div>
+      <div class="absolute inset-0 bg-gray-950 opacity-80 z-[10]"></div>
     </div>
 
     <!-- Text Overlay -->
     <div class="absolute inset-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 content-center h-full">
       <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
         <h1 class="display mb-4 text-gray-50">Studieleje</h1>
-        <hr class="border-blue-700 border-4 w-[195px] md:w-[335px] md:mb-8 mb-10" />
+        <hr class="shadow-drop25 border-blue-700 border-4 w-[195px] md:w-[335px] md:mb-8 mb-10" />
         <p class="hero_text text-gray-50">
           Har du brug for et kreativt rum til dit næste projekt? Vores studie er udstyret med alt du behøver, fra green screen til makeupstation.
           Perfekt til både fotoshoots og videoproduktioner. Book din næste session hos os og få den professionelle ramme, du søger.
@@ -48,16 +48,13 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section
-    id="info-list"
-    class="info_list mt-desktop-top md:mb-desktop-bottom mt-mobile-top mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12"
-  >
+  <section id="info-list" class="info_list md:mb-desktop-bottom mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12">
     <div class="col-span-12">
       <h2 class="md:mb-12 mb-4">Alt du skal vide</h2>
       <div class="list grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div class="flex flex-col">
           <img src="/images/mandatory.webp" class="w-full object-cover rounded-sm" alt="Obligatorisk info" />
-          <h3 class="md:mt-8 mt-5 mb-4">Obligatorisk</h3>
+          <h3 class="md:mt-8 mt-6 mb-4">Obligatorisk</h3>
           <ul class="space-y-4 md:pb-0 pb-8">
             <li><span class="bold">Beliggenhed:</span><br />Wilders Plads 5, 1403 KBH K</li>
             <li><span class="bold">Pris pr. dag:</span><br />2950,- kr. ekskl. moms</li>
@@ -218,5 +215,10 @@ import Button from "../components/Button.astro";
   }
   .float {
     animation: float 3s ease-in-out infinite;
+  }
+
+  .top-section p,
+  .top-section h1 {
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
 </style>
