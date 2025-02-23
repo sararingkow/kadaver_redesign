@@ -22,13 +22,13 @@ cards.map((card) => {
 import Button from "./Button.astro";
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 col-span-12">
+<div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 col-span-12">
   {
     cards
       .filter((c) => c.slug !== cards.slug)
       .map((card) => (
         <a href={`/${card.slug}`} class="hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-          <div class="cards flex flex-col max-w-7xl rounded-sm overflow-hidden shadow-drop25 bg-gray-100 h-full">
+          <div class="flex flex-col max-w-7xl rounded-sm overflow-hidden shadow-drop25 bg-gray-100 h-full">
             <img src={card.image} alt={card.title} class="w-full h-[350px] object-cover" />
             <div class="p-6 flex-grow">
               <h4>{card.title}</h4>
@@ -44,3 +44,20 @@ import Button from "./Button.astro";
       ))
   }
 </div>
+
+<script>
+  import { inView } from "motion";
+
+  const elementmedanimation4 = document.querySelector(".cards");
+
+  if (elementmedanimation4) {
+    const cards = elementmedanimation4.children; // Get all child elements (cards)
+
+    inView(".cards", ({ target }) => {
+      Array.from(cards).forEach((card, index) => {
+        card.classList.add("animate__animated", "animate__fadeInUp");
+        card.style.animationDelay = `${index * 400}ms`; // Adjust delay as needed
+      });
+    });
+  }
+</script>

@@ -44,7 +44,7 @@ import Button from "../components/Button.astro";
   </section>
   <section
     id="info-section"
-    class="info_section mt-mobil-top md:mt-desktop-top mb-mobil-bottom md:mb-desktop-bottom pb-8 max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
+    class="info_section mt-mobil-top md:mt-desktop-top md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
   >
     <div class="text_left col-span-12 md:col-span-9 max-w-4xl">
       <h2 class="text-h3-mobile md:text-h3-desktop pb-2 md:pb-4">Kadaver – et resultatdrevet brand- & contentbureau</h2>
@@ -65,7 +65,9 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="service_section md:mt-desktop-top max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
+  <section
+    class="service_section md:mt-desktop-top mt-mobil-top mb-mobil-bottom md:mb-desktop-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
+  >
     <div class="col-span-12">
       <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-16">
         <img src="/images/ydelser1.svg" alt="Ydelser 1" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
@@ -77,10 +79,8 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="work_section flex justify-center items-center">
-    <div
-      class="max-w-7xl md:mt-desktop-top mt-mobil-top mb-mobil-bottom md:mb-desktop-bottom mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 items-center justify-center"
-    >
+  <section class="work_section flex justify-center items-center md:mt-desktop-top mt-mobil-top mb-mobil-bottom md:mb-desktop-bottom">
+    <div class="mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 items-center justify-center">
       <div class="work_text col-span-12">
         <h3 class="pb-2 md:pb-4">Vores arbejde i praksis</h3>
         <p>

@@ -273,6 +273,19 @@ import Button from "../components/Button.astro";
   inView(elementmedanimation6, () => {
     elementmedanimation6.classList.add("animate__animated", "animate__zoomIn");
   });
+
+  const elementmedanimation7 = document.querySelector(".card"); // Should be a container, not a single card
+
+  if (elementmedanimation7) {
+    const cards = document.querySelectorAll(".card"); // Select all cards
+
+    inView(".card", ({ target }) => {
+      cards.forEach((card, index) => {
+        card.classList.add("animate__animated", "animate__fadeInUp");
+        card.style.animationDelay = `${index * 400}ms`; // Adjust delay as needed
+      });
+    });
+  }
 </script>
 
 <style>

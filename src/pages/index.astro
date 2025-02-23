@@ -59,34 +59,34 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section id="about" class="px-6 md:px-12 grid gap-12 md:md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom">
-    <div class="grid md:grid-cols-2 gap-12">
-      <div class="bg-gray-100 rounded-lg p-8">
+  <section id="about" class="about-section px-6 md:px-12 grid gap-12 md:md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom">
+    <div class="about_grid grid md:grid-cols-2 gap-12">
+      <div class="bg-gray-100 rounded-sm p-8">
         <h3 class="mb-4">Hvem er vi?</h3>
-        <p class="text-gray-700 leading-relaxed">
+        <p>
           Kadaver er et kreativt brand- og contentbureau, der bryder med normen og skaber oplevelser, der både engagerer og inspirerer. Vi forener
           strategi, design og storytelling for at bringe idéer til live.
         </p>
       </div>
-      <div class="bg-gray-100 rounded-lg p-8">
+      <div class="bg-gray-100 rounded-sm p-8">
         <h3 class="mb-4">Hvad laver vi?</h3>
-        <p class="text-gray-700 leading-relaxed">
+        <p>
           Vi skaber kampagner, brandoplevelser og innovative løsninger, der bryder grænser. Uanset om det drejer sig om events, branding eller
           digitale koncepter, udvikler vi unikke løsninger, der engagerer.
         </p>
       </div>
     </div>
-    <div class="grid md:grid-cols-2 gap-12">
-      <div class="bg-gray-100 rounded-lg p-8">
+    <div class="about_grid grid md:grid-cols-2 gap-12">
+      <div class="bg-gray-100 rounded-sm p-8">
         <h3 class="mb-4">Vores tilgang</h3>
-        <p class="text-gray-700 leading-relaxed">
+        <p>
           Vi tror på, at de bedste resultater opstår gennem tæt samarbejde. Vi tænker kreativt og finder løsninger, der både overrasker og skaber
           værdi.
         </p>
       </div>
-      <div class="bg-gray-100 rounded-lg p-8">
+      <div class="bg-gray-100 rounded-sm p-8">
         <h3 class="mb-4">Vores proces</h3>
-        <p class="text-gray-700 leading-relaxed">
+        <p>
           Vores proces bygger på samarbejde, så vi altid er i tæt dialog med dig, fra idé til færdigt resultat. Sammen sikrer vi, at din vision bliver
           til virkelighed.
         </p>
@@ -309,7 +309,7 @@ import Button from "../components/Button.astro";
       });
 
       /* InView Animations for Each Image with Delay */
-      const sections = document.querySelectorAll("#about > div");
+      const sections = document.querySelectorAll(".about_grid > div");
 
       sections.forEach((sections, index) => {
         inView(sections, () => {

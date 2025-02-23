@@ -171,7 +171,7 @@ import Button from "../components/Button.astro";
   columns.forEach((column, index) => {
     inView(column, () => {
       column.classList.add("animate__animated", "animate__fadeInLeft");
-      column.style.animationDelay = `${index * 0.2}s`; // Delay each column by 0.2s
+      column.style.animationDelay = `${index * 400}ms`; // Delay each column by 0.2s
     });
   });
 
