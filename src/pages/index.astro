@@ -35,10 +35,10 @@ import Button from "../components/Button.astro";
         </p>
         <div class="btn_container flex flex-row gap-6 md:gap-12 col-span-12">
           <a href="/kontakt">
-            <Button variant="secondary" size="small">Kontakt os</Button>
+            <Button variant="primary" size="small">Kontakt os</Button>
           </a>
           <a href="/listview">
-            <Button variant="secondary" href="/listview" size="small">Vores cases</Button>
+            <Button variant="primary" href="/listview" size="small">Vores cases</Button>
           </a>
         </div>
       </div>
@@ -50,7 +50,7 @@ import Button from "../components/Button.astro";
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="float w-8 h-8 sm:w-10 sm:h-10 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
+            class="float w-8 h-8 [5px]:w-10 [5px]:h-10 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
           >
             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
           </svg>
@@ -61,14 +61,14 @@ import Button from "../components/Button.astro";
 
   <section id="about" class="about-section px-6 md:px-12 grid gap-12 md:md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom">
     <div class="about_grid grid md:grid-cols-2 gap-12">
-      <div class="bg-gray-100 rounded-sm p-8">
+      <div class="bg-gray-100 rounded-[5px] p-8">
         <h3 class="mb-4">Hvem er vi?</h3>
         <p>
           Kadaver er et kreativt brand- og contentbureau, der bryder med normen og skaber oplevelser, der både engagerer og inspirerer. Vi forener
           strategi, design og storytelling for at bringe idéer til live.
         </p>
       </div>
-      <div class="bg-gray-100 rounded-sm p-8">
+      <div class="bg-gray-100 rounded-[5px] p-8">
         <h3 class="mb-4">Hvad laver vi?</h3>
         <p>
           Vi skaber kampagner, brandoplevelser og innovative løsninger, der bryder grænser. Uanset om det drejer sig om events, branding eller
@@ -77,14 +77,14 @@ import Button from "../components/Button.astro";
       </div>
     </div>
     <div class="about_grid grid md:grid-cols-2 gap-12">
-      <div class="bg-gray-100 rounded-sm p-8">
+      <div class="bg-gray-100 rounded-[5px] p-8">
         <h3 class="mb-4">Vores tilgang</h3>
         <p>
           Vi tror på, at de bedste resultater opstår gennem tæt samarbejde. Vi tænker kreativt og finder løsninger, der både overrasker og skaber
           værdi.
         </p>
       </div>
-      <div class="bg-gray-100 rounded-sm p-8">
+      <div class="bg-gray-100 rounded-[5px] p-8">
         <h3 class="mb-4">Vores proces</h3>
         <p>
           Vores proces bygger på samarbejde, så vi altid er i tæt dialog med dig, fra idé til færdigt resultat. Sammen sikrer vi, at din vision bliver
@@ -124,12 +124,12 @@ import Button from "../components/Button.astro";
                     {
                       cards.map((card) => (
                         <div
-                          class="carousel-focus flex flex-col relative bg-gray-100 mx-5 my-10 rounded-sm shadow-drop25"
+                          class="carousel-focus flex flex-col relative bg-gray-100 mx-5 my-10 rounded-[5px] shadow-drop25"
                           style="width: 400px;"
                           aria-label={`View project: ${card.title}`}
                         >
                           <img
-                            class="w-full h-[350px] object-cover rounded-tl-sm rounded-tr-sm border-gray-200 flex-shrink-0"
+                            class="w-full h-[350px] object-cover rounded-tl-[5px] rounded-tr-[5px] border-gray-200 flex-shrink-0"
                             src={card.image}
                             alt={`Screenshot of the frontpage for ${card.title}`}
                           />
@@ -144,12 +144,12 @@ import Button from "../components/Button.astro";
                     {
                       cards.map((card) => (
                         <div
-                          class="carousel-focus flex flex-col relative bg-gray-100 mx-5 my-10 rounded-sm shadow-drop25"
+                          class="carousel-focus flex flex-col relative bg-gray-100 mx-5 my-10 rounded-[5px] shadow-drop25"
                           style="width: 400px;"
                           aria-label={`View project: ${card.title}`}
                         >
                           <img
-                            class="w-full h-[350px] object-cover rounded-tl-sm rounded-tr-sm border-gray-200 flex-shrink-0"
+                            class="w-full h-[350px] object-cover rounded-tl-[5px] rounded-tr-[5px] border-gray-200 flex-shrink-0"
                             src={card.image}
                             alt={`Screenshot of the frontpage for ${card.title}`}
                           />
