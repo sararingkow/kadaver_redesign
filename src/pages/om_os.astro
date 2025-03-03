@@ -7,15 +7,15 @@ import Button from "../components/Button.astro";
   <section class="top-section relative md:mb-desktop-bottom mb-mobil-bottom w-full h-screen">
     <!-- Video Background -->
     <div class="absolute inset-0 w-full h-full z-0">
-      <img src="/images/au_page.webp" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gray-950 opacity-80 z-[10]"></div>
+      <img src="/images/au_page.webp" class="w-full h-screen object-cover" />
+      <div class="absolute inset-0 bg-gray-950 opacity-60 z-[10]"></div>
     </div>
 
     <!-- Text Overlay -->
     <div class="absolute inset-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 content-center h-full">
       <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
         <h1 class="display mb-4 text-gray-50">Om os</h1>
-        <hr class="shadow-drop25 border-blue-700 border-4 w-[100px] md:w-[180px] md:mb-8 mb-10" />
+        <hr class="shadow-drop25 border-violet-600 border-4 w-[100px] md:w-[180px] md:mb-8 mb-10" />
         <p class="hero_text text-gray-50">
           Vil du vide mere om, hvem vi er, og hvordan vi arbejder? Udforsk vores tilgang til kreativt og strategisk arbejde, og se, hvordan vi
           udvikler idéer, der skaber stærke forbindelser mellem brands og mennesker.
@@ -35,7 +35,7 @@ import Button from "../components/Button.astro";
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="float w-8 h-8 sm:w-10 sm:h-10 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
+          class="arrow float w-8 h-8 sm:w-10 sm:h-10 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
         >
           <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
         </svg>
@@ -55,7 +55,7 @@ import Button from "../components/Button.astro";
         Med en strategisk tilgang omsætter vi indsigt til stærke kampagner, der ikke bare fanger opmærksomhed, men også skaber ægte forbindelser og målbare
         resultater. Vi kombinerer kreativitet med handling&mdash; vi underholder, vi inspirerer, og vi bygger relationer, der holder.
         <br /><br />
-        <span class="bold"
+        <span
           >For os handler det ikke om at jagte trends, men om at forme fortællinger, der føles <br class="hidden md:block" />ægte og giver mening.</span
         >
       </p>
@@ -68,13 +68,14 @@ import Button from "../components/Button.astro";
   <section
     class="service_section md:mt-desktop-top mt-mobil-top mb-mobil-bottom md:mb-desktop-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
   >
-    <div class="col-span-12">
-      <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-16">
-        <img src="/images/ydelser1.svg" alt="Ydelser 1" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
-        <img src="/images/ydelser2.svg" alt="Ydelser 2" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
-        <img src="/images/ydelser3.svg" alt="Ydelser 3" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
-        <img src="/images/ydelser4.svg" alt="Ydelser 4" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
-        <img src="/images/ydelser5.svg" alt="Ydelser 5" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-44" />
+    <div class="md:col-span-10 md:col-start-2 justify-center">
+      <h2 class="text-h3-mobile md:text-h3-desktop col-span-12 md:text-left text-center pb-12 md:pb-8">Vores ydelser</h2>
+      <div class="flex flex-col md:flex-row gap-12">
+        <img src="/images/ydelser1.svg" alt="Ydelser 1" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-48" />
+        <img src="/images/ydelser2.svg" alt="Ydelser 2" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-48" />
+        <img src="/images/ydelser3.svg" alt="Ydelser 3" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-48" />
+        <img src="/images/ydelser4.svg" alt="Ydelser 4" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-48" />
+        <img src="/images/ydelser5.svg" alt="Ydelser 5" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-48" />
       </div>
     </div>
   </section>
@@ -82,7 +83,7 @@ import Button from "../components/Button.astro";
   <section class="work_section flex justify-center items-center md:mt-desktop-top mt-mobil-top mb-mobil-bottom md:mb-desktop-bottom">
     <div class="mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 items-center justify-center">
       <div class="work_text col-span-12">
-        <h3 class="pb-2 md:pb-4">Vores arbejde i praksis</h3>
+        <h2 class="pb-2 md:pb-4 text-h3-mobile md:text-h3-desktop">Vores arbejde i praksis</h2>
         <p>
           Vi tror på, at kreative løsninger starter med stærke idéer. Udforsk vores cases, og se<br class="hidden md:block" />
           hvordan vi har hjulpet brands med at formidle deres historier på nye og inspirerende <br class="hidden md:block" />
@@ -105,7 +106,7 @@ import Button from "../components/Button.astro";
   /* inView Animations */
   const elementmedanimation1 = document.querySelector("h1");
   inView(elementmedanimation1, () => {
-    elementmedanimation1.classList.add("animate__animated", "animate__fadeInLeft");
+    elementmedanimation1.classList.add("animate__animated", "animate__fadeInRight");
   });
 
   const elementmedanimation2 = document.querySelector("hr");
@@ -115,7 +116,7 @@ import Button from "../components/Button.astro";
 
   const elementmedanimation3 = document.querySelector(".text_left");
   inView(elementmedanimation3, () => {
-    elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
+    elementmedanimation3.classList.add("animate__animated", "animate__fadeInRight");
   });
 
   const elementmedanimation4 = document.querySelector(".logo");
@@ -168,5 +169,9 @@ import Button from "../components/Button.astro";
   .top-section p,
   .top-section h1 {
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .arrow {
+    shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
 </style>

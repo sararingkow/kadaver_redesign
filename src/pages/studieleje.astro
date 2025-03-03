@@ -12,15 +12,15 @@ import Button from "../components/Button.astro";
   <section class="top-section relative md:mb-desktop-bottom mb-mobil-bottom w-full h-screen">
     <!-- Video Background -->
     <div class="absolute inset-0 w-full h-full z-0">
-      <video src="/images/studio_video.mp4" class="w-full h-full object-cover" autoplay loop muted></video>
-      <div class="absolute inset-0 bg-gray-950 opacity-80 z-[10]"></div>
+      <video src="/images/studio_video.mp4" class="w-full h-screen object-cover" autoplay loop muted></video>
+      <div class="absolute inset-0 bg-gray-950 opacity-60 z-[10]"></div>
     </div>
 
     <!-- Text Overlay -->
     <div class="absolute inset-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 content-center h-full">
       <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
         <h1 class="display mb-4 text-gray-50">Studieleje</h1>
-        <hr class="shadow-drop25 border-blue-700 border-4 w-[195px] md:w-[335px] md:mb-8 mb-10" />
+        <hr class="shadow-drop25 border-violet-600 border-4 w-[195px] md:w-[335px] md:mb-8 mb-10" />
         <p class="hero_text text-gray-50">
           Har du brug for et kreativt rum til dit næste projekt? Vores studie er udstyret med alt du behøver, fra green screen til makeupstation.
           Perfekt til både fotoshoots og videoproduktioner. Book din næste session hos os og få den professionelle ramme, du søger.
@@ -32,7 +32,7 @@ import Button from "../components/Button.astro";
         </a>
       </div>
     </div>
-    <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
+    <div class="arrow absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
       <a href="#info-list">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ import Button from "../components/Button.astro";
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="float w-8 h-8 sm:w-10 sm:h-10 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
+          class="arrow float w-8 h-8 sm:w-10 sm:h-10 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
         >
           <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
         </svg>
@@ -148,7 +148,7 @@ import Button from "../components/Button.astro";
   /* inView Animations */
   const elementmedanimation1 = document.querySelector("h1");
   inView(elementmedanimation1, () => {
-    elementmedanimation1.classList.add("animate__animated", "animate__fadeInLeft");
+    elementmedanimation1.classList.add("animate__animated", "animate__fadeInRight");
   });
 
   const elementmedanimation2 = document.querySelector("hr");
@@ -220,5 +220,9 @@ import Button from "../components/Button.astro";
   .top-section p,
   .top-section h1 {
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .arrow {
+    shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
 </style>
