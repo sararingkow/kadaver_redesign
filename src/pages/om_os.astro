@@ -17,8 +17,8 @@ import Button from "../components/Button.astro";
         <h1 class="display mb-4 text-gray-50">Om os</h1>
         <hr class="shadow-drop25 border-violet-600 border-4 w-[100px] md:w-[180px] md:mb-8 mb-10" />
         <p class="hero_text text-gray-50">
-          Vil du vide mere om, hvem vi er, og hvordan vi arbejder? Udforsk vores tilgang til kreativt og strategisk arbejde, og se, hvordan vi
-          udvikler idéer, der skaber stærke forbindelser mellem brands og mennesker.
+          Er du nysgerrig på hvem vi er, og hvordan vi arbejder? Dyk ned i vores tilgang til kreativt og strategisk arbejde, og se hvordan vi udvikler
+          idéer, der skaber varige forbindelser mellem brands og mennesker.
         </p>
       </div>
       <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
@@ -69,8 +69,8 @@ import Button from "../components/Button.astro";
     class="service_section md:mt-desktop-top mt-mobil-top mb-mobil-bottom md:mb-desktop-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
   >
     <div class="md:col-span-10 md:col-start-2 justify-center">
-      <h2 class="text-h3-mobile md:text-h3-desktop col-span-12 md:text-left text-center pb-12 md:pb-8">Vores ydelser</h2>
-      <div class="flex flex-col md:flex-row gap-12">
+      <h2 class="service_title text-h3-mobile md:text-h3-desktop col-span-12 md:text-left text-center pb-12 md:pb-8">Vores ydelser</h2>
+      <div class="service_images flex flex-col md:flex-row gap-12">
         <img src="/images/ydelser1.svg" alt="Ydelser 1" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-48" />
         <img src="/images/ydelser2.svg" alt="Ydelser 2" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-48" />
         <img src="/images/ydelser3.svg" alt="Ydelser 3" class="hover:-translate-y-2 transition duration-300 ease-in-out w-auto h-48" />
@@ -81,9 +81,9 @@ import Button from "../components/Button.astro";
   </section>
 
   <section class="work_section flex justify-center items-center md:mt-desktop-top mt-mobil-top mb-mobil-bottom md:mb-desktop-bottom">
-    <div class="mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 items-center justify-center">
-      <div class="work_text col-span-12">
-        <h2 class="pb-2 md:pb-4 text-h3-mobile md:text-h3-desktop">Vores arbejde i praksis</h2>
+    <div class="work_container mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 items-center justify-center">
+      <h2 class="col-span-12 pb-2 md:pb-4 text-h3-mobile md:text-h3-desktop">Vores arbejde i praksis</h2>
+      <div class="col-span-12">
         <p>
           Vi tror på, at kreative løsninger starter med stærke idéer. Udforsk vores cases, og se<br class="hidden md:block" />
           hvordan vi har hjulpet brands med at formidle deres historier på nye og inspirerende <br class="hidden md:block" />
@@ -91,7 +91,7 @@ import Button from "../components/Button.astro";
         </p>
         <div class="btn_container md:pt-5 pt-6 md:pb-12 pb-8">
           <a href="/listview">
-            <Button variant="primary" size="small">Udforsk cases</Button>
+            <Button variant="secondary" size="small">Udforsk cases</Button>
           </a>
         </div>
         <img src="/images/top_cases.webp" alt="Cases" class="work_image w-full h-auto object-cover" />
@@ -116,7 +116,7 @@ import Button from "../components/Button.astro";
 
   const elementmedanimation3 = document.querySelector(".text_left");
   inView(elementmedanimation3, () => {
-    elementmedanimation3.classList.add("animate__animated", "animate__fadeInRight");
+    elementmedanimation3.classList.add("animate__animated", "animate__fadeInLeft");
   });
 
   const elementmedanimation4 = document.querySelector(".logo");
@@ -124,19 +124,19 @@ import Button from "../components/Button.astro";
     elementmedanimation4.classList.add("animate__animated", "animate__fadeInRight");
   });
 
-  const elementmedanimation5 = document.querySelector(".service_section");
+  const elementmedanimation5 = document.querySelector(".service_images");
   inView(elementmedanimation5, () => {
     elementmedanimation5.classList.add("animate__animated", "animate__flipInX");
   });
 
-  const elementmedanimation6 = document.querySelector(".work_text");
+  const elementmedanimation6 = document.querySelector(".work_container");
   inView(elementmedanimation6, () => {
     elementmedanimation6.classList.add("animate__animated", "animate__fadeInUp");
   });
 
   const elementmedanimation7 = document.querySelector(".work_image");
   inView(elementmedanimation7, () => {
-    elementmedanimation7.classList.add("animate__animated", "animate__fadeInRight");
+    elementmedanimation7.classList.add("animate__animated", "animate__fadeInLeft");
   });
 
   const elementmedanimation8 = document.querySelector(".btn_container");
@@ -147,6 +147,11 @@ import Button from "../components/Button.astro";
   const elementmedanimation9 = document.querySelector(".hero_text");
   inView(elementmedanimation9, () => {
     elementmedanimation9.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const elementmedanimation10 = document.querySelector(".service_title");
+  inView(elementmedanimation10, () => {
+    elementmedanimation10.classList.add("animate__animated", "animate__fadeInLeft");
   });
 </script>
 
