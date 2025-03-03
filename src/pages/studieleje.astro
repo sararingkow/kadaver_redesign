@@ -12,8 +12,8 @@ import Button from "../components/Button.astro";
   <section class="top-section relative md:mb-desktop-bottom mb-mobil-bottom w-full h-screen">
     <!-- Video Background -->
     <div class="absolute inset-0 w-full h-full z-0">
-      <video src="/images/studio_video.mp4" class="w-full h-screen object-cover" autoplay loop muted></video>
-      <div class="absolute inset-0 bg-gray-950 opacity-60 z-[10]"></div>
+      <video src="/images/studio_video.mp4" class="w-full h-screen object-cover brightness-[0.6]" autoplay loop muted></video>
+      <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
     </div>
 
     <!-- Text Overlay -->
@@ -28,7 +28,7 @@ import Button from "../components/Button.astro";
       </div>
       <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
         <a href="#contact">
-          <Button variant="primary" size="small">Gå til kontakt</Button>
+          <Button variant="secondary" size="small">Gå til kontakt</Button>
         </a>
       </div>
     </div>
@@ -51,60 +51,79 @@ import Button from "../components/Button.astro";
   <section id="info-list" class="info_list md:mb-desktop-bottom mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12">
     <div class="col-span-12">
       <h2 class="md:mb-12 mb-4">Alt du skal vide</h2>
-      <div class="list grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="list grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Obligatory Table -->
         <div class="flex flex-col">
           <img src="/images/mandatory.webp" class="w-full object-cover" alt="Obligatorisk info" />
           <h3 class="md:mt-8 mt-6 mb-4">Obligatorisk</h3>
-          <ul class="space-y-4 md:pb-0 pb-8">
-            <li><span class="bold">Beliggenhed:</span><br />Wilders Plads 5, 1403 KBH K</li>
-            <li><span class="bold">Pris pr. dag:</span><br />2950,- kr. ekskl. moms</li>
-            <li><span class="bold">Tidsrum:</span><br />8-17</li>
-            <li><span class="bold">Areal:</span><br />40 m2 + klippestudie på 12,5 m2</li>
-            <li><span class="bold">Højde:</span><br />3 m</li>
-            <li><span class="bold">Rumhorisont:</span><br />18 m2 <em>(Kan males efter aftale)</em></li>
-            <li><span class="bold">Adgang:</span><br />Direkte fra parkeringsplads i stueplan</li>
-            <li><span class="bold">Internet:</span><br />Ja</li>
-          </ul>
+          <table class="w-full border-collapse border border-gray-300">
+            <tbody>
+              <tr class="border-b"><td class="p-4 font-bold">Beliggenhed</td><td class="p-4">Wilders Plads 5, 1403 KBH K</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Pris pr. dag</td><td class="p-4">2950,- kr. ekskl. moms</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Tidsrum</td><td class="p-4">8-17</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Areal</td><td class="p-4">40 m2 + klippestudie på 12,5 m2</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Højde</td><td class="p-4">3 m</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Rumhorisont</td><td class="p-4">18 m2 <em>(kan males efter aftale)</em></td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Adgang</td><td class="p-4">Direkte fra parkeringsplads i stueplan</td></tr>
+              <tr><td class="p-4 font-bold">Internet</td><td class="p-4">Ja</td></tr>
+            </tbody>
+          </table>
         </div>
+
+        <!-- Technical Table -->
         <div class="flex flex-col">
           <img src="/images/technical.webp" class="w-full object-cover" alt="Teknisk info" />
           <h3 class="md:mt-8 mt-5 mb-4">Teknisk</h3>
-          <ul class="space-y-4 md:pb-0 pb-8">
-            <li><span class="bold">Green-screen:</span> Ja</li>
-            <li><span class="bold">Baggrunde:</span> Ja, mange forskellige farver</li>
-            <li><span class="bold">Lydisoleret:</span> Delvist</li>
-            <li><span class="bold">Akustik-behandlet:</span> Ja</li>
-            <li><span class="bold">Mulighed for mørklægning:</span> Ja</li>
-            <li><span class="bold">Lys:</span> Mulighed for opsætning i loft- og standerlamper</li>
-            <li><span class="bold">El:</span> 18 amp udtag</li>
-            <li><span class="bold">Musikanlæg:</span> Ja</li>
-            <li><span class="bold">Makeup-station:</span> Ja</li>
-            <li><span class="bold">Lounge:</span> Ja</li>
-            <li><span class="bold">Tekøkken:</span> Ja</li>
-          </ul>
+          <table class="w-full border-collapse border border-gray-300">
+            <tbody>
+              <tr class="border-b"><td class="p-4 font-bold">Green-screen</td><td class="p-4">Ja</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Baggrunde</td><td class="p-4">Ja, mange forskellige farver</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Lydisoleret</td><td class="p-4">Delvist</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Akustisk behandlet</td><td class="p-4">Ja</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Mulighed for mørklægning</td><td class="p-4">Ja</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Lys</td><td class="p-4">Mulighed for opsætning i loft- og standerlamper</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">El</td><td class="p-4">18 amp udtag</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Musikanlæg</td><td class="p-4">Ja</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Makeup-station</td><td class="p-4">Ja</td></tr>
+              <tr class="border-b"><td class="p-4 font-bold">Lounge</td><td class="p-4">Ja</td></tr>
+              <tr><td class="p-4 font-bold">Tekøkken</td><td class="p-4">Ja</td></tr>
+            </tbody>
+          </table>
         </div>
+
+        <!-- Rental Table -->
         <div class="flex flex-col">
           <img src="/images/rent.webp" class="w-full object-cover" alt="Udstyrsleje" />
           <h3 class="md:mt-8 mt-5 mb-4">Udstyrsleje</h3>
-          <ul class="space-y-4 md:pb-0 pb-8">
-            <li>
-              <span class="bold">Kamera:</span> Sony a7s iii + Atomos Ninja V recorder inkl. diske: <span class="bold underline">800 kr. pr. dag</span
+          <table class="w-full border-collapse border border-gray-300">
+            <tbody>
+              <tr class="border-b"
+                ><td class="p-4 font-bold">Kamera</td><td class="p-4"
+                  >Sony a7s iii + Atomos Ninja V recorder inkl. diske: <span class="bold underline">800 kr. pr. dag</span></td
+                ></tr
               >
-            </li>
-            <li>
-              <span class="bold">Objektiv:</span> SONY (E) FE 28-135MM F/4 PZ G OSS Ø95: <span class="bold underline">500 kr. pr. dag</span>
-            </li>
-            <li><span class="bold">Gimbal:</span> ZHIYUN CRANE 3S: <span class="bold underline">500 kr. pr. dag</span></li>
-            <li>
-              <span class="bold">Lys:</span>
-              <ul class="space-y-2">
-                <li>5 x Area 48 LED: <span class="bold underline">250 kr. pr. dag</span></li>
-                <li>1 x Soft boks Nanlite Compac 200B: <span class="bold underline">250 kr. pr. dag</span></li>
-                <li>2 x Boling LED Slim line BL-2280P. 5500 Kelvin: <span class="bold underline">200 kr. pr. stk. pr. dag</span></li>
-                <li>Diverse lysstofrør og stativer: <span class="bold underline">Pris efter aftale</span></li>
-              </ul>
-            </li>
-          </ul>
+              <tr class="border-b"
+                ><td class="p-4 font-bold">Objektiv</td><td class="p-4"
+                  >SONY (E) FE 28-135MM F/4 PZ G OSS Ø95: <span class="bold underline">500 kr. pr. dag</span></td
+                ></tr
+              >
+              <tr class="border-b"
+                ><td class="p-4 font-bold">Gimbal</td><td class="p-4">ZHIYUN CRANE 3S: <span class="bold underline">500 kr. pr. dag</span></td></tr
+              >
+              <tr class="border-b"
+                ><td class="p-4 font-bold">Lys</td><td class="p-4">
+                  <ul class="list-disc pl-4 space-y-2">
+                    <li>5 x Area 48 LED: <span class="bold underline">250 kr. pr. dag</span></li>
+                    <li>1 x Soft boks Nanlite Compac 200B: <span class="bold underline">250 kr. pr. dag</span></li>
+                    <li>
+                      2 x Boling LED Slim line BL-2280P + 5500 Kelvin: <span class="bold underline">200 kr. pr. stk. pr. dag</span>
+                    </li>
+                    <li>Diverse lysstofrør og stativer: <span class="bold underline">pris efter aftale</span></li>
+                  </ul>
+                </td></tr
+              >
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ import Button from "../components/Button.astro";
   <section id="top-section" class="relative md:mb-desktop-bottom mb-mobil-bottom w-full h-screen">
     <div class="absolute inset-0 w-full h-full z-0">
       <img src="/images/hero_gif.webp" alt="background gif" class="w-full h-screen object-cover" />
-      <div class="absolute inset-0 bg-gray-950 opacity-60 z-[10]"></div>
+      <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
       <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center h-full">
         <div class="typewriter col-span-12 md:col-span-12 z-30">
           <h1 class="display text-gray-50">Kadaver</h1>
@@ -35,10 +35,10 @@ import Button from "../components/Button.astro";
         </p>
         <div class="btn_container flex flex-row gap-6 md:gap-12 col-span-12">
           <a href="/kontakt">
-            <Button variant="primary" size="small">Kontakt os</Button>
+            <Button variant="secondary" size="small">Kontakt os</Button>
           </a>
           <a href="/listview">
-            <Button variant="primary" href="/listview" size="small">Vores cases</Button>
+            <Button variant="secondary" href="/listview" size="small">Vores cases</Button>
           </a>
         </div>
       </div>
