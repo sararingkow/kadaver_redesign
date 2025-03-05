@@ -2,15 +2,38 @@
 
 ---
 
-<div x-data="{ showmenu: false }" class="gap-4 z-[50] p-4 fixed w-full bg-opacity-90 bg-gray-50 backdrop-blur-sm">
+<div
+  x-data="{ scrolled: false, showmenu: false }"
+  @scroll.window="scrolled = window.scrollY > 50"
+  :class="scrolled ? 'bg-white/80 backdrop-blur-md' : 'bg-transparent'"
+  class="gap-4 z-[50] p-4 fixed w-full transition-colors duration-300 ease-in-out"
+>
   <!-- brug "fixed" for at have den på siden hele vejen ned -->
   <div id="navbar" class="flex flex-row justify-between max-w-7xl mx-auto pr-4 pl-4">
     <nav id="desktopmenu" class="hidden lg:block w-full">
       <div class="max-w-5xl mx-auto">
         <ul class="flex flex-row justify-between items-center gap-4 w-full [&>li]:basis-[45%]">
-          <li class="text-center"><a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/">Forside</a></li>
-          <li class="text-center"><a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/listview">Cases</a></li>
-          <li class="text-center"><a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/om_os">Om os</a></li>
+          <li class="text-center">
+            <a
+              :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+              class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+              href="/">Forside</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+              class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+              href="/listview">Cases</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+              class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+              href="/om_os">Om os</a
+            >
+          </li>
           <li class="text-center">
             <a class="text-neutral-50 flex items-center justify-center" href="/">
               <div class="relative w-16 h-16">
@@ -31,13 +54,25 @@
           </li>
 
           <li class="text-center">
-            <a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/studieleje">Studieleje</a>
+            <a
+              :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+              class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+              href="/studieleje">Studieleje</a
+            >
           </li>
           <li class="text-center">
-            <a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/praktik">Praktik</a>
+            <a
+              :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+              class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+              href="/praktik">Praktik</a
+            >
           </li>
           <li class="text-center">
-            <a class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/kontakt">Kontakt os</a>
+            <a
+              :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+              class="py-2 hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+              href="/kontakt">Kontakt os</a
+            >
           </li>
         </ul>
       </div>
@@ -51,7 +86,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="size-8 hover:text-violet-600 transition duration-300 ease-in-out"
+        class="size-8 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
       >
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"></path>
       </svg>
@@ -64,7 +99,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="size-8 hover:text-violet-600 transition duration-300 ease-in-out"
+        class="size-8 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
       >
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
       </svg>
@@ -73,7 +108,7 @@
   <!-- Burger Menu -->
   <nav
     id="mobilmenu"
-    class="flex flex-col content-center pt-4 transition duration-300 ease-in-out"
+    class="bg-transparent backdrop-blur-sm flex flex-col content-center pt-4 transition duration-300 ease-in-out"
     x-show="showmenu"
     x-transition.opacity
     x-cloak
@@ -81,22 +116,46 @@
   >
     <ul>
       <li class="py-4 text-center">
-        <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/">Forside</a>
+        <a
+          :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+          class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+          href="/">Forside</a
+        >
       </li>
       <li class="py-4 text-center">
-        <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/listview">Cases</a>
+        <a
+          :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+          class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+          href="/listview">Cases</a
+        >
       </li>
       <li class="py-4 text-center">
-        <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/om_os">Om os</a>
+        <a
+          :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+          class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+          href="/om_os">Om os</a
+        >
       </li>
       <li class="py-4 text-center">
-        <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/studieleje">Studieleje</a>
+        <a
+          :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+          class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+          href="/studieleje">Studieleje</a
+        >
       </li>
       <li class="py-4 text-center">
-        <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/praktik">Praktik</a>
+        <a
+          :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+          class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+          href="/praktik">Praktik</a
+        >
       </li>
       <li class="py-4 text-center">
-        <a class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out" href="/kontakt">Kontakt os</a>
+        <a
+          :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
+          class="py-3 border-b hover:opacity-50 hover:underline transition duration-300 ease-in-out"
+          href="/kontakt">Kontakt os</a
+        >
       </li>
     </ul>
   </nav>
@@ -107,3 +166,18 @@
     display: none !important;
   }
 </style>
+
+<script>
+  import Alpine from "alpinejs";
+
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("navbar", () => ({
+      scrolled: false,
+      init() {
+        window.addEventListener("scroll", () => {
+          this.scrolled = window.scrollY > 50; // Skifter farve efter 50px scroll
+        });
+      },
+    }));
+  });
+</script>
