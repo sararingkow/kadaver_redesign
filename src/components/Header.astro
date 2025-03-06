@@ -5,8 +5,8 @@
 <div
   x-data="{ scrolled: false, showmenu: false }"
   @scroll.window="scrolled = window.scrollY > 50"
-  :class="scrolled ? 'bg-white/80 backdrop-blur-md' : 'bg-transparent'"
-  class="gap-4 z-[50] p-4 fixed w-full transition-colors duration-300 ease-in-out"
+  :class="scrolled ? 'backdrop-blur-sm bg-opacity-80 bg-gray-50' : 'bg-transparent'"
+  class="gap-4 z-[50] p-4 fixed w-full transition-colors duration-300 ease-in-out backdrop-blur-sm"
 >
   <!-- brug "fixed" for at have den på siden hele vejen ned -->
   <div id="navbar" class="flex flex-row justify-between max-w-7xl mx-auto pr-4 pl-4">
@@ -86,6 +86,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
+        :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
         class="size-8 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
       >
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"></path>
@@ -99,6 +100,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
+        :class="scrolled ? 'text-gray-950' : 'text-gray-50'"
         class="size-8 text-gray-50 hover:text-violet-600 transition duration-300 ease-in-out"
       >
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
@@ -107,8 +109,8 @@
   </div>
   <!-- Burger Menu -->
   <nav
+    class="flex flex-col content-center pt-4 transition duration-300 ease-in-out"
     id="mobilmenu"
-    class="bg-transparent backdrop-blur-sm flex flex-col content-center pt-4 transition duration-300 ease-in-out"
     x-show="showmenu"
     x-transition.opacity
     x-cloak

@@ -56,7 +56,7 @@ import Button from "../components/Button.astro";
         <!-- Obligatory Table -->
         <div class="flex flex-col">
           <img src="/images/mandatory.webp" class="w-full object-cover" alt="Obligatorisk info" />
-          <h3 class="md:mt-8 mt-6 mb-4">Obligatorisk</h3>
+          <h3 class="md:mt-8 mt-6 md:mb-4 mb-2">Obligatorisk</h3>
           <table class="w-full border-collapse border border-gray-950">
             <tbody>
               <tr class="border-b border-gray-950"
@@ -91,7 +91,7 @@ import Button from "../components/Button.astro";
         <!-- Technical Table -->
         <div class="flex flex-col">
           <img src="/images/technical.webp" class="w-full object-cover" alt="Teknisk info" />
-          <h3 class="md:mt-8 mt-5 mb-4">Teknisk</h3>
+          <h3 class="md:mt-8 mt-5 md:mb-4 mb-2">Teknisk</h3>
           <table class="w-full border-collapse border border-gray-950">
             <tbody>
               <tr class="border-b border-gray-950"
@@ -134,7 +134,7 @@ import Button from "../components/Button.astro";
         <!-- Rental Table -->
         <div class="flex flex-col">
           <img src="/images/rent.webp" class="w-full object-cover" alt="Udstyrsleje" />
-          <h3 class="md:mt-8 mt-5 mb-4">Udstyrsleje</h3>
+          <h3 class="md:mt-8 mt-5 md:mb-4 mb-2">Udstyrsleje</h3>
           <table class="w-full border-collapse border border-gray-950">
             <tbody>
               <tr class="border-b border-gray-950"
@@ -171,11 +171,17 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="image_section md:pb-0 md:mb-desktop-bottom mb-mobil-bottom md:mt-desktop-top mt-mobil-top">
-    <div class="max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
-      <div class="col-span-12 md:col-span-10 md:col-start-2">
-        <img src="/images/image_section.webp" alt="Billede-sektion" class="w-full object-cover" />
-      </div>
+  <section
+    class="image-section md:mt-0 mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-4 items-start"
+  >
+    <div class="image1 col-span-12 md:col-span-7">
+      <img src="/images/sr_section1.webp" alt="Produktbillede 1" class="w-full h-[497px] object-cover" />
+    </div>
+    <div class="images2 col-span-12 md:col-span-5 flex flex-wrap gap-4">
+      <img src="/images/sr_section2.webp" alt="Produktbillede 2" class="w-[48%] md:w-[47%] h-[240px] object-cover" />
+      <img src="/images/sr_section3.webp" alt="Produktbillede 3" class="w-[48%] md:w-[47%] h-[240px] object-cover" />
+      <img src="/images/sr_section4.webp" alt="Produktbillede 4" class="w-[48%] md:w-[47%] h-[240px] object-cover" />
+      <img src="/images/sr_section5.webp" alt="Produktbillede 5" class="w-[48%] md:w-[47%] h-[240px] object-cover" />
     </div>
   </section>
 
@@ -236,9 +242,18 @@ import Button from "../components/Button.astro";
     });
   });
 
-  const elementmedanimation5 = document.querySelector(".image_section");
+  const elementmedanimation5 = document.querySelector(".image1");
   inView(elementmedanimation5, () => {
-    elementmedanimation5.classList.add("animate__animated", "animate__zoomIn");
+    elementmedanimation5.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const img = document.querySelectorAll(".images2 > img");
+
+  img.forEach((imgs, index) => {
+    inView(imgs, () => {
+      imgs.style.animationDelay = `${index * 400}ms`; // Ensure delay is set before animation
+      imgs.classList.add("animate__animated", "animate__fadeInRight");
+    });
   });
 
   const elementmedanimation6 = document.querySelector(".contact_text");

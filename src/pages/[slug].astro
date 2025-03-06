@@ -46,38 +46,16 @@ import "../styles/tobii.min.css";
   ogtitle={`Kadaver - ${card.subtitle}`}
   ogdescription={`Kadaver's arbejde for ${card.subtitle}`}
 >
-  <section class="main max-w-7xl md:mt-desktop-top md:mb-desktop-bottom mb-mobil-bottom mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
-    <div class="col-span-12 md:pb-16 pb-8">
-      <h1 class="md:text-h2-desktop text-h2-mobile md:mt-28 mt-16 md:mb-4 mb-2">{card.title}</h1>
-      <h2 class="md:text-h3-desktop text-h4-mobile text-gray-500 md:mt-4 mt-0 md:mb-2 mb-0">{card.subtitle}</h2>
+  <section>
+    <div class="relative">
+      <div class="absolute inset-0 bg-gray-950 z-10 opacity-60"></div>
+      <img src={card.image} alt={card.title} class="w-full h-[350px] object-cover shadow-inner25" />
     </div>
-    <div class="flex md:flex-row flex-col col-span-12 gap-8">
-      <div class="image_video md:w-[700px] w-full">
-        {
-          isVideo ? (
-            <video src={card.image_header} class="aspect-[16/9] shadow-drop25 w-full object-cover" controls />
-          ) : (
-            <a href={card.image_header} class="lightbox w-full aspect-[16/9] object-cover">
-              <img src={card.image_header} alt={card.title} class="shadow-drop25 w-full aspect-[16/9] object-cover" />
-            </a>
-          )
-        }
-      </div>
-      <div class="details md:pl-8 pl-0 md:mt-0 mt-8 flex flex-col">
-        <h2 class="md:text-h3-desktop text-h3-mobile">Detaljer</h2>
-        <hr class="shadow-drop25 border-violet-600 border-4 mb-8 mt-2 md:w-[170px] w-[150px]" />
-        <h3 class="md:text-h4-desktop text-h4-mobile">Type:</h3>
-        <p class="md:max-w-[700px]">{card.type}</p>
-        <h3 class="md:text-h4-desktop text-h4-mobile md:mt-8 mt-4">Målgruppe:</h3>
-        <p>{card.group}</p>
-        <h3 class="md:text-h4-desktop text-h4-mobile md:mt-8 mt-4">Medier:</h3>
-        <p>{card.media}</p>
-      </div>
-    </div>
-
+  </section>
+  <section class="relative main max-w-7xl md:mb-desktop-bottom mb-mobil-bottom mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
     <!-- Navigation Arrows -->
-    <div class="z-30 fixed top-[5.5rem] md:top-[6.5rem] right-[18px] md:right-[5.25rem] flex flex-col items-end gap-4 col-span-12">
-      <div class="flex justify-between items-center md:mt-7 mt-0 gap-8 bg-transparent backdrop-blur-sm p-2 w-fit">
+    <div class="z-30 flex flex-col md:items-end items-center justify-center gap-4 col-span-12">
+      <div class="flex justify-between items-center md:mt-7 mt-4 gap-8 bg-transparent backdrop-blur-sm p-2 w-fit">
         {
           prevCard && (
             <a href={`/${prevCard.slug}`} class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center">
@@ -96,6 +74,33 @@ import "../styles/tobii.min.css";
             </a>
           )
         }
+      </div>
+    </div>
+    <div class="col-span-12 md:pb-16 pb-8">
+      <h1 class="md:text-h2-desktop text-h2-mobile md:mt-12 mt-16 md:mb-4 mb-2">{card.title}</h1>
+      <h2 class="md:text-h3-desktop text-h4-mobile text-gray-500 md:mt-4 mt-0 md:mb-2 mb-0">{card.subtitle}</h2>
+    </div>
+    <div class="flex md:flex-row flex-col col-span-12 gap-8">
+      <div class="image_video md:w-[700px] w-full">
+        {
+          isVideo ? (
+            <video src={card.image_header} class="aspect-[16/9] shadow-drop25 w-full object-cover" controls />
+          ) : (
+            <a href={card.image_header} class="lightbox w-full aspect-[16/9] object-cover">
+              <img src={card.image_header} alt={card.title} class="shadow-drop25 w-full aspect-[16/9] object-cover" />
+            </a>
+          )
+        }
+      </div>
+      <div class="details md:pl-8 pl-0 md:mt-0 mt-8 flex flex-col">
+        <h2 class="md:text-h3-desktop text-h3-mobile">Detaljer</h2>
+        <hr class="border-violet-600 border-4 mb-8 mt-2 md:w-[170px] w-[150px]" />
+        <h3 class="md:text-h4-desktop text-h4-mobile">Type:</h3>
+        <p class="md:max-w-[700px]">{card.type}</p>
+        <h3 class="md:text-h4-desktop text-h4-mobile md:mt-8 mt-4">Målgruppe:</h3>
+        <p>{card.group}</p>
+        <h3 class="md:text-h4-desktop text-h4-mobile md:mt-8 mt-4">Medier:</h3>
+        <p>{card.media}</p>
       </div>
     </div>
   </section>
