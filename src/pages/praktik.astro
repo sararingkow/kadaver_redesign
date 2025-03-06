@@ -7,7 +7,11 @@ import Button from "../components/Button.astro";
   <section class="top-section relative md:mb-desktop-bottom mb-mobil-bottom w-full h-screen">
     <!-- Video Background -->
     <div class="absolute inset-0 w-full h-full z-0">
-      <img src="/images/internship.webp" class="w-full h-screen object-cover brightness-[0.6]" />
+      <img
+        src="/images/internship.webp"
+        alt="billede til hero-sektionen af Kadaver's praktikside"
+        class="w-full h-screen object-cover brightness-[0.6]"
+      />
       <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
     </div>
 
@@ -22,13 +26,13 @@ import Button from "../components/Button.astro";
         </p>
       </div>
       <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
-        <a href="#contact">
+        <a href="#contact" aria-label="Gå til kontakt">
           <Button variant="primary" size="small">Gå til kontakt</Button>
         </a>
       </div>
     </div>
     <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
-      <a href="#info-section">
+      <a href="#info-section" aria-label="Gå længere ned ad siden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -48,9 +52,9 @@ import Button from "../components/Button.astro";
     class="info_image md:md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12"
   >
     <div class="column grid grid-cols-1 lg:grid-cols-3 flex-row col-span-12 gap-4">
-      <img src="/images/internship1.svg" alt="Grafik for mentorordning" class="object-cover" />
-      <img src="/images/internship2.svg" alt="Grafik for mentorordning" class="object-cover" />
-      <img src="/images/internship3.svg" alt="Grafik for mentorordning" class="object-cover" />
+      <img src="/images/internship1.svg" alt="grafik for mentorordning (fra teori til praksis)" class="object-cover" />
+      <img src="/images/internship2.svg" alt="grafik for mentorordning (ansvar)" class="object-cover" />
+      <img src="/images/internship3.svg" alt="grafik for mentorordning (skræddersyet)" class="object-cover" />
     </div>
   </section>
 
@@ -67,7 +71,7 @@ import Button from "../components/Button.astro";
       </p>
     </div>
     <div class="mentoring_image hidden md:block col-span-3 content-center">
-      <img src="/images/mentoring.svg" alt="Grafik for mentorordning" class="w-36 h-36" />
+      <img src="/images/mentoring.svg" alt="grafik for mentorordning" class="w-36 h-36" />
     </div>
   </section>
   <section
@@ -78,7 +82,11 @@ import Button from "../components/Button.astro";
     <div class="flex gap-10 items-start col-span-12">
       <div class="flex flex-col md:flex-row md:items-center items-start md:gap-12 gap-8">
         <!-- Avatar Image -->
-        <img class="intern_image rounded-full w-[200px] h-[200px] object-cover" src="/images/mikkel.webp" alt="Avatar for Mikkel" />
+        <img
+          class="intern_image rounded-full w-[200px] h-[200px] object-cover"
+          src="/images/mikkel.webp"
+          alt="billede af Mikkel (tidligere praktikant)"
+        />
 
         <!-- Text Box -->
         <div class="intern_text flex flex-col w-full justify-center p-8 bg-gray-100 rounded-lg shadow-md">
@@ -95,7 +103,7 @@ import Button from "../components/Button.astro";
 
   <section class="after_internship relative max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
     <div class="relative flex justify-center col-span-12">
-      <img src="/images/scribble.svg" alt="Logo for Kadaver" class="w-[fit-content] h-[fit-content] object-cover" />
+      <img src="/images/scribble.svg" alt="krudsedulle-grafik" class="w-[fit-content] h-[fit-content] object-cover" />
 
       <div class="absolute inset-0 flex flex-col items-center justify-center">
         <h2 class="md:text-h2-desktop text-h3-mobile pb-2 md:pb-4">Efter endt praktik</h2>
@@ -118,13 +126,13 @@ import Button from "../components/Button.astro";
         et indblik i hvem vi er.
       </p>
       <div class="btn_container pt-6">
-        <a href="/kontakt">
+        <a href="/kontakt" aria-label="Gå til kontakt-siden">
           <Button variant="secondary" size="small">Gå til kontakt-siden</Button>
         </a>
       </div>
     </div>
     <div class="logo hidden md:block col-span-2 md:col-span-3 content-center">
-      <img src="/images/logo_gradient.webp" alt="Logo for Kadaver" class="w-40 h-40" />
+      <img src="/images/logo_gradient.webp" alt="gradient-logo for Kadaver" class="w-40 h-40" />
     </div>
   </section>
 </MainLayout>

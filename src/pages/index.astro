@@ -19,7 +19,7 @@ import Button from "../components/Button.astro";
 <MainLayout title="Kadaver | Hjem" description="Kadaver's forside" ogtitle="Kadaver - forside" ogdescription="Kadaver's forside/startside">
   <section id="top-section" class="relative md:mb-desktop-bottom mb-mobil-bottom w-full h-screen">
     <div class="absolute inset-0 w-full h-full z-0">
-      <img src="/images/hero_gif.webp" alt="background gif" class="w-full h-screen object-cover" />
+      <img src="/images/hero_gif.webp" alt="billede til hero-sektionen af Kadaver's forside" class="w-full h-screen object-cover" />
       <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
       <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center h-full">
         <div class="typewriter col-span-12 md:col-span-12 z-30">
@@ -33,16 +33,16 @@ import Button from "../components/Button.astro";
           løsninger skaber vi stærke, langvarige forbindelser med dit publikum.
         </p>
         <div class="btn_container flex flex-row gap-6 md:gap-12 col-span-12">
-          <a href="/kontakt">
+          <a href="/kontakt" aria-label="Gå til kontakt-siden">
             <Button variant="primary" size="small">Kontakt os</Button>
           </a>
-          <a href="/listview">
+          <a href="/listview" aria-label="Gå til cases">
             <Button variant="primary" href="/listview" size="small">Vores cases</Button>
           </a>
         </div>
       </div>
       <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
-        <a href="#about">
+        <a href="#about" aria-label="Gå længere ned ad siden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -104,7 +104,7 @@ import Button from "../components/Button.astro";
           </p>
         </div>
         <div class="btn_container pt-8">
-          <a href="/listview">
+          <a href="/listview" aria-label="Gå til cases">
             <Button variant="secondary" size="small">Gå til cases</Button>
           </a>
         </div>
@@ -130,7 +130,7 @@ import Button from "../components/Button.astro";
                           <img
                             class="w-full h-[350px] object-cover rounded-tl-[5px] rounded-tr-[5px] border-gray-200 flex-shrink-0"
                             src={card.image}
-                            alt={`Screenshot of the frontpage for ${card.title}`}
+                            alt={`screenshot af thumbnail for ${card.title}`}
                           />
                           <div class="p-6">
                             <h4 class="mb-2 text-h4-mobile">{card.title}</h4>
@@ -145,12 +145,12 @@ import Button from "../components/Button.astro";
                         <div
                           class="carousel-focus flex flex-col relative bg-gray-100 mx-5 my-10 rounded-[5px] shadow-drop25"
                           style="width: 400px;"
-                          aria-label={`View project: ${card.title}`}
+                          aria-label={`Se projekt: ${card.title}`}
                         >
                           <img
                             class="w-full h-[350px] object-cover rounded-tl-[5px] rounded-tr-[5px] border-gray-200 flex-shrink-0"
                             src={card.image}
-                            alt={`Screenshot of the frontpage for ${card.title}`}
+                            alt={`Screenshot af thumbnail for ${card.title}`}
                           />
                           <div class="p-6">
                             <h4 class="mb-2 ">{card.title}</h4>
@@ -176,13 +176,13 @@ import Button from "../components/Button.astro";
           løsninger, der skaber værdi og gør en forskel. <br class="hidden md:block" />Kontakt os i dag&mdash; vi ser frem til at møde dig!
         </p>
         <div class="btn_container pt-6">
-          <a href="/kontakt">
+          <a href="/kontakt" aria-label="Gå til kontakt-siden">
             <Button variant="secondary" size="small">Gå til kontakt-siden</Button>
           </a>
         </div>
       </div>
       <div class="logo hidden md:block col-span-2 content-center">
-        <img src="/images/logo_gradient.webp" alt="Logo for Kadaver" class="w-40 h-40" />
+        <img src="/images/logo_gradient.webp" alt="gradient-logo for Kadaver" class="w-40 h-40" />
       </div>
     </section>
 

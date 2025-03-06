@@ -7,7 +7,11 @@ import Button from "../components/Button.astro";
   <section class="top-section relative md:mb-desktop-bottom mb-mobil-bottom w-full h-screen">
     <!-- Video Background -->
     <div class="absolute inset-0 w-full h-full z-0">
-      <img src="/images/au_page.webp" class="w-full h-screen object-cover brightness-[0.6]" />
+      <img
+        src="/images/au_page.webp"
+        alt="billede til hero-sektionen af Kadaver's 'om os'-side"
+        class="w-full h-screen object-cover brightness-[0.6]"
+      />
       <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
     </div>
 
@@ -22,13 +26,13 @@ import Button from "../components/Button.astro";
         </p>
       </div>
       <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
-        <a href="#contact">
+        <a href="#contact" aria-label="Gå til kontakt">
           <Button variant="secondary" size="small">Gå til kontakt</Button>
         </a>
       </div>
     </div>
     <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
-      <a href="#info-section">
+      <a href="#info-section" aria-label="Gå længere ned ad siden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -61,7 +65,7 @@ import Button from "../components/Button.astro";
       </p>
     </div>
     <div class="logo hidden md:block col-span-12 md:col-span-3 md:justify-center justify-start items-center md:pb-0 pb-10">
-      <img src="/images/logo_gradient.webp" alt="Logo for Kadaver" class="md:w-52 md:h-52 w-40 h-40" />
+      <img src="/images/logo_gradient.webp" alt="gradient-logo for Kadaver" class="md:w-52 md:h-52 w-40 h-40" />
     </div>
   </section>
 
@@ -72,19 +76,19 @@ import Button from "../components/Button.astro";
       <h2 class="service_title text-h3-mobile md:text-h3-desktop col-span-12 md:text-left text-center pb-12 md:pb-8">Vores ydelser</h2>
       <div class="service_images flex flex-col md:flex-row gap-12 items-center justify-center">
         <div class="w-full flex justify-center">
-          <img src="/images/ydelser1.svg" alt="Ydelser 1" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
+          <img src="/images/ydelser1.svg" alt="Design (ydelse 1)" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
         </div>
         <div class="w-full flex justify-center">
-          <img src="/images/ydelser2.svg" alt="Ydelser 2" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
+          <img src="/images/ydelser2.svg" alt="Events (ydelse 2)" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
         </div>
         <div class="w-full flex justify-center">
-          <img src="/images/ydelser3.svg" alt="Ydelser 3" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
+          <img src="/images/ydelser3.svg" alt="Film (ydelse 3)" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
         </div>
         <div class="w-full flex justify-center">
-          <img src="/images/ydelser4.svg" alt="Ydelser 4" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
+          <img src="/images/ydelser4.svg" alt="Social (ydelse 4)" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
         </div>
         <div class="w-full flex justify-center">
-          <img src="/images/ydelser5.svg" alt="Ydelser 5" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
+          <img src="/images/ydelser5.svg" alt="Kampagner (ydelse 5)" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
         </div>
       </div>
     </div>
@@ -100,11 +104,15 @@ import Button from "../components/Button.astro";
           måder.
         </p>
         <div class="btn_container md:pt-5 pt-6 md:pb-12 pb-8">
-          <a href="/listview">
+          <a href="/listview" aria-label="Udforsk cases">
             <Button variant="secondary" size="small">Udforsk cases</Button>
           </a>
         </div>
-        <img src="/images/top_cases.webp" alt="Cases" class="work_image w-full h-auto object-cover" />
+        <img
+          src="/images/top_cases.webp"
+          alt="screenshot af cases fra den nuværende Kadaver-hjemmeside"
+          class="work_image w-full h-auto object-cover"
+        />
       </div>
     </div>
   </section>

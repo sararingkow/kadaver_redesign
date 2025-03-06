@@ -7,7 +7,11 @@ import Button from "../components/Button.astro";
   <section class="top-section relative w-full h-screen">
     <!-- Video Background -->
     <div class="absolute inset-0 w-full h-full z-0">
-      <img src="/images/contact.webp" class="w-full h-screen object-cover brightness-[0.6]" />
+      <img
+        src="/images/contact.webp"
+        alt="billede til hero-sektionen af Kadaver's kontaktside"
+        class="w-full h-screen object-cover brightness-[0.6]"
+      />
       <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
     </div>
 
@@ -22,13 +26,13 @@ import Button from "../components/Button.astro";
         </p>
       </div>
       <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
-        <a href="#contact">
+        <a href="#contact" aria-label="Se hvor vi befinder os">
           <Button variant="secondary" size="small">Se hvor vi befinder os</Button>
         </a>
       </div>
     </div>
     <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
-      <a href="#team">
+      <a href="#team" aria-label="Gå længere ned ad siden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -49,7 +53,7 @@ import Button from "../components/Button.astro";
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gap mt-10 col-span-12">
       <!-- Repeat this block for each person -->
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/chomee.webp" alt="Person 1" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/chomee.webp" alt="billede af Cho-Mee" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Cho-Mee Annemette Kristensen</p>
         <p class="position">Partner/CEO</p>
         <p class="email mt-2">chomee@kadaver.dk</p>
@@ -57,7 +61,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/borris.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/borris.webp" alt="billede af Borris" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Carl Johannes Borris</p>
         <p class="position">Partner/creative director</p>
         <p class="email mt-2">borris@kadaver.dk</p>
@@ -65,7 +69,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/jakob.webp" alt="Person 1" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/jakob.webp" alt="billede af Jacob" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Jacob Klintrup</p>
         <p class="position">Creative strategic director</p>
         <a href="mailto:klintrup@kadaver.dk" class="email mt-2">klintrup@kadaver.dk</a>
@@ -73,7 +77,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/toke.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/toke.webp" alt="billede af Toke" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Toke Krebs</p>
         <p class="position">Senior designer & concept developer</p>
         <a href="mailto:toke@kadaver.dk" class="email mt-2">toke@kadaver.dk</a>
@@ -81,7 +85,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/daniel.webp" alt="Person 1" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/daniel.webp" alt="billede af Daniel" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Daniel Stokke Meldrum Larsen</p>
         <p class="position">Senior creative</p>
         <a href="mailto:daniel@kadaver.dk" class="email mt-2">daniel@kadaver.dk</a>
@@ -89,7 +93,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/kristoffer.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/kristoffer.webp" alt="billede af Kristoffer" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Kristoffer Telling Foged</p>
         <p class="position">Creative/copywriter/strategy</p>
         <a href="mailto:kristoffer@kadaver.dk" class="email mt-2">kristoffer@kadaver.dk</a>
@@ -97,7 +101,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/thomas.webp" alt="Person 1" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/thomas.webp" alt="billede af Thomas" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Thomas Arvid Jensen</p>
         <p class="position">Creative/AV creative/concept developer</p>
         <a href="mailto:thomas@kadaver.dk" class="email mt-2">thomas@kadaver.dk</a>
@@ -105,7 +109,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/cecilie.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/cecilie.webp" alt="billede af Cecilie" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Cecilie Heisterberg Otzen</p>
         <p class="position">Production/project manager</p>
         <a href="mailto:cecilie@kadaver.dk" class="email mt-2">cecilie@kadaver.dk</a>
@@ -113,7 +117,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/nicolai.webp" alt="Person 1" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/nicolai.webp" alt="billede af Nicolai" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Nicolai Hundebøll</p>
         <p class="position">Produktionskoordinator</p>
         <a href="mailto:nico@kadaver.dk" class="email mt-2">nico@kadaver.dk</a>
@@ -121,7 +125,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/jeppe.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/jeppe.webp" alt="billede af Jeppe" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Jeppe Wittus</p>
         <p class="position">Production/project manager</p>
         <a href="mailto:jeppe@kadaver.dk" class="email mt-2">jeppe@kadaver.dk</a>
@@ -129,7 +133,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/dharshika.webp" alt="Person 1" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/dharshika.webp" alt="billede af Dharshika" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Dharshika Christopher</p>
         <p class="position">Community manager</p>
         <a href="mailto:dharshika@kadaver.dk" class="email mt-2">dharshika@kadaver.dk</a>
@@ -137,7 +141,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/rose.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/rose.webp" alt="billede af Rose" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Rose Appel</p>
         <p class="position">Creative</p>
         <a href="mailto:rose@kadaver.dk" class="email mt-2">rose@kadaver.dk</a>
@@ -145,7 +149,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/niels.webp" alt="Person 1" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/niels.webp" alt="billede af Niels" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Niels Forsberg</p>
         <p class="position">Manager (Girl's Legion)</p>
         <a href="mailto:niels@kadaver.dk" class="email mt-2">niels@kadaver.dk</a>
@@ -153,35 +157,35 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/marie.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/marie.webp" alt="billede af Marie" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Marie Groes-Petersen</p>
         <p class="position">Junior creative</p>
         <a href="mailto:marie@kadaver.dk" class="email mt-2">marie@kadaver.dk</a>
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/frederikke.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/frederikke.webp" alt="billede af Frederikke" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Frederikke Zander Kahne</p>
         <p class="position">Junior creative</p>
         <a href="mailto:frederikke@kadaver.dk" class="email mt-2">frederikke@kadaver.dk</a>
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/hannah.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/hannah.webp" alt="billede af Hannah" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Hannah Hansen</p>
         <p class="position">Junior creative</p>
         <a href="mailto:hannah@kadaver.dk" class="email mt-2">hannah@kadaver.dk</a>
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/emma.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/emma.webp" alt="billede af Emma" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Emma Lenau</p>
         <p class="position">Creative</p>
         <a href="mailto:emma@kadaver.dk" class="email mt-2">emma@kadaver.dk</a>
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/caroline.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/caroline.webp" alt="billede af Caroline" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Caroline Juul</p>
         <p class="position">Senior antropolog</p>
         <a href="mailto:caroline@kadaver.dk" class="email mt-2">caroline@kadaver.dk</a>
@@ -189,7 +193,7 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/fahad.webp" alt="Person 2" alt="Person 1" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/fahad.webp" alt="billede af Fahad" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Fahad Saeed</p>
         <p class="position">Business & strategy lead</p>
         <a href="mailto:fahad@kadaver.dk" class="email mt-2">fahad@kadaver.dk</a>
@@ -197,14 +201,14 @@ import Button from "../components/Button.astro";
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/sara.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/sara.webp" alt="billede af Sara" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Sara Ringkow Petersen</p>
         <p class="position">Junior creative/koder</p>
         <a href="mailto:ringkow@kadaver.dk" class="email mt-2">ringkow@kadaver.dk</a>
       </div>
 
       <div class="card flex flex-col md:items-start items-center">
-        <img src="/images/kristian.webp" alt="Person 2" class="w-[290px] h-[386.77] object-cover mb-4" />
+        <img src="/images/kristian.webp" alt="billede af Kristian" class="w-[290px] h-[386.77] object-cover mb-4" />
         <p class="bold">Kristian Albert Petersen</p>
         <p class="position">Junior designer</p>
         <a href="mailto:kristian@kadaver.dk" class="email mt-2">kristian@kadaver.dk</a>
@@ -230,6 +234,7 @@ import Button from "../components/Button.astro";
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4499.534553598127!2d12.590916477142986!3d55.67564697305568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652533c731d5263%3A0x590838e2ed2b2ebc!2sKadaver!5e0!3m2!1sen!2sdk!4v1738848876277!5m2!1sen!2sdk"
             class="w-full h-full shadow-drop25"
+            aria-label="google maps med Kadaver's adresse"
             style="border:0;"
             allowfullscreen=""
             loading="lazy"
