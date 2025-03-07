@@ -30,12 +30,12 @@ const filteredCards = cards.filter((card) => card.slug !== currentSlug);
             filteredCards.map((card) => (
               <a
                 href={`/${card.slug}`}
-                class="carousel-focus flex flex-col relative bg-gray-100 mx-5 my-10 rounded-sm shadow-drop25 hover:-translate-y-1 transition-transform duration-300 ease-in-out"
+                class="carousel-focus flex flex-col relative bg-gray-100 mx-5 my-10 rounded-[5px] shadow-drop25 hover:-translate-y-1 transition-transform duration-300 ease-in-out"
                 style="width: 400px;"
                 aria-label={`View project: ${card.title}`}
               >
                 <img
-                  class="w-full h-[350px] object-cover rounded-tl-sm rounded-tr-sm border-gray-200 flex-shrink-0"
+                  class="w-full h-[350px] object-cover rounded-tl-[5px] rounded-tr-[5px] border-gray-200 flex-shrink-0"
                   src={card.image}
                   alt={`Screenshot of the frontpage for ${card.title}`}
                 />
