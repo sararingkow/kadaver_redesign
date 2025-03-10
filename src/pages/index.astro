@@ -22,16 +22,14 @@ import Button from "../components/Button.astro";
       <img
         src="/images/hero_gif.webp"
         alt="billede til hero-sektionen af Kadaver's forside"
-        class="w-full h-screen object-cover brightness-[0.6] filter-grayscale"
+        class="w-full h-screen object-cover brightness-[0.5] filter-grayscale"
       />
       <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
       <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center h-full">
         <div class="typewriter col-span-12 md:col-span-12 z-30">
           <h1 class="display text-gray-50">Kadaver</h1>
         </div>
-        <h2 class="text-h3-mobile md:text-h3-desktop text-gray-50 col-span-12 lg:col-span-8 xl:col-span-6">
-          Kreativ kommunikation, der skaber stærke relationer
-        </h2>
+        <h2 class="text-h3-mobile md:text-h3-desktop text-gray-50 col-span-12 lg:col-span-6">Kreativ kommunikation, der skaber stærke relationer</h2>
         <p class="text-gray-50 col-span-12 lg:col-span-10 xl:col-span-8 md:pb-9 pb-8">
           Hos Kadaver laver vi indhold, der inspirerer og hjælper brands med at finde deres stemme. Gennem strategisk storytelling og innovative
           løsninger skaber vi stærke, langvarige forbindelser med dit publikum.
@@ -233,7 +231,6 @@ import Button from "../components/Button.astro";
       }
       50% {
         border-color: #9934ff;
-        shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
       }
     }
 
@@ -241,7 +238,8 @@ import Button from "../components/Button.astro";
     .typewriter {
       overflow: hidden;
       white-space: nowrap; /* Ensures text stays in one line */
-      border-right: 8px solid;
+      border-right: 8px solid transparent; /* Default border color */
+      position: relative; /* For positioning the pseudo-element */
       display: inline-block;
       animation:
         typewriter 0.9s steps(30) 0.8s 1 normal both,
@@ -285,16 +283,6 @@ import Button from "../components/Button.astro";
       100% {
         transform: translateX(-50%);
       }
-    }
-
-    #top-section p,
-    #top-section h1,
-    #top-section h2 {
-      text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-
-    .arrow {
-      shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     }
   </style>
 

@@ -10,7 +10,7 @@ import Button from "../components/Button.astro";
       <img
         src="/images/au_page.webp"
         alt="billede til hero-sektionen af Kadaver's 'om os'-side"
-        class="w-full h-screen object-cover brightness-[0.6] grayscale"
+        class="w-full h-screen object-cover brightness-[0.5] grayscale"
       />
       <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
     </div>
@@ -19,15 +19,15 @@ import Button from "../components/Button.astro";
     <div class="absolute inset-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 content-center h-full">
       <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
         <h1 class="display mb-4 text-gray-50">Om os</h1>
-        <hr class="shadow-drop25 border-violet-600 border-4 w-[100px] md:w-[180px] md:mb-8 mb-10" />
+        <hr class="border-violet-600 border-4 w-[100px] md:w-[180px] md:mb-8 mb-10" />
         <p class="hero_text text-gray-50">
           Er du nysgerrig på hvem vi er, og hvordan vi arbejder? Dyk ned i vores tilgang til kreativt og strategisk arbejde, og se hvordan vi udvikler
           idéer, der skaber varige forbindelser mellem brands og mennesker.
         </p>
       </div>
-      <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
+      <div class="btn_container flex flex-row pt-12 gap-6 md:gap-12 col-span-12">
         <a href="#contact" aria-label="Gå til kontakt">
-          <Button variant="secondary" size="small">Gå til kontakt</Button>
+          <Button variant="primary" size="small">Gå til kontakt</Button>
         </a>
       </div>
     </div>
@@ -187,14 +187,5 @@ import Button from "../components/Button.astro";
   }
   .float {
     animation: float 3s ease-in-out infinite;
-  }
-
-  .top-section p,
-  .top-section h1 {
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  .arrow {
-    shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
 </style>

@@ -10,7 +10,7 @@ import Button from "../components/Button.astro";
       <img
         src="/images/contact.webp"
         alt="billede til hero-sektionen af Kadaver's kontaktside"
-        class="w-full h-screen object-cover brightness-[0.6] grayscale"
+        class="w-full h-screen object-cover brightness-[0.5] grayscale"
       />
       <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
     </div>
@@ -19,15 +19,15 @@ import Button from "../components/Button.astro";
     <div class="absolute inset-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 content-center h-full">
       <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
         <h1 class="display mb-4 text-gray-50">Kontakt os</h1>
-        <hr class="shadow-drop25 border-violet-600 border-4 w-[260px] md:w-[450px] md:mb-8 mb-10" />
+        <hr class="border-violet-600 border-4 w-[260px] md:w-[450px] md:mb-8 mb-10" />
         <p class="hero_text text-gray-50">
           Hos os handler det om at arbejde tæt sammen og skabe noget ægte. Vil du vide mere om hvem vi er, hvad vi gør, og hvordan du kan komme i
           kontakt med os? Vi er klar til at tage det næste skridt&mdash; lad os finde ud af hvad vi kan opnå sammen.
         </p>
       </div>
-      <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
+      <div class="btn_container flex flex-row pt-12 gap-6 md:gap-12 col-span-12">
         <a href="#contact" aria-label="Se hvor vi befinder os">
-          <Button variant="secondary" size="small">Se hvor vi befinder os</Button>
+          <Button variant="primary" size="small">Se hvor vi befinder os</Button>
         </a>
       </div>
     </div>
@@ -290,11 +290,6 @@ import Button from "../components/Button.astro";
     font-size: 1em;
   }
 
-  .top-section p,
-  .top-section h1 {
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
   @keyframes float {
     0% {
       transform: translatey(0);
@@ -308,9 +303,5 @@ import Button from "../components/Button.astro";
   }
   .float {
     animation: float 3s ease-in-out infinite;
-  }
-
-  .arrow {
-    shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   }
 </style>
