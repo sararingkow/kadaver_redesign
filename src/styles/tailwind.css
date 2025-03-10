@@ -103,10 +103,5 @@
     .phone:hover {
       @apply opacity-50 transition duration-300 ease-in-out;
     }
-
-    /* Button Text */
-    .btn_container a {
-      @apply font-gilroy-bold text-gray-50 text-[16px];
-    }
   }
 }
