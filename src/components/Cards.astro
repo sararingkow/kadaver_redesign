@@ -48,8 +48,8 @@ import Button from "./Button.astro";
     cards
       .filter((c) => c.slug !== cards.slug)
       .map((card) => (
-        <a href={`/${card.slug}`} class="hover:-translate-y-1 transition-transform duration-300 ease-in-out">
-          <div class="flex flex-col max-w-7xl rounded-[5px] overflow-hidden shadow-drop25 bg-gray-100 h-full">
+        <a href={`/${card.slug}`} class="hover:-translate-y-1  transition-transform duration-300 ease-in-out">
+          <div class="flex flex-col rounded-[5px] overflow-hidden bg-gray-100 hover:bg-gray-200 transition duration-300 ease-in-out h-full">
             <img src={card.image} alt={card.title} class="w-full h-[375px] object-cover" />
             <div class="p-6 flex-grow">
               <h4 class="text-h4-mobile">
@@ -78,7 +78,7 @@ import Button from "./Button.astro";
 
 <style>
   .btn_container {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: "bold";
     color: "#f6f6f6";
   }

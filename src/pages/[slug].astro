@@ -49,10 +49,10 @@ import "../styles/tobii.min.css";
   <section>
     <div class="relative">
       <div class="absolute inset-0 bg-gray-950 z-10 opacity-60"></div>
-      <img src={card.image} alt={card.title} class="w-full h-[350px] object-cover shadow-inner25 grayscale" />
+      <img src={card.image} alt={card.title} class="w-full h-[350px] object-cover grayscale" />
     </div>
   </section>
-  <section class="relative main max-w-7xl md:mb-desktop-bottom mb-mobil-bottom mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
+  <section class="relative main max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
     <!-- Navigation Arrows -->
     <div class="z-30 flex flex-col md:items-end items-center justify-center gap-4 col-span-12">
       <div class="flex justify-between items-center md:mt-7 mt-4 gap-8 bg-transparent backdrop-blur-sm p-2 w-fit">
@@ -84,10 +84,10 @@ import "../styles/tobii.min.css";
       <div class="image_video md:w-[700px] w-full">
         {
           isVideo ? (
-            <video src={card.image_header} class="aspect-[16/9] shadow-drop25 w-full object-cover" controls />
+            <video src={card.image_header} class="aspect-[16/9] w-full object-cover rounded-[5px]" controls />
           ) : (
             <a href={card.image_header} class="lightbox w-full aspect-[16/9] object-cover">
-              <img src={card.image_header} alt={card.title} class="shadow-drop25 w-full aspect-[16/9] object-cover" />
+              <img src={card.image_header} alt={card.title} class="w-full aspect-[16/9] object-cover rounded-[5px]" />
             </a>
           )
         }
@@ -112,12 +112,12 @@ import "../styles/tobii.min.css";
           <h3 class="pb-4">Produktmateriale</h3>
           <div class="flex flex-wrap gap-4">
             <a href={images[0]} class="lightbox w-[fit-content] md:w-[60%] h-[484px] object-cover">
-              <img src={images[0]} alt={card.title} class="w-full h-full object-cover" />
+              <img src={images[0]} alt={card.title} class="w-full h-full object-cover rounded-[5px]" />
             </a>
             <div class="flex flex-wrap gap-4 flex-grow md:w-[38%]">
               {images.slice(1).map((image) => (
                 <a href={image} class="lightbox w-[fit-content] md:w-[240px] h-auto object-cover">
-                  <img src={image} alt={card.title} class="w-full h-full object-cover" />
+                  <img src={image} alt={card.title} class="w-full h-full object-cover rounded-[5px]" />
                 </a>
               ))}
             </div>
@@ -126,9 +126,7 @@ import "../styles/tobii.min.css";
       </section>
     )
   }
-  <section
-    class="other_cases md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
-  >
+  <section class="other_cases md:pt-desktop-top pt-mobil-top max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
     <div class="col-span-12">
       <h3>Andre cases</h3>
       <p class="pt-4">
@@ -194,3 +192,10 @@ import "../styles/tobii.min.css";
     elementmedanimation6.classList.add("animate__animated", "animate__slideInRight");
   });
 </script>
+
+<style>
+  a {
+    text-decoration: none;
+    font-family: "Gilroy-regular";
+  }
+</style>

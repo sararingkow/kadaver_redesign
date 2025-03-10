@@ -108,8 +108,8 @@ export default {
       full: "9999px",
     },
     boxShadow: {
-      drop25: "4px 4px 4px 0 rgb(0 0 0 / 0.25)",
-      drop50: "4px 4px 4px 0 rgb(0 0 0 / 0.50)",
+      drop25: "2px 2px 2px 0 rgb(0 0 0 / 0.25)",
+      drop50: "2px 2px 2px 0 rgb(0 0 0 / 0.50)",
       inner25: "0 4px 4px 0 rgb(0 0 0 / 0.25) inset",
       inner50: "0 4px 4px 0 rgb(0 0 0 / 0.50) inset",
     },

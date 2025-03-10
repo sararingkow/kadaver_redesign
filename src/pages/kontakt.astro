@@ -48,9 +48,9 @@ import Button from "../components/Button.astro";
   </section>
   <section
     id="team"
-    class="team_list md:mt-desktop-top mt-mobil-top md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12"
+    class="team_list md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12"
   >
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gap mt-10 col-span-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gap col-span-12">
       <!-- Repeat this block for each person -->
       <div class="card flex flex-col md:items-start items-center">
         <img src="/images/chomee.webp" alt="billede af Cho-Mee" class="w-[290px] h-[386.77] object-cover mb-4" />
@@ -218,7 +218,7 @@ import Button from "../components/Button.astro";
 
   <div class="grid grid-cols-12 gap-4">
     <section id="contact" class="col-span-12">
-      <div class="md:mb-desktop-bottom mb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="maps flex flex-col">
           <h4 class="mb-4">Kom og find os!</h4>
           <p class="max-w-6xl">
@@ -232,8 +232,8 @@ import Button from "../components/Button.astro";
         </div>
         <div class="google relative w-full h-96">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4499.534553598127!2d12.590916477142986!3d55.67564697305568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652533c731d5263%3A0x590838e2ed2b2ebc!2sKadaver!5e0!3m2!1sen!2sdk!4v1738848876277!5m2!1sen!2sdk"
-            class="w-full h-full shadow-drop25"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5003.3886832978915!2d12.590916477137617!3d55.675646973055706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652533c731d5263%3A0x590838e2ed2b2ebc!2sKadaver!5e1!3m2!1sen!2sdk!4v1741630729812!5m2!1sen!2sdk"
+            class="w-full h-full rounded-[5px]"
             aria-label="google maps med Kadaver's adresse"
             style="border:0;"
             allowfullscreen=""
@@ -278,18 +278,14 @@ import Button from "../components/Button.astro";
   inView(elementmedanimation6, () => {
     elementmedanimation6.classList.add("animate__animated", "animate__zoomIn");
   });
+
+  const elementmedanimation7 = document.querySelector(".team_list");
+  inView(elementmedanimation7, () => {
+    elementmedanimation7.classList.add("animate__animated", "animate__fadeIn");
+  });
 </script>
 
 <style>
-  .position {
-    font-size: 1em;
-  }
-
-  .email,
-  .phone {
-    font-size: 1em;
-  }
-
   @keyframes float {
     0% {
       transform: translatey(0);
