@@ -10,9 +10,9 @@ import Button from "../components/Button.astro";
       <img
         src="/images/au_page.webp"
         alt="billede til hero-sektionen af Kadaver's 'om os'-side"
-        class="w-full h-screen object-cover brightness-[0.5] grayscale"
+        class="w-full h-screen object-cover brightness-[0.7] grayscale"
       />
-      <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
+      <div class="overlay absolute inset-0 bg-gray-950 backdrop-blur-[2px] bg-opacity-60 z-10 md:w-[50%]"></div>
     </div>
 
     <!-- Text Overlay -->
@@ -20,10 +20,6 @@ import Button from "../components/Button.astro";
       <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
         <h1 class="display mb-4 text-gray-50">Om os</h1>
         <hr class="border-violet-600 border-4 w-[100px] md:w-[180px] md:mb-8 mb-10" />
-        <p class="hero_text text-gray-50">
-          Er du nysgerrig på hvem vi er, og hvordan vi arbejder? Dyk ned i vores tilgang til kreativt og strategisk arbejde, og se hvordan vi udvikler
-          idéer, der skaber varige forbindelser mellem brands og mennesker.
-        </p>
       </div>
       <div class="btn_container flex flex-row pt-12 gap-6 md:gap-12 col-span-12">
         <a href="#contact" aria-label="Gå til kontakt">
@@ -73,22 +69,51 @@ import Button from "../components/Button.astro";
     class="service_section md:pt-desktop-top pt-mobil-top pb-mobil-bottom md:pb-desktop-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center"
   >
     <div class="md:col-span-10 col-span-12 md:col-start-2 items-center justify-center">
-      <h2 class="service_title text-h3-mobile md:text-h3-desktop col-span-12 md:text-left text-center pb-12 md:pb-8">Vores ydelser</h2>
+      <h2 class="service_title text-h3-mobile md:text-h3-desktop col-span-12 md:text-left text-center pb-0 md:pb-2">Vores ydelser</h2>
+      <h3 class="service_subtitle md:text-h4-desktop text-h4-mobile md:pt-0 pt-2 pb-12 md:pb-14 text-gray-700 md:text-left text-center">
+        Se dem i aktion i vores cases
+      </h3>
       <div class="service_images flex flex-col md:flex-row gap-12 items-center justify-center">
         <div class="w-full flex justify-center">
-          <img src="/images/ydelser1.svg" alt="Design (ydelse 1)" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
+          <a href="/listview" class="service-link">
+            <img
+              src="/images/ydelser1.svg"
+              alt="Design"
+              class="service-image hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32"
+            />
+          </a>
         </div>
         <div class="w-full flex justify-center">
-          <img src="/images/ydelser2.svg" alt="Events (ydelse 2)" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
+          <a href="/listview" class="service-link">
+            <img
+              src="/images/ydelser2.svg"
+              alt="Events"
+              class="service-image hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32"
+            />
+          </a>
         </div>
         <div class="w-full flex justify-center">
-          <img src="/images/ydelser3.svg" alt="Film (ydelse 3)" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
+          <a href="/listview" class="service-link">
+            <img src="/images/ydelser3.svg" alt="Film" class="service-image hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
+          </a>
         </div>
         <div class="w-full flex justify-center">
-          <img src="/images/ydelser4.svg" alt="Social (ydelse 4)" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
+          <a href="/listview" class="service-link">
+            <img
+              src="/images/ydelser4.svg"
+              alt="Socials"
+              class="service-image hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32"
+            />
+          </a>
         </div>
         <div class="w-full flex justify-center">
-          <img src="/images/ydelser5.svg" alt="Kampagner (ydelse 5)" class="hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32" />
+          <a href="/listview" class="service-link">
+            <img
+              src="/images/ydelser5.svg"
+              alt="Campaign"
+              class="service-image hover:-translate-y-2 transition duration-300 ease-in-out md:w-40 w-32"
+            />
+          </a>
         </div>
       </div>
     </div>
@@ -162,14 +187,19 @@ import Button from "../components/Button.astro";
     elementmedanimation8.classList.add("animate__animated", "animate__zoomIn");
   });
 
-  const elementmedanimation9 = document.querySelector(".hero_text");
-  inView(elementmedanimation9, () => {
-    elementmedanimation9.classList.add("animate__animated", "animate__fadeInRight");
-  });
-
   const elementmedanimation10 = document.querySelector(".service_title");
   inView(elementmedanimation10, () => {
-    elementmedanimation10.classList.add("animate__animated", "animate__fadeInLeft");
+    elementmedanimation10.classList.add("animate__animated", "animate__fadeInRight");
+  });
+
+  const elementmedanimation10a = document.querySelector(".service_subtitle");
+  inView(elementmedanimation10a, () => {
+    elementmedanimation10a.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const elementmedanimation11 = document.querySelector(".overlay");
+  inView(elementmedanimation11, () => {
+    elementmedanimation11.classList.add("animate__animated", "animate__fadeInLeft");
   });
 </script>
 

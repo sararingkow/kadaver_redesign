@@ -11,9 +11,9 @@ import Button from "../components/Button.astro";
       <img
         src="/images/cases.webp"
         alt="billede til hero-sektionen af Kadaver's caseside"
-        class="w-full h-screen object-cover brightness-[0.5] grayscale"
+        class="w-full h-screen object-cover brightness-[0.7] grayscale"
       />
-      <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
+      <div class="overlay absolute inset-0 bg-gray-950 backdrop-blur-[2px] bg-opacity-60 z-10 md:w-[50%]"></div>
     </div>
 
     <!-- Text Overlay -->
@@ -21,11 +21,6 @@ import Button from "../components/Button.astro";
       <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
         <h1 class="display mb-4 text-gray-50">Cases</h1>
         <hr class="border-violet-600 border-4 w-[190px] md:w-[320px] md:mb-8 mb-10" />
-
-        <p class="hero_text text-gray-50">
-          Vi tror på, at de bedste kampagner ikke bare ses&mdash; de mærkes. Gennem strategi, kreativitet og tæt samarbejde udvikler vi løsninger, der
-          gør en reel forskel. Se vores cases og opdag hvordan vi bringer brands til liv med idéer, der både inspirerer og skaber konkrete resultater.
-        </p>
       </div>
     </div>
     <div class="absolute bottom-[3%] md:bottom-[2.5%] w-full flex justify-center z-[30]">
@@ -76,6 +71,11 @@ import Button from "../components/Button.astro";
   const elementmedanimation4 = document.querySelector(".case_list");
   inView(elementmedanimation4, () => {
     elementmedanimation4.classList.add("animate__animated", "animate__fadeIn");
+  });
+
+  const elementmedanimation5 = document.querySelector(".overlay");
+  inView(elementmedanimation5, () => {
+    elementmedanimation5.classList.add("animate__animated", "animate__fadeInLeft");
   });
 </script>
 

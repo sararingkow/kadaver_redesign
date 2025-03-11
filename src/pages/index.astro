@@ -43,19 +43,17 @@ import Button from "../components/Button.astro";
       <img
         src="/images/hero_gif.webp"
         alt="billede til hero-sektionen af Kadaver's forside"
-        class="w-full h-screen object-cover brightness-[0.5] filter-grayscale"
+        class="w-full h-screen object-cover brightness-[0.7] grayscale"
       />
-      <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
+      <div class="overlay absolute inset-0 bg-gray-950 backdrop-blur-[2px] bg-opacity-60 z-10 md:w-[50%]"></div>
       <div class="absolute inset-0 md:mt-12 mt-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-6 content-center h-full">
-        <div class="typewriter col-span-12 md:col-span-12 z-30">
+        <div class="typewriter col-span-12 z-30">
           <h1 class="display text-gray-50">Kadaver</h1>
         </div>
-        <h2 class="text-h3-mobile md:text-h3-desktop text-gray-50 col-span-12 lg:col-span-6">Kreativ kommunikation, der skaber stærke relationer</h2>
-        <p class="text-gray-50 col-span-12 lg:col-span-10 xl:col-span-8 md:pb-9 pb-8">
-          Hos Kadaver laver vi indhold, der inspirerer og hjælper brands med at finde deres stemme. Gennem strategisk storytelling og innovative
-          løsninger skaber vi stærke, langvarige forbindelser med dit publikum.
-        </p>
-        <div class="btn_container flex flex-row gap-6 md:gap-12 col-span-12">
+        <h2 class="md:text-h3-mobile text-h3-desktop font-gilroy-lightitalic text-gray-50 col-span-12 md:col-span-6">
+          Kreativ kommunikation, der skaber stærke relationer
+        </h2>
+        <div class="btn_container flex flex-row gap-6 md:gap-12 col-span-12 pt-12">
           <a href="/kontakt" aria-label="Gå til kontakt-siden">
             <Button variant="primary" size="small">Kontakt os</Button>
           </a>
@@ -210,164 +208,169 @@ import Button from "../components/Button.astro";
         </div>
       </div>
     </div>
-
-    <section class="contact md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
-      <div class="contact_text col-span-12 md:col-span-8 md:col-start-2">
-        <h3 class="pb-2 md:pb-4">Har du en idé? Lad os gøre <br class="hidden md:block" /> den til virkelighed</h3>
-        <p class="pb-4">
-          Har du en idé, et projekt eller en udfordring? Lad os tage en uforpligtende snak om <br class="hidden md:block" /> hvordan vi sammen kan udvikle
-          løsninger, der skaber værdi og gør en forskel. <br class="hidden md:block" />Kontakt os i dag&mdash; vi ser frem til at møde dig!
-        </p>
-        <div class="btn_container pt-6">
-          <a href="/kontakt" aria-label="Gå til kontakt-siden">
-            <Button variant="secondary" size="small">Gå til kontakt-siden</Button>
-          </a>
-        </div>
-      </div>
-      <div class="logo hidden md:block col-span-2 content-center">
-        <img src="/images/logo_gradient.webp" alt="gradient-logo for Kadaver" class="w-40 h-40" />
-      </div>
-    </section>
   </section>
 
-  <style>
-    @keyframes float {
-      0% {
-        transform: translatey(0);
-      }
-      50% {
-        transform: translatey(-10px);
-      }
-      100% {
-        transform: translatey(0);
-      }
-    }
-    .float {
-      animation: float 3s ease-in-out infinite;
-    }
+  <section class="contact md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 justify-center">
+    <div class="contact_text col-span-12 md:col-span-8 md:col-start-2">
+      <h3 class="pb-2 md:pb-4">Har du en idé? Lad os gøre <br class="hidden md:block" /> den til virkelighed</h3>
+      <p class="pb-4">
+        Har du en idé, et projekt eller en udfordring? Lad os tage en uforpligtende snak om <br class="hidden md:block" /> hvordan vi sammen kan udvikle
+        løsninger, der skaber værdi og gør en forskel. <br class="hidden md:block" />Kontakt os i dag&mdash; vi ser frem til at møde dig!
+      </p>
+      <div class="btn_container pt-6">
+        <a href="/kontakt" aria-label="Gå til kontakt-siden">
+          <Button variant="secondary" size="small">Gå til kontakt-siden</Button>
+        </a>
+      </div>
+    </div>
+    <div class="logo hidden md:block col-span-2 content-center">
+      <img src="/images/logo_gradient.webp" alt="gradient-logo for Kadaver" class="w-40 h-40" />
+    </div>
+  </section>
+</MainLayout>
 
-    /* Define keyframes globally (not inside media queries) */
-    @keyframes typewriter {
-      0% {
-        width: 0;
-      }
-      100% {
-        width: 37.5%;
-      }
+<style>
+  @keyframes float {
+    0% {
+      transform: translatey(0);
     }
-
-    @keyframes typewriter-mobile {
-      0% {
-        width: 0;
-      }
-      100% {
-        width: 69%;
-      }
+    50% {
+      transform: translatey(-10px);
     }
-
-    @keyframes blink-caret {
-      from,
-      to {
-        border-color: transparent;
-      }
-      50% {
-        border-color: #9934ff;
-      }
+    100% {
+      transform: translatey(0);
     }
+  }
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
 
-    /* Default typewriter effect (for desktop) */
+  /* Define keyframes globally (not inside media queries) */
+  @keyframes typewriter {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 37.5%;
+    }
+  }
+
+  @keyframes typewriter-mobile {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 69%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #9934ff;
+    }
+  }
+
+  /* Default typewriter effect (for desktop) */
+  .typewriter {
+    overflow: hidden;
+    white-space: nowrap; /* Ensures text stays in one line */
+    border-right: 8px solid transparent; /* Default border color */
+    position: relative; /* For positioning the pseudo-element */
+    display: inline-block;
+    animation:
+      typewriter 0.9s steps(30) 0.8s 1 normal both,
+      blink-caret 0.9s step-end infinite;
+  }
+
+  /* Modify animation for smaller screens */
+  @media screen and (max-width: 1020px) {
     .typewriter {
-      overflow: hidden;
-      white-space: nowrap; /* Ensures text stays in one line */
-      border-right: 8px solid transparent; /* Default border color */
-      position: relative; /* For positioning the pseudo-element */
-      display: inline-block;
       animation:
-        typewriter 0.9s steps(30) 0.8s 1 normal both,
+        typewriter-mobile 0.9s steps(30) 0.8s 1 normal both,
         blink-caret 0.9s step-end infinite;
     }
+  }
 
-    /* Modify animation for smaller screens */
-    @media screen and (max-width: 1020px) {
-      .typewriter {
-        animation:
-          typewriter-mobile 0.9s steps(30) 0.8s 1 normal both,
-          blink-caret 0.9s step-end infinite;
-      }
+  .logo-slider {
+    max-width: fit-content;
+    min-width: 400px;
+    width: 100%;
+    display: flex;
+    padding-block: 5px;
+    overflow: hidden;
+  }
+
+  .marquee {
+    display: flex;
+    width: fit-content;
+    animation: marquee 400s linear infinite;
+  }
+
+  .carousel-items {
+    display: flex;
+    opacity: 0.5;
+    filter: grayscale(100%);
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
     }
-
-    .logo-slider {
-      max-width: fit-content;
-      min-width: 400px;
-      width: 100%;
-      display: flex;
-      padding-block: 5px;
-      overflow: hidden;
+    100% {
+      transform: translateX(-50%);
     }
+  }
+</style>
 
-    .marquee {
-      display: flex;
-      width: fit-content;
-      animation: marquee 400s linear infinite;
-    }
+<script>
+  import { inView } from "motion";
 
-    .carousel-items {
-      display: flex;
-      opacity: 0.5;
-      filter: grayscale(100%);
-    }
+  const elementmedanimation2 = document.querySelector("h2");
+  inView(elementmedanimation2, () => {
+    elementmedanimation2.classList.add("animate__animated", "animate__slideInRight");
+  });
 
-    @keyframes marquee {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-  </style>
+  const elementmedanimation3 = document.querySelector("#top-section p");
+  inView(elementmedanimation3, () => {
+    elementmedanimation3.classList.add("animate__animated", "animate__slideInRight");
+  });
 
-  <script>
-    import { inView } from "motion";
+  const elementmedanimation4 = document.querySelector(".btn_container");
+  inView(elementmedanimation4, () => {
+    elementmedanimation4.classList.add("animate__animated", "animate__zoomIn");
+  });
 
-    const elementmedanimation2 = document.querySelector("h2");
-    inView(elementmedanimation2, () => {
-      elementmedanimation2.classList.add("animate__animated", "animate__slideInRight");
+  /* InView Animations for Each Image with Delay */
+  const sections = document.querySelectorAll(".about_grid > div");
+
+  sections.forEach((sections, index) => {
+    inView(sections, () => {
+      sections.classList.add("animate__animated", "animate__fadeInUp");
+      sections.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
     });
+  });
 
-    const elementmedanimation3 = document.querySelector("#top-section p");
-    inView(elementmedanimation3, () => {
-      elementmedanimation3.classList.add("animate__animated", "animate__slideInRight");
-    });
+  const elementmedanimation5 = document.querySelector(".contact_text");
+  inView(elementmedanimation5, () => {
+    elementmedanimation5.classList.add("animate__animated", "animate__slideInLeft");
+  });
 
-    const elementmedanimation4 = document.querySelector(".btn_container");
-    inView(elementmedanimation4, () => {
-      elementmedanimation4.classList.add("animate__animated", "animate__zoomIn");
-    });
+  const elementmedanimation6 = document.querySelector(".logo");
+  inView(elementmedanimation6, () => {
+    elementmedanimation6.classList.add("animate__animated", "animate__slideInRight");
+  });
 
-    /* InView Animations for Each Image with Delay */
-    const sections = document.querySelectorAll(".about_grid > div");
+  const elementmedanimation7 = document.querySelector(".our_cases");
+  inView(elementmedanimation7, () => {
+    elementmedanimation7.classList.add("animate__animated", "animate__fadeInRight");
+  });
 
-    sections.forEach((sections, index) => {
-      inView(sections, () => {
-        sections.classList.add("animate__animated", "animate__fadeInUp");
-        sections.style.animationDelay = `${index * 0.2}s`; // Delay each image by 0.2s
-      });
-    });
-
-    const elementmedanimation5 = document.querySelector(".contact_text");
-    inView(elementmedanimation5, () => {
-      elementmedanimation5.classList.add("animate__animated", "animate__slideInLeft");
-    });
-
-    const elementmedanimation6 = document.querySelector(".logo");
-    inView(elementmedanimation6, () => {
-      elementmedanimation6.classList.add("animate__animated", "animate__slideInRight");
-    });
-
-    const elementmedanimation7 = document.querySelector(".our_cases");
-    inView(elementmedanimation7, () => {
-      elementmedanimation7.classList.add("animate__animated", "animate__fadeInRight");
-    });
-  </script>
-</MainLayout>
+  const elementmedanimation8 = document.querySelector(".overlay");
+  inView(elementmedanimation8, () => {
+    elementmedanimation8.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+</script>

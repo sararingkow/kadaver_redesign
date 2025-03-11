@@ -49,13 +49,13 @@ import "../styles/tobii.min.css";
   <section>
     <div class="relative">
       <div class="absolute inset-0 bg-gray-950 z-10 opacity-60"></div>
-      <img src={card.image} alt={card.title} class="w-full h-[350px] object-cover grayscale" />
+      <img src={card.image} alt={card.title} class="w-full h-[350px] object-cover brightness-[0.7] grayscale" />
     </div>
   </section>
   <section class="relative main max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
     <!-- Navigation Arrows -->
     <div class="z-30 flex flex-col md:items-end items-center justify-center gap-4 col-span-12">
-      <div class="flex justify-between items-center md:mt-7 mt-4 gap-8 bg-transparent backdrop-blur-sm p-2 w-fit">
+      <div class="flex justify-between items-center md:mt-7 mt-4 gap-8 bg-transparent backdrop-blur-[5px] p-2 w-fit">
         {
           prevCard && (
             <a href={`/${prevCard.slug}`} class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center">
@@ -107,7 +107,7 @@ import "../styles/tobii.min.css";
 
   {
     images.length > 0 && (
-      <section class="product_material max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
+      <section class="product_material pt-mobil-top md:pt-desktop-top max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
         <div class="col-span-12">
           <h3 class="pb-4">Produktmateriale</h3>
           <div class="flex flex-wrap gap-4">

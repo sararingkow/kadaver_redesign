@@ -15,11 +15,11 @@ import Button from "../components/Button.astro";
       <video
         src="/images/studio_video.mp4"
         aria-label="timelapse-video til hero-sektionen af Kadaver's studieleje-side"
-        class="w-full h-screen object-cover brightness-[0.5] grayscale"
+        class="w-full h-screen object-cover brightness-[0.7] grayscale"
         autoplay
         loop
         muted></video>
-      <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
+      <div class="overlay absolute inset-0 bg-gray-950 backdrop-blur-[2px] bg-opacity-60 z-10 md:w-[50%]"></div>
     </div>
 
     <!-- Text Overlay -->
@@ -27,11 +27,6 @@ import Button from "../components/Button.astro";
       <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
         <h1 class="display mb-4 text-gray-50">Studieleje</h1>
         <hr class="border-violet-600 border-4 w-[195px] md:w-[335px] md:mb-8 mb-10" />
-        <p class="hero_text text-gray-50">
-          Har du brug for et kreativt rum til dit næste projekt? Vores studie er udstyret med alt du behøver, fra green screen til
-          makeupstation&mdash; perfekt til både fotoshoots og videoproduktioner. Book din næste session hos os og få den professionelle ramme, som du
-          søger.
-        </p>
       </div>
       <div class="btn_container flex flex-row pt-8 gap-6 md:gap-12 col-span-12">
         <a href="#contact" aria-label="Gå til kontakt">
@@ -57,130 +52,155 @@ import Button from "../components/Button.astro";
 
   <section
     id="info-list"
-    class="info_list md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom mb-mobile-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12"
+    class="info_list md:pt-24 pt-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-3 gap-12"
   >
-    <div class="col-span-12">
-      <h2 class="md:text-h2-desktop text-h3-mobile md:mb-12 mb-4">Alt du skal vide</h2>
-      <div class="list grid grid-cols-1 lg:grid-cols-3 gap-12">
-        <!-- Obligatory Table -->
-        <div class="flex flex-col">
-          <img src="/images/mandatory.webp" class="w-full object-cover" alt="Obligatorisk info" />
-          <h3 class="md:text-h3-desktop text-h4-mobile md:mt-8 mt-6 md:mb-4 mb-2">Obligatorisk</h3>
-          <table class="w-full border-collapse border border-gray-950">
-            <tbody>
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Beliggenhed</td><td class="p-4">Wilders Plads 5, 1403 KBH K</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Pris pr. dag</td><td class="p-4">2950,- kr. ekskl. moms</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Tidsrum</td><td class="p-4">8-17</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Areal</td><td class="p-4">40 m2 + klippestudie på 12,5 m2</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Højde</td><td class="p-4">3 m</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Rumhorisont</td><td class="p-4"
-                  >18 m2 <em>(kan males efter aftale)</em></td
-                ></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Adgang</td><td class="p-4">Direkte fra parkeringsplads i stueplan</td
-                ></tr
-              >
-              <tr><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Internet</td><td class="p-4">Ja</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Technical Table -->
-        <div class="flex flex-col">
-          <img src="/images/technical.webp" class="w-full object-cover" alt="Teknisk info" />
-          <h3 class="md:text-h3-desktop text-h4-mobile md:mt-8 mt-5 md:mb-4 mb-2">Teknisk</h3>
-          <table class="w-full border-collapse border border-gray-950">
-            <tbody>
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Green-screen</td><td class="p-4">Ja</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Baggrunde</td><td class="p-4">Ja, mange forskellige farver</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Lydisoleret</td><td class="p-4">Delvist</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Akustisk behandlet</td><td class="p-4">Ja</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Mulighed for mørklægning</td><td class="p-4">Ja</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Lys</td><td class="p-4"
-                  >Mulighed for opsætning i loft- og standerlamper</td
-                ></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">El</td><td class="p-4">18 amp udtag</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Musikanlæg</td><td class="p-4">Ja</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Makeup-station</td><td class="p-4">Ja</td></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Lounge</td><td class="p-4">Ja</td></tr
-              >
-              <tr><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Tekøkken</td><td class="p-4">Ja</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Rental Table -->
-        <div class="flex flex-col">
-          <img src="/images/rent.webp" class="w-full object-cover" alt="Udstyrsleje" />
-          <h3 class="md:text-h3-desktop text-h4-mobile md:mt-8 mt-5 md:mb-4 mb-2">Udstyrsleje</h3>
-          <table class="w-full border-collapse border border-gray-950">
-            <tbody>
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Kamera</td><td class="p-4"
-                  >Sony a7s iii + Atomos Ninja V recorder inkl. diske: <span class="bold underline">800 kr. pr. dag</span></td
-                ></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Objektiv</td><td class="p-4"
-                  >SONY (E) FE 28-135MM F/4 PZ G OSS Ø95: <span class="bold underline">500 kr. pr. dag</span></td
-                ></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Gimbal</td><td class="p-4"
-                  >ZHIYUN CRANE 3S: <span class="bold underline">500 kr. pr. dag</span></td
-                ></tr
-              >
-              <tr class="border-b border-gray-950"
-                ><td class="p-4 font-bold border-r border-gray-950 bg-gray-100">Lys</td><td class="p-4">
-                  <ul class="list-disc pl-4 space-y-2">
-                    <li>5 x Area 48 LED: <span class="bold underline">250 kr. pr. dag</span></li>
-                    <li>1 x Soft boks Nanlite Compac 200B: <span class="bold underline">250 kr. pr. dag</span></li>
-                    <li>
-                      2 x Boling LED Slim line BL-2280P + 5500 Kelvin: <span class="bold underline">200 kr. pr. stk. pr. dag</span>
-                    </li>
-                    <li>Diverse lysstofrør og stativer: <span class="bold underline">pris efter aftale</span></li>
-                  </ul>
-                </td></tr
-              >
-            </tbody>
-          </table>
-        </div>
+    <h2 class="md:text-h2-desktop text-h3-mobile col-span-3 md:mb-2 mb-4">Alt du skal vide om studiet</h2>
+    <div class="bg-[#e9e9e9] p-6 rounded-[5px]">
+      <div class="flex items-center mb-4">
+        <img src="/images/mandatory.webp" alt="Obligatorisk info" class="w-12 h-12 mr-4 rounded-full object-cover" />
+        <h3 class="md:text-h4-desktop text-h4-mobile">Obligatorisk</h3>
       </div>
+      <table class="w-full">
+        <tbody class="divide-y divide-gray-300">
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Beliggenhed</td>
+            <td class="p-4 text-gray-600 text-[15px]">Wilders Plads 5, <br class="hidden md:block" /> 1403 København K</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Pris pr. dag</td>
+            <td class="p-4 text-gray-600 text-[15px]">2950,- ekskl. moms</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Tidsrum</td>
+            <td class="p-4 text-gray-600 text-[15px]">8-17</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Areal</td>
+            <td class="p-4 text-gray-600 text-[15px]">40 m2 + klippestudie på 12,5 m2</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Højde</td>
+            <td class="p-4 text-gray-600 text-[15px]">3 m</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Rumhorisont</td>
+            <td class="p-4 text-gray-600 text-[15px]">18 m2 <br class="hidden md:block" /><em>(kan males efter aftale)</em></td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Adgang</td>
+            <td class="p-4 text-gray-600 text-[15px]">Direkte fra parkeringsplads i stueplan</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Internet</td>
+            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Card 2: Optional Info -->
+    <div class="bg-[#e9e9e9] p-6 rounded-[5px]">
+      <div class="flex items-center mb-4">
+        <img src="/images/technical.webp" alt="Valgfrit info" class="w-12 h-12 mr-4 rounded-full object-cover" />
+        <h3 class="md:text-h4-desktop text-h4-mobile">Teknisk</h3>
+      </div>
+      <table class="w-full">
+        <tbody class="divide-y divide-gray-300">
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Green-screen</td>
+            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Baggrunde</td>
+            <td class="p-4 text-gray-600 text-[15px]">Ja, mange forskellige farver</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Lydisoleret</td>
+            <td class="p-4 text-gray-600 text-[15px]">Delvist</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Akustisk behandlet</td>
+            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Mulighed for mørklægning</td>
+            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Lys</td>
+            <td class="p-4 text-gray-600 text-[15px]">Mulighed for opsætning i loft- og standerlamper</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">El</td>
+            <td class="p-4 text-gray-600 text-[15px]">18 amp udtag</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Musikanlæg</td>
+            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Makeup-station</td>
+            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Lounge</td>
+            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Tekøkken</td>
+            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Card 3: Other Info -->
+    <div class="bg-[#e9e9e9] p-6 rounded-[5px]">
+      <div class="flex items-center mb-4">
+        <img src="/images/rent.webp" alt="Andet info" class="w-12 h-12 mr-4 rounded-full object-cover" />
+        <h3 class="md:text-h4-desktop text-h4-mobile">Udstyrsleje</h3>
+      </div>
+      <table class="w-full">
+        <tbody class="divide-y divide-gray-300">
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Kamera</td>
+            <td class="p-4 text-gray-600 text-[15px]"
+              >Sony a7s iii + Atomos Ninja V recorder inkl. diske: <span class="font-bold underline">800 kr. pr. dag</span></td
+            >
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Objektiv</td>
+            <td class="p-4 text-gray-600 text-[15px]"
+              >SONY (E) FE 28-135MM F/4 PZ G OSS Ø95: <span class="font-bold underline">500 kr. pr. dag</span></td
+            >
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Gimbal</td>
+            <td class="p-4 text-gray-600 text-[15px]">ZHIYUN CRANE 3S: <span class="font-bold underline">500 kr. pr. dag</span></td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[15px] font-gilroy-bold">Lys</td>
+            <td class="p-4 text-gray-600 text-[15px]">
+              <ul class="list-disc pl-4 space-y-2">
+                <li class="text-gray-600 text-[15px]">5 x Area 48 LED: <span class="font-gilroy-bold underline">250 kr. pr. dag</span></li>
+                <li class="text-gray-600 text-[15px]">
+                  1 x Soft boks Nanlite Compac 200B: <span class="font-gilroy-bold underline">250 kr. pr. dag</span>
+                </li>
+                <li class="text-gray-600 text-[15px]">
+                  2 x Boling LED Slim line BL-2280P + 5500 Kelvin: <span class="font-gilroy-bold underline">200 kr. pr. stk. pr. dag</span>
+                </li>
+                <li class="text-gray-600 text-[15px]">
+                  Diverse lysstofrør og stativer: <span class="font-gilroy-bold underline">pris efter aftale</span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
-  <section class="image-section md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-4 items-start">
+  <section class="image-section md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto px-8 grid grid-cols-12 gap-4 items-start">
     <div class="image1 col-span-12 md:col-span-7">
       <img src="/images/sr_section1.webp" alt="produktbillede 1 (kampagne: enter the gamer)" class="w-full h-[497px] object-cover" />
     </div>
@@ -243,7 +263,7 @@ import Button from "../components/Button.astro";
     elementmedanimation4.classList.add("animate__animated", "animate__fadeInLeft");
   });
 
-  const columns = document.querySelectorAll(".list > div");
+  const columns = document.querySelectorAll(".info_list > div");
 
   columns.forEach((column, index) => {
     inView(column, () => {
@@ -284,6 +304,11 @@ import Button from "../components/Button.astro";
   const elementmedanimation9 = document.querySelector(".btn_container");
   inView(elementmedanimation9, () => {
     elementmedanimation9.classList.add("animate__animated", "animate__zoomIn");
+  });
+
+  const elementmedanimation10 = document.querySelector(".overlay");
+  inView(elementmedanimation10, () => {
+    elementmedanimation10.classList.add("animate__animated", "animate__fadeInLeft");
   });
 </script>
 

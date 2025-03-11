@@ -10,9 +10,9 @@ import Button from "../components/Button.astro";
       <img
         src="/images/internship.webp"
         alt="billede til hero-sektionen af Kadaver's praktikside"
-        class="w-full h-screen object-cover brightness-[0.5] grayscale"
+        class="w-full h-screen object-cover brightness-[0.6] grayscale"
       />
-      <div class="absolute inset-0 bg-gray-950 backdrop-blur-sm bg-opacity-60 z-10 md:w-[50%]"></div>
+      <div class="overlay absolute inset-0 bg-gray-950 backdrop-blur-[2px] bg-opacity-60 z-10 md:w-[50%]"></div>
     </div>
 
     <!-- Text Overlay -->
@@ -20,10 +20,6 @@ import Button from "../components/Button.astro";
       <div class="md:col-span-8 col-span-12 text-left flex flex-col justify-center items-start z-30">
         <h1 class="display mb-4 text-gray-50">Praktik hos Kadaver</h1>
         <hr class="border-violet-600 border-4 w-[275px] md:w-[450px] md:mb-8 mb-10" />
-        <p class="hero_text text-gray-50">
-          Er du klar til at bringe dine kreative idéer til live? Hos Kadaver søger vi praktikanter, der vil udfordre status quo og skabe ægte
-          forbindelser. Bliv en del af vores dynamiske team, hvor strategi og kreativitet forenes for at skabe resultater, der betyder noget.
-        </p>
       </div>
       <div class="btn_container flex flex-row pt-12 gap-6 md:gap-12 col-span-12">
         <a href="#contact" aria-label="Gå til kontakt">
@@ -211,6 +207,11 @@ import Button from "../components/Button.astro";
   const elementmedanimation14 = document.querySelector(".life_as_an_intern h2");
   inView(elementmedanimation14, () => {
     elementmedanimation14.classList.add("animate__animated", "animate__fadeInLeft");
+  });
+
+  const elementmedanimation15 = document.querySelector(".overlay");
+  inView(elementmedanimation15, () => {
+    elementmedanimation15.classList.add("animate__animated", "animate__fadeInLeft");
   });
 </script>
 
