@@ -92,12 +92,12 @@
   }
 
   .position {
-    font-size: 1em;
+    font-size: 0.9rem;
   }
 
   .email,
   .phone {
-    font-size: 1em;
+    font-size: 0.9rem;
   }
 
   @screen md {

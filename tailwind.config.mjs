@@ -116,7 +116,7 @@ export default {
 
     extend: {
       spacing: {
-        gap: "40px", // Keeps the 30px gap
+        gap: "40px", // Keeps the 40px gap
         "mobil-bottom": "100px", // Slightly reduced bottom spacing for mobile
         "desktop-bottom": "120px", // Reduced bottom spacing for desktop
         "mobil-top": "100px", // Reduced top spacing for mobile

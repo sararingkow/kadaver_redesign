@@ -50,153 +50,156 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section
-    id="info-list"
-    class="info_list md:pt-24 pt-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-3 gap-12"
-  >
-    <h2 class="md:text-h2-desktop text-h3-mobile col-span-3 md:mb-2 mb-4">Alt du skal vide om studiet</h2>
-    <div class="bg-[#e9e9e9] p-6 rounded-[5px]">
-      <div class="flex items-center mb-4">
-        <img src="/images/mandatory.webp" alt="Obligatorisk info" class="w-12 h-12 mr-4 rounded-full object-cover" />
-        <h3 class="md:text-h4-desktop text-h4-mobile">Obligatorisk</h3>
+  <section id="info-list" class="info_list md:pt-24 pt-12 md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto px-8">
+    <h2 class="md:text-h2-desktop text-h3-mobile col-span-3 md:pb-16 pb-8">Alt du skal vide <br class="md:hidden block" /> om studiet</h2>
+    <div class="info_list grid grid-cols-1 lg:grid-cols-3 flex-row col-span-12 md:gap-12 gap-6">
+      <div class="bg-[#e9e9e9] p-6 rounded-[5px]">
+        <div class="flex items-center mb-4">
+          <img src="/images/mandatory.webp" alt="Obligatorisk info" class="w-12 h-12 mr-4 rounded-full object-cover" />
+          <h3 class="md:text-h4-desktop text-h4-mobile">Obligatorisk</h3>
+        </div>
+        <table class="w-full">
+          <tbody class="divide-y divide-gray-300">
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Beliggenhed</td>
+              <td class="p-4 text-gray-800 text-[15px]">Wilders Plads 5, <br class="hidden md:block" /> 1403 København K</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Pris pr. dag</td>
+              <td class="p-4 text-gray-800 text-[15px]">2950,- ekskl. moms</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Tidsrum</td>
+              <td class="p-4 text-gray-800 text-[15px]">8-17</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Areal</td>
+              <td class="p-4 text-gray-800 text-[15px]">40 m2 + klippestudie på 12,5 m2</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Højde</td>
+              <td class="p-4 text-gray-800 text-[15px]">3 m</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Rumhorisont</td>
+              <td class="p-4 text-gray-800 text-[15px]">18 m2 <br class="hidden md:block" /><em>(kan males efter aftale)</em></td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Adgang</td>
+              <td class="p-4 text-gray-800 text-[15px]">Direkte fra parkeringsplads i stueplan</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Internet</td>
+              <td class="p-4 text-gray-800 text-[15px]">Ja</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <table class="w-full">
-        <tbody class="divide-y divide-gray-300">
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Beliggenhed</td>
-            <td class="p-4 text-gray-600 text-[15px]">Wilders Plads 5, <br class="hidden md:block" /> 1403 København K</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Pris pr. dag</td>
-            <td class="p-4 text-gray-600 text-[15px]">2950,- ekskl. moms</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Tidsrum</td>
-            <td class="p-4 text-gray-600 text-[15px]">8-17</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Areal</td>
-            <td class="p-4 text-gray-600 text-[15px]">40 m2 + klippestudie på 12,5 m2</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Højde</td>
-            <td class="p-4 text-gray-600 text-[15px]">3 m</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Rumhorisont</td>
-            <td class="p-4 text-gray-600 text-[15px]">18 m2 <br class="hidden md:block" /><em>(kan males efter aftale)</em></td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Adgang</td>
-            <td class="p-4 text-gray-600 text-[15px]">Direkte fra parkeringsplads i stueplan</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Internet</td>
-            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
-    <!-- Card 2: Optional Info -->
-    <div class="bg-[#e9e9e9] p-6 rounded-[5px]">
-      <div class="flex items-center mb-4">
-        <img src="/images/technical.webp" alt="Valgfrit info" class="w-12 h-12 mr-4 rounded-full object-cover" />
-        <h3 class="md:text-h4-desktop text-h4-mobile">Teknisk</h3>
+      <!-- Card 2: Optional Info -->
+      <div class="bg-[#e9e9e9] p-6 rounded-[5px]">
+        <div class="flex items-center mb-4">
+          <img src="/images/technical.webp" alt="Valgfrit info" class="w-12 h-12 mr-4 rounded-full object-cover" />
+          <h3 class="md:text-h4-desktop text-h4-mobile">Teknisk</h3>
+        </div>
+        <table class="w-full">
+          <tbody class="divide-y divide-gray-300">
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Green-screen</td>
+              <td class="p-4 text-gray-800 text-[15px]">Ja</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Baggrunde</td>
+              <td class="p-4 text-gray-800 text-[15px]">Ja, mange forskellige farver</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Lydisoleret</td>
+              <td class="p-4 text-gray-800 text-[15px]">Delvist</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Akustik-behandlet</td>
+              <td class="p-4 text-gray-800 text-[15px]">Ja</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Mulighed for mørklægning</td>
+              <td class="p-4 text-gray-800 text-[15px]">Ja</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Lys</td>
+              <td class="p-4 text-gray-800 text-[15px]">Mulighed for opsætning i loft- og standerlamper</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">El</td>
+              <td class="p-4 text-gray-800 text-[15px]">18 amp udtag</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Musikanlæg</td>
+              <td class="p-4 text-gray-800 text-[15px]">Ja</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Makeup-station</td>
+              <td class="p-4 text-gray-800 text-[15px]">Ja</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Lounge</td>
+              <td class="p-4 text-gray-800 text-[15px]">Ja</td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Tekøkken</td>
+              <td class="p-4 text-gray-800 text-[15px]">Ja</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <table class="w-full">
-        <tbody class="divide-y divide-gray-300">
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Green-screen</td>
-            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Baggrunde</td>
-            <td class="p-4 text-gray-600 text-[15px]">Ja, mange forskellige farver</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Lydisoleret</td>
-            <td class="p-4 text-gray-600 text-[15px]">Delvist</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Akustisk behandlet</td>
-            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Mulighed for mørklægning</td>
-            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Lys</td>
-            <td class="p-4 text-gray-600 text-[15px]">Mulighed for opsætning i loft- og standerlamper</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">El</td>
-            <td class="p-4 text-gray-600 text-[15px]">18 amp udtag</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Musikanlæg</td>
-            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Makeup-station</td>
-            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Lounge</td>
-            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Tekøkken</td>
-            <td class="p-4 text-gray-600 text-[15px]">Ja</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
-    <!-- Card 3: Other Info -->
-    <div class="bg-[#e9e9e9] p-6 rounded-[5px]">
-      <div class="flex items-center mb-4">
-        <img src="/images/rent.webp" alt="Andet info" class="w-12 h-12 mr-4 rounded-full object-cover" />
-        <h3 class="md:text-h4-desktop text-h4-mobile">Udstyrsleje</h3>
+      <!-- Card 3: Other Info -->
+      <div class="bg-[#e9e9e9] p-6 rounded-[5px]">
+        <div class="flex items-center mb-4">
+          <img src="/images/rent.webp" alt="Andet info" class="w-12 h-12 mr-4 rounded-full object-cover" />
+          <h3 class="md:text-h4-desktop text-h4-mobile">Udstyrsleje</h3>
+        </div>
+        <table class="w-full">
+          <tbody class="divide-y divide-gray-300">
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Kamera</td>
+              <td class="p-4 text-gray-800 text-[15px]"
+                >Sony a7s iii + Atomos Ninja V recorder inkl. diske: <span class="font-bold underline text-gray-950">800 kr. pr. dag</span></td
+              >
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Objektiv</td>
+              <td class="p-4 text-gray-800 text-[15px]"
+                >SONY (E) FE 28-135MM F/4 PZ G OSS Ø95: <span class="font-bold underline text-gray-950">500 kr. pr. dag</span></td
+              >
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Gimbal</td>
+              <td class="p-4 text-gray-800 text-[15px]">ZHIYUN CRANE 3S: <span class="font-bold underline text-gray-950">500 kr. pr. dag</span></td>
+            </tr>
+            <tr>
+              <td class="p-4 text-[15px] font-gilroy-bold">Lys</td>
+              <td class="p-4 text-gray-800 text-[15px]">
+                <ul class="list-disc pl-4 space-y-2">
+                  <li class="text-gray-800 text-[15px]">
+                    5 x Area 48 LED: <span class="font-gilroy-bold underline text-gray-950">250 kr. pr. dag</span>
+                  </li>
+                  <li class="text-gray-800 text-[15px]">
+                    1 x Soft boks Nanlite Compac 200B: <span class="font-gilroy-bold underline text-gray-950">250 kr. pr. dag</span>
+                  </li>
+                  <li class="text-gray-800 text-[15px]">
+                    2 x Boling LED Slim line BL-2280P + 5500 Kelvin: <span class="font-gilroy-bold underline text-gray-950"
+                      >200 kr. pr. stk. pr. dag</span
+                    >
+                  </li>
+                  <li class="text-gray-800 text-[15px]">
+                    Diverse lysstofrør og stativer: <span class="font-gilroy-bold underline text-gray-950">pris efter aftale</span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <table class="w-full">
-        <tbody class="divide-y divide-gray-300">
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Kamera</td>
-            <td class="p-4 text-gray-600 text-[15px]"
-              >Sony a7s iii + Atomos Ninja V recorder inkl. diske: <span class="font-bold underline">800 kr. pr. dag</span></td
-            >
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Objektiv</td>
-            <td class="p-4 text-gray-600 text-[15px]"
-              >SONY (E) FE 28-135MM F/4 PZ G OSS Ø95: <span class="font-bold underline">500 kr. pr. dag</span></td
-            >
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Gimbal</td>
-            <td class="p-4 text-gray-600 text-[15px]">ZHIYUN CRANE 3S: <span class="font-bold underline">500 kr. pr. dag</span></td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[15px] font-gilroy-bold">Lys</td>
-            <td class="p-4 text-gray-600 text-[15px]">
-              <ul class="list-disc pl-4 space-y-2">
-                <li class="text-gray-600 text-[15px]">5 x Area 48 LED: <span class="font-gilroy-bold underline">250 kr. pr. dag</span></li>
-                <li class="text-gray-600 text-[15px]">
-                  1 x Soft boks Nanlite Compac 200B: <span class="font-gilroy-bold underline">250 kr. pr. dag</span>
-                </li>
-                <li class="text-gray-600 text-[15px]">
-                  2 x Boling LED Slim line BL-2280P + 5500 Kelvin: <span class="font-gilroy-bold underline">200 kr. pr. stk. pr. dag</span>
-                </li>
-                <li class="text-gray-600 text-[15px]">
-                  Diverse lysstofrør og stativer: <span class="font-gilroy-bold underline">pris efter aftale</span>
-                </li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </section>
 
@@ -233,7 +236,7 @@ import Button from "../components/Button.astro";
       <img
         src="/images/borris_contact.svg"
         alt="Billede-grafik af Borris"
-        class="hover:-translate-y-2 transition duration-300 ease-in-out w-[290px] h-[386.77px]"
+        class="hover:-translate-y-1 transition duration-300 ease-in-out w-[290px] h-[386.77px]"
       />
     </div>
   </section>
@@ -272,12 +275,7 @@ import Button from "../components/Button.astro";
     });
   });
 
-  const elementmedanimation5 = document.querySelector(".image1");
-  inView(elementmedanimation5, () => {
-    elementmedanimation5.classList.add("animate__animated", "animate__fadeInLeft");
-  });
-
-  const img = document.querySelectorAll(".images2 > img");
+  const img = document.querySelectorAll(".image-section > div");
 
   img.forEach((imgs, index) => {
     inView(imgs, () => {
@@ -326,5 +324,9 @@ import Button from "../components/Button.astro";
   }
   .float {
     animation: float 3s ease-in-out infinite;
+  }
+
+  .contact_text a {
+    font-size: 1rem;
   }
 </style>

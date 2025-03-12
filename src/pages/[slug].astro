@@ -34,6 +34,27 @@ const isVideo =
 // Removes the images, based on the card-data from the API
 const images = [card.image1, card.image2, card.image3, card.image4, card.image5, card.image6].filter((image) => image); // Removes undefined/null values
 
+function breakTitle(title, maxLength = 25) {
+  if (title.length > maxLength) {
+    const words = title.split(" ");
+    let line = "";
+    let lines = [];
+
+    words.forEach((word) => {
+      if ((line + " " + word).length <= maxLength) {
+        line += " " + word;
+      } else {
+        lines.push(line.trim());
+        line = word;
+      }
+    });
+
+    lines.push(line.trim());
+    return lines;
+  }
+  return [title];
+}
+
 import MainLayout from "../layouts/MainLayout.astro";
 import Carousel from "../components/Carousel.astro";
 import Button from "../components/Button.astro";
@@ -55,7 +76,7 @@ import "../styles/tobii.min.css";
   <section class="relative main max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12">
     <!-- Navigation Arrows -->
     <div class="z-30 flex flex-col md:items-end items-center justify-center gap-4 col-span-12">
-      <div class="flex justify-between items-center md:mt-7 mt-4 gap-8 bg-transparent backdrop-blur-[5px] p-2 w-fit">
+      <div class="arrows flex justify-between items-center md:mt-7 mt-4 md:gap-8 gap-4 bg-transparent backdrop-blur-[5px] p-2 w-fit">
         {
           prevCard && (
             <a href={`/${prevCard.slug}`} class="hover:opacity-50 hover:underline transition duration-300 ease-in-out flex items-center">
@@ -76,8 +97,18 @@ import "../styles/tobii.min.css";
         }
       </div>
     </div>
-    <div class="col-span-12 md:pb-16 pb-8">
-      <h1 class="md:text-h2-desktop text-h2-mobile md:mt-12 mt-16 md:mb-4 mb-2">{card.title}</h1>
+    <div class="col-span-12 md:pb-16 pb-8 md:pt-16 pt-4">
+      <h1 class="md:text-h2-desktop text-h4-desktop md:mt-0 mt-8 md:mb-0 mb-2">
+        {
+          // Use Astro’s each loop to render each line
+          breakTitle(card.title).map((line) => (
+            <span>
+              {line}
+              <br />
+            </span>
+          ))
+        }
+      </h1>
       <h2 class="md:text-h3-desktop text-h4-mobile text-gray-500 md:mt-4 mt-0 md:mb-2 mb-0">{card.subtitle}</h2>
     </div>
     <div class="flex md:flex-row flex-col col-span-12 gap-8">
@@ -93,8 +124,8 @@ import "../styles/tobii.min.css";
         }
       </div>
       <div class="details md:pl-8 pl-0 md:mt-0 mt-8 flex flex-col">
-        <h2 class="md:text-h3-desktop text-h3-mobile">Detaljer</h2>
-        <hr class="border-violet-600 border-4 mb-8 mt-2 md:w-[170px] w-[150px]" />
+        <h2 class="md:text-h3-desktop text-h4-desktop">Detaljer</h2>
+        <hr class="border-violet-600 border-4 mb-8 mt-2 md:w-[170px] w-[135px]" />
         <h3 class="md:text-h4-desktop text-h4-mobile">Type:</h3>
         <p class="md:max-w-[700px]">{card.type}</p>
         <h3 class="md:text-h4-desktop text-h4-mobile md:mt-8 mt-4">Målgruppe:</h3>
@@ -109,7 +140,7 @@ import "../styles/tobii.min.css";
     images.length > 0 && (
       <section class="product_material pt-mobil-top md:pt-desktop-top max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
         <div class="col-span-12">
-          <h3 class="pb-4">Produktmateriale</h3>
+          <h3 class="md:text-h3-desktop text-h4-desktop pb-4">Produktmateriale</h3>
           <div class="flex flex-wrap gap-4">
             <a href={images[0]} class="lightbox w-[fit-content] md:w-[60%] h-[484px] object-cover">
               <img src={images[0]} alt={card.title} class="w-full h-full object-cover rounded-[5px]" />
@@ -128,7 +159,7 @@ import "../styles/tobii.min.css";
   }
   <section class="other_cases md:pt-desktop-top pt-mobil-top max-w-7xl mx-auto md:px-0 px-8 grid grid-cols-12 gap-6 md:gap-12 items-center">
     <div class="col-span-12">
-      <h3>Andre cases</h3>
+      <h3 class="md:text-h3-desktop text-h4-desktop">Andre cases</h3>
       <p class="pt-4">
         Er du nysgerrig på flere? Udforsk andre cases, hvor vi har hjulpet brands med at skabe unikke og kreative løsninger,<br
           class="hidden md:block"
@@ -197,5 +228,15 @@ import "../styles/tobii.min.css";
   a {
     text-decoration: none;
     font-family: "Gilroy-regular";
+  }
+
+  .arrows {
+    font-size: 14.5px;
+  }
+
+  @media (min-width: 768px) {
+    .arrows {
+      font-size: 18px;
+    }
   }
 </style>

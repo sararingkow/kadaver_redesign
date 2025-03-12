@@ -45,7 +45,7 @@ import Button from "../components/Button.astro";
 
   <section
     id="info-section"
-    class="info_image md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12"
+    class="info_image md:pt-desktop-top pt-mobil-top md:pb-desktop-bottom pb-0 max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12"
   >
     <div class="column grid grid-cols-1 lg:grid-cols-3 flex-row col-span-12 gap-4">
       <img src="/images/internship1.svg" alt="grafik for mentorordning (fra teori til praksis)" class="object-cover" />
@@ -54,9 +54,9 @@ import Button from "../components/Button.astro";
     </div>
   </section>
 
-  <section class="mentoring pt-mobil-topmd:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-20">
+  <section class="mentoring pt-mobil-top md:pb-desktop-bottom pb-mobil-bottom max-w-7xl mx-auto md:px-0 px-8 z-20 grid grid-cols-12 gap-20">
     <div class="mentoring_text col-span-6 md:col-span-8 md:col-start-2">
-      <h2 class="md:text-h2-desktop text-h3-mobile pb-4 md:pb-8">Mentorordning</h2>
+      <h2 class="md:text-h2-desktop text-h3-mobile pb-4 md:pb-6">Mentorordning</h2>
       <p class="pb-4">
         Hos os handler dit praktikforløb om mere end bare erfaring&mdash; det handler om læring og udvikling. Derfor får du fra start en mentor, der
         er specialiseret inden for netop det område, du brænder for at dykke ned i. <br /><br />Din mentor følger dig gennem hele forløbet, hjælper
@@ -68,7 +68,7 @@ import Button from "../components/Button.astro";
       <img src="/images/mentoring.svg" alt="grafik for mentorordning" class="w-36 h-36" />
     </div>
   </section>
-  <section class="life_as_an_intern md:pb-desktop-bottom pb-mobil-bottom max-w-5xl mx-auto px-6 md:px-0 grid grid-cols-12">
+  <section class="life_as_an_intern md:pb-desktop-bottom pb-mobil-bottom max-w-5xl mx-auto px-8 md:px-0 grid grid-cols-12">
     <h2 class="md:text-h2-desktop text-h3-mobile col-span-12 md:col-span-10 text-left mb-8">Livet som praktikant</h2>
 
     <div class="flex gap-10 items-start col-span-12">
@@ -81,9 +81,12 @@ import Button from "../components/Button.astro";
         />
 
         <!-- Text Box -->
-        <div class="intern_text flex flex-col w-full justify-center p-8 bg-gray-100 rounded-lg shadow-md">
+        <div class="intern_text flex flex-col w-full justify-center p-8 bg-gray-100 rounded-lg">
           <!-- Quote -->
-          <span class="font-semibold text-h4-mobile">Mikkel Thorbøll <span class="text-gray-500">(junior kreativ)</span></span>
+          <span class="font-semibold text-h4-mobile"
+            >Mikkel Thorbøll <br class="md:hidden block" /><span class="md:mb-0 mb-2 text-gray-500">(junior kreativ, tidligere praktikant)</span
+            ></span
+          >
           <p class="quote py-2 text-gray-700">
             Jeg fik muligheden for at være med på virkelig fede projekter, som jeg selv var med til at starte. Det er en af mange grunde til at man
             føler sig meget set og værdsat som praktikant hos Kadaver.
@@ -103,7 +106,7 @@ import Button from "../components/Button.astro";
         <h2 class="md:text-h2-desktop text-h3-mobile pb-2 md:pb-4">Efter endt praktik</h2>
         <p class="max-w-[80%] md:max-w-[60%] text-center">
           Når du er i praktik hos os, arbejder vi altid med et mål om, at du skal være klar til erhvervslivet efter dit praktikforløb&mdash; og altid
-          med en forhåbning om, at vores samarbejde er så godt, at du kan fortsætte hos os.
+          med en forhåbning om at vores samarbejde er så godt, at du kan fortsætte hos os.
         </p>
       </div>
     </div>
