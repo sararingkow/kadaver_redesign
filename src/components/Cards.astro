@@ -4,6 +4,8 @@ const cards = await fetch("https://iwqejxdoyvguvkbjlqrq.supabase.co/rest/v1/list
   headers: {
     apikey:
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml3cWVqeGRveXZndXZrYmpscXJxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk5MDgyMTksImV4cCI6MjA1NTQ4NDIxOX0.uGOrCj2BHaecpyauDJEjv-iZfytL2pUg0wVzj8YLsN0",
+    "Content-Type": "application/json",
+    Prefer: "return=representation",
   },
 }).then((res) => res.json());
 
